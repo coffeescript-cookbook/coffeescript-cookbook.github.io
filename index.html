@@ -18,7 +18,7 @@ I know, right? So check out <a href="http://www.heartmindcode.com/blog/2011/05/c
 {% for page in site.pages %}
 <ul>
   {% if page.url contains '/chapters/strings/' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
 {% endfor %}
@@ -26,7 +26,7 @@ I know, right? So check out <a href="http://www.heartmindcode.com/blog/2011/05/c
 {% for page in site.pages %}
 <ul>
   {% if page.url contains '/chapters/arrays/' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
 {% endfor %}

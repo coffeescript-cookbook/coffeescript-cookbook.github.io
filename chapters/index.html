@@ -7,7 +7,7 @@ title: Cookbook
 {% for page in site.pages %}
 <ul>
   {% if page.url contains '/chapters/strings/' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
 {% endfor %}
@@ -15,7 +15,7 @@ title: Cookbook
 {% for page in site.pages %}
 <ul>
   {% if page.url contains '/chapters/arrays/' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
 {% endfor %}
