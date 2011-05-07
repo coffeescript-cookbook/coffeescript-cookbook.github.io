@@ -2,7 +2,7 @@
 layout: default
 title: Reversing Arrays
 categories:
-  - Arrays
+- arrays
 ---
 
 Q. How to reverse an array

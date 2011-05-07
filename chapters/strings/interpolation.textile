@@ -1,0 +1,13 @@
+---
+layout:   default
+title:    String Interpolation
+categories:
+- strings
+---
+h1. How do I do string interpolation?
+
+{% highlight coffeescript %}
+you = "world"
+greeting  = "Hello #{ you }!"
+# => "Hello world!"
+{% endhighlight %}

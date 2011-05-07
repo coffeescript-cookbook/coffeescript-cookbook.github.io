@@ -3,6 +3,19 @@ layout: default
 title: Cookbook
 ---
 <h1>Chapter Index</h1>
-{% for category in site.categories %}
-{{ category }}<br />
+<h2>Working with Strings</h2>
+{% for page in site.pages %}
+<ul>
+  {% if page.categories contains 'strings' %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endif %}
+</ul>
+{% endfor %}
+<h2>Working with Arrays</h2>
+{% for page in site.pages %}
+<ul>
+  {% if page.categories contains 'arrays' %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endif %}
+</ul>
 {% endfor %}
