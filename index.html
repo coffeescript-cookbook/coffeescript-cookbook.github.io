@@ -14,4 +14,19 @@ I know, right? So check out <a href="http://www.heartmindcode.com/blog/2011/05/c
 <p>
 <i>Note: I snagged this domain because I thought there was a need to curate a cookbook for CoffeeScript. If somebody else is doing a better job, please contact me. I would love to give you this domain.</i>
 </p>
-<p>Version 2.0</p>
+<h2>Working with Strings</h2>
+{% for page in site.pages %}
+<ul>
+  {% if page.categories contains 'strings' %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endif %}
+</ul>
+{% endfor %}
+<h2>Working with Arrays</h2>
+{% for page in site.pages %}
+<ul>
+  {% if page.categories contains 'arrays' %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endif %}
+</ul>
+{% endfor %}
