@@ -17,7 +17,7 @@ I know, right? So check out <a href="http://www.heartmindcode.com/blog/2011/05/c
 <h2>Working with Strings</h2>
 {% for page in site.pages %}
 <ul>
-  {% if page.categories contains 'strings' %}
+  {% if page.url contains '/chapters/strings/' %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
@@ -25,7 +25,7 @@ I know, right? So check out <a href="http://www.heartmindcode.com/blog/2011/05/c
 <h2>Working with Arrays</h2>
 {% for page in site.pages %}
 <ul>
-  {% if page.categories contains 'arrays' %}
+  {% if page.url contains '/chapters/arrays/' %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endif %}
 </ul>
