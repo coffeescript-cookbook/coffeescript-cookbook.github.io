@@ -32,7 +32,7 @@ h2. Working with Arrays
 h2. Dates and Times
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/dates-and-times/' %}
+  {% if page.url contains '/chapters/dates_and_times/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
