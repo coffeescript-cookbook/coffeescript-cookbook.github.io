@@ -3,6 +3,12 @@ layout: default
 title: Cookbook
 ---
 
+{% comment %}
+This page is pretty horrid. For each chapter, it loops through every page on the site and renders the pages than are in that chapter. It might make more sense to just patch Jekyll to let us put a "chapters" hash in the _config.yml.
+
+Developers: If you have a good idea for how to tackle this, that would be brilliant.
+{% endcomment %}
+
 h2. Objects
 
 {% for page in site.pages %}
