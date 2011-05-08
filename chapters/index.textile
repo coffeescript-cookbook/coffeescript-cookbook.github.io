@@ -6,7 +6,7 @@ title: Cookbook
 h2. Objects
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/objects' %}
+  {% if page.url contains '/chapters/objects/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -32,7 +32,7 @@ h2. Working with Arrays
 h2. Dates and Times
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/dates-and-times %}
+  {% if page.url contains '/chapters/dates-and-times/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -41,7 +41,7 @@ h2. Dates and Times
 h2. Math
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/math' %}
+  {% if page.url contains '/chapters/math/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -50,7 +50,7 @@ h2. Math
 h2. Functions
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/functions' %}
+  {% if page.url contains '/chapters/functions/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -59,7 +59,7 @@ h2. Functions
 h2. jQuery
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/jquery' %}
+  {% if page.url contains '/chapters/jquery/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -68,7 +68,7 @@ h2. jQuery
 h2. Regular Expressions
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/regular-expressions' %}
+  {% if page.url contains '/chapters/regular-expressions/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
@@ -77,7 +77,7 @@ h2. Regular Expressions
 h2. AJAX
 
 {% for page in site.pages %}
-  {% if page.url contains '/chapters/ajax' %}
+  {% if page.url contains '/chapters/ajax/' %}
     * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a>
   {% endif %}
 {% endfor %}
