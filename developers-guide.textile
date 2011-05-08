@@ -60,6 +60,7 @@ Leave this window running while you work. Any time you change a file, jekyll wil
 h3. Run serve
 
 Open another terminal window, cd into the project folder, then cd into the <tt>_site</tt> subfolder, and run
+
 {% highlight bash %}
 serve
 {% endhighlight %}
