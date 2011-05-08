@@ -14,7 +14,7 @@ h2. General Guidelines
 * Feel free to add new pages, or even chapters. Just keep them organized.
 * Try to write well-styled, idiomatic CoffeeScript.
 * Try to stay within the Problem/Solution/Discussion format. If you can't think of a good problem for your recipe... hang onto it for a while.
-* Sharing code that you think might only be used rarely is fine. Sharing esoteric code tricks is less so. There's a difference between sharing a reader for an obscure format and sharing a weird bit-shifting trick that does fast but inaccurate multiplication.
+* Sharing code that you think might only be used rarely is fine. Sharing esoteric code tricks is less so. There's a difference between sharing a translator for an obscure format and sharing a weird bit-shifting trick that does fast but inaccurate multiplication.
 
 h2. Use Cookbook Problem/Solution/Discussion Format
 
@@ -88,4 +88,8 @@ h2. I Have A Problem/Solution, But It's Basically Just JavaScript. Should I Add 
 
 Yes! CoffeeScript compiles to JavaScript, and that means that some of its functionality comes straight from JavaScript. (For example, see <a href="/chapters/arrays/reversing-arrays">Reversing Arrays</a>.) But if you're programming in CoffeeScript and you need to reverse an array, this Cookbook should stand ready to tell you it's available to you in CoffeeScript&mdash;even if it's just a straight call into a JavaScript library.
 
+
+h2. I Found a Typo. Is That Enough of a Fix? Does That Count?
+
+Absolutely!
 
