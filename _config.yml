@@ -1,4 +1,8 @@
+pygments: true
 exclude:
   - README
   - CNAME
+  - TODO.textile
+  - script
+
 

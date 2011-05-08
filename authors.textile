@@ -1,0 +1,10 @@
+---
+layout: default
+title: Authors
+---
+
+h1. Authors
+
+* David Brady _ratgeyser@gmail.com_
+* Mike Moore _mike@blowmage.com_
+* ...You! What are you waiting for? Check out the <a href="/contributing">contributing</a> section and get cracking!

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CoffeeScript Cookbook &raquo; {{ page.title }}</title>
+    <link rel="stylesheet" href="/css/default.css" type="text/css">
+  </head>
+  <body>
+<div class="header">
+  <h2>
+    <a href="/">CoffeeScript Cookbok:</a>
+    <a href="/chapters">Chapters</a> &raquo;
+    <a href="/chapters/{{ page.chapter | downcase }}">{{ page.chapter }}</a> &raquo;
+    {{ page.title }}</h2>
+</div>
+{{ content }}
+  </body>
+</html>
+

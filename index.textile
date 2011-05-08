@@ -1,0 +1,19 @@
+---
+layout: default
+title: Home
+---
+
+h1. Welcome
+
+Welcome to the CoffeeScript Cookbook! It's a bit of a mess right now,
+and VERY lonely and empty in these pages. That's where _you_ come in.
+Head over to the <a href="/contributing">Contributing</a> page and see
+what you can do to help out!
+
+Contributions URGENTLY needed NOW:
+
+* Authors: Write recipes!
+* Developers: Expand the Cookbook site!
+* Designers: Make this place look like not-crap!
+
+
