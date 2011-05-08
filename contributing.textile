@@ -8,7 +8,7 @@ The Cookbook needs your help!
 
 Here's the Contribution Recipe:
 
-# Fork the repository at http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com.git
+# Fork the repository at <a href="http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com">http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com</a>
 # Do awesomeness!
 # Send a pull request to coffeescript-cookbook
 # If we merge your pull request, you get commit access. BAM. Go back to step 2 and stay there as long as you want.

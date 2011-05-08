@@ -9,8 +9,7 @@ Welcome to the CoffeeScript Cookbook! It's a bit of a mess right now, and VERY l
 
 Contributions URGENTLY needed NOW:
 
-* Authors: Write recipes!
-* Developers: Expand the Cookbook site!
-* Designers: Make this place look like not-crap!
-
+* Authors: Write recipes! <a href="/authors-guide">Here's how</a>.
+* Developers: Expand the Cookbook site! <a href="/developers-guide">Here's how</a>.
+* Designers: Make this place look like not-crap! <a href="/designers-guide">Here's how</a>.
 

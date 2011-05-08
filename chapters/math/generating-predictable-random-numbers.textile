@@ -1,0 +1,22 @@
+---
+layout: recipe
+title: Generating Predictable Random Numbers
+chapter: Math
+---
+
+h2. Problem
+
+You need to generate a random number in a certain range, but you also need to be able to "seed" the generator to deliver predictable values.
+
+h2. Solution
+
+Write your own random number generator. There are a LOT of ways to do this. Here's a simple one.
+
+{% highlight coffeescript %}
+# TODO: write simple linear PRNG
+{% endhighlight %}
+
+h2. Discussion
+
+JavaScript and CoffeeScript do not provide a seedable random number generator. Writing your own will be an exercise in trading off the amount of randomness with the simplicity of the generator. A full discussion of randomness is beyond the scope of this cookbook; for further reading consult Donald Knuths _The Art of Computer Programming_, Volume II.
+

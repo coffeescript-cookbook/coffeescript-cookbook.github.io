@@ -11,7 +11,7 @@ Look at the source of other recipe pages and follow that page structure. Start w
 
 h2. General Guidelines
 
-* Feel free to add new pages, or even chapters. Just keep them organized.
+* Feel free to add new pages, or even chapters. Just keep them organized. _(See "How to Add a Chapter" below)_
 * Try to write well-styled, idiomatic CoffeeScript.
 * Try to stay within the Problem/Solution/Discussion format. If you can't think of a good problem for your recipe... hang onto it for a while.
 * Sharing code that you think might only be used rarely is fine. Sharing esoteric code tricks is less so. There's a difference between sharing a translator for an obscure format and sharing a weird bit-shifting trick that does fast but inaccurate multiplication.
@@ -56,6 +56,58 @@ square(16)
 # => 256
 {% endhighlight %}
 
+
+h1. Grindy HOWTOs
+
+h2. How to Add a Recipe
+
+Create a new textile page. The filename should be about the problem, e.g. <tt>finding-last-day-of-the-month.textile</tt> or <tt>reversing-arrays.textile</tt>. In your file, start with the following template:
+
+{% highlight text %}
+---
+layout: recipe
+title: Title of The Recipe
+chapter: Chapter Name
+---
+
+h2. Problem
+
+You have a problem.
+
+h2. Solution
+
+Do this about it.
+
+h2. Discussion
+
+Here's why.
+{% endhighlight %}
+
+One fussy little bit, the chapter name should match the directory the chapter is in, otherwise the page won't render correctly. For example, if you're writing a recipe for arrays, make sure the chapter is "Arrays", not "arrays" or "aray" ...or especially not "Chapter Name".
+
+h2. How to Add a Chapter
+
+* Open chapters/index.textile and your chapter's name to the yaml list of chapters.
+* cd into chapters/ and create the directory for the chapter name. Downcase the name and replace spaces with underscores.
+
+For example, to add a chapter called "Dates and Times", you would add it to the chapters array:
+
+{% highlight yaml %}
+chapters:
+- Syntax
+- Objects
+- Arrays
+- Dates and Times
+{% endhighlight %}
+
+...and then create that chapter in the file system:
+
+{% highlight bash %}
+cd chapters
+mkdir dates_and_times
+{% endhighlight %}
+
+Now create a new page in that chapter (remember to add its YAML front matter) and once jekyll regenerates the chapter index, your new page should appear.
 
 h1. FAQ
 
