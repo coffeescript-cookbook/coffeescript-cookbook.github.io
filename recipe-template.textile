@@ -1,0 +1,18 @@
+---
+layout: recipe
+title: Title of The Recipe
+chapter: Chapter Name
+---
+
+h2. Problem
+
+You have a problem.
+
+h2. Solution
+
+Do this about it.
+
+h2. Discussion
+
+Here's why.
+

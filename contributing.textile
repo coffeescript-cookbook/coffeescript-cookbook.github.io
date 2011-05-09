@@ -13,6 +13,11 @@ Here's the Contribution Recipe:
 # Send a pull request to coffeescript-cookbook
 # If we merge your pull request, you get commit access. BAM. Go back to step 2 and stay there as long as you want.
 
+
+h2. Wanted Recipes
+
+Want to help, but don't know where to start? Want a recipe, but don't know how to write it? Check out the <a href="/wanted-recipes">Wanted Recipes</a> page!
+
 h2. Authors
 
 Write recipes! Fork the repository, author some pages, and send us a pull request. For more information read the <a href="/authors-guide">author's guide</a>.

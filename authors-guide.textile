@@ -61,7 +61,7 @@ h1. Grindy HOWTOs
 
 h2. How to Add a Recipe
 
-Create a new textile page. The filename should be about the problem, e.g. <tt>finding-last-day-of-the-month.textile</tt> or <tt>reversing-arrays.textile</tt>. In your file, start with the following template:
+Create a new textile page (or copy the <a href="/recipe-template">Recipe Template</a>. The filename should be about the problem, e.g. <tt>finding-last-day-of-the-month.textile</tt> or <tt>reversing-arrays.textile</tt>. In your file, start with the following template:
 
 {% highlight text %}
 ---
