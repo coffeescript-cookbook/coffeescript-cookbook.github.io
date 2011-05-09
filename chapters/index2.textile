@@ -36,5 +36,6 @@ h2. <a href="{{ url }}">{{ chapter }}</a>
   {% endfor %}
 {% endfor %}
 
-_The CoffeeScript Cookbook currently has {{ recipe_count | number_of_words }} recipes in {{ page.chapters | size }} chapters._
+
+_The CoffeeScript Cookbook currently has {{ recipe_count | number_of_words }} ({{ recipe_count }}) recipes in {{ page.chapters | size }} chapters._
 
