@@ -1,0 +1,39 @@
+---
+layout: recipe
+title: Repeating a String
+chapter: Strings
+---
+
+h2. Problem
+
+You want to repeat a string.
+
+h2. Solution
+
+Use a list comprehension that ignores the list:
+
+{% highlight coffeescript %}
+# repeat 'foo' 10 times
+('foo' for dummy in [1..10]).join ''
+# => "foofoofoofoofoofoofoofoofoofoo"
+{% endhighlight %}
+
+Or a simple (but stateful) loop:
+
+{% highlight coffeescript %}
+repeatString = (str, times) ->
+  s = ''
+  while times > 0
+    s += str
+    --times
+  s
+
+repeatString "foo", 10
+# => "foofoofoofoofoofoofoofoofoofoo"
+{% endhighlight %}
+
+h2. Discussion
+
+JavaScript lacks a string repeat function, as does CoffeeScript. List comprehensions can be pressed into service here, however it remains to be seen if this use is considered idiomatic.
+
+

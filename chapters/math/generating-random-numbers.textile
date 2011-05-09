@@ -33,6 +33,8 @@ This is a straight lift from JavaScript.
 
 Note that JavaScripts's Math.random() does not allow you to seed the random number generator to force certain values. See <a href="/chapters/math/generating-predictable-random-numbers">Generating Predictable Random Numbers</a> for that.
 
+To generate a number from 0 up to (but not including) n, multiply by n. To generate a number from 1 to n (inclusive), multiply by n and add 1.
+
 
 
 
