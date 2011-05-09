@@ -9,6 +9,7 @@ h2. tl;dr: Look at Other Recipes, and Blend In
 
 Look at the source of other recipe pages and follow that page structure. Start with the <a href="/developers-guide">Developer's Guide</a> to get a test version of the cookbook up and running on your machine, and get to work!
 
+
 h2. General Guidelines
 
 * Feel free to add new pages, or even chapters. Just keep them organized. _(See "How to Add a Chapter" below)_
@@ -25,6 +26,14 @@ A typical cookbook page will have three sections (four if you count the title):
 * +Solution+ State the solution as briefly as possible, ideally as a single sentence that identifies the strategy you would use, and give example code. It's tempting to explain the solution, but don't do it yet. Remember that the reader will look this solution up many times after the first time, and that they will be looking for a quick reference each time. You're going to explain the solution in the +Discussion+, and the first time reader will read your solution, think about it, and then proceed to the discussion if necessary. For example, for "accessing parts of a string", a good Solution sentence might be "Use CoffeeScript's array range subscripts, or JavaScript's slice function."
 * +Discussion+ Here you should explain why your solution works, or give further examples such as edge cases. If your solution can break on some edge cases, be sure to note them here. For example, if a percentage function crashes when given a zero, you could note this in the discussion and give a workaround. NOTE: If your solution has really dangerous edge cases, so dangerous that you would include them in the solution, please consider whether your recipe should be included at all. Remember, this Cookbook is for good code!
 
+
+h2. Copyright Issues
+
+Do not post code that is copyrighted by another user, unless you have permission to use that code AND to relicense that code under the <a href="/license">CC BY 3.0</a> license. If you DO have permission and the author would like credit, please add them to the <a href="/authors">authors</a> page.
+
+Also, just a stylistic note, please do not yank code directly from http://coffeescript.org and post it with little or no discussion. The CoffeeScript Cookbook is not affiliated with them. We think they're awesome and want them to like us, too! Make sure that anything taken from coffeescript.org is permissible use and that it stands alone as a valid recipe. If the recipe is too terse, consider adding more examples and discussion.
+
+
 h2. Tag the page with Jekyll frontmatter
 
 ...that's a lot of fancy words that mean "don't forget to put the layout, chapter and page title at the top of the file in a YAML block". For example, the string interpolation page begins with
@@ -34,6 +43,7 @@ layout: recipe
 title: String Interpolation
 chapter: Strings
 ---</tt>
+
 
 h2. Use Liquid highlighting templates
 
@@ -56,6 +66,36 @@ square = (x) -> x * x
 square(16)
 # => 256
 {% endhighlight %}
+
+
+h2. Include Output
+
+After writing an important expression, show the reader what the output would be by adding it with a <tt># =></tt> on the following line. Once we get automated script testing working up in this joint, we'll actually load up your recipe snippets and evaluate its expressions against the output comment you wrote. (In other words, <tt># =></tt> tells the reader what the output will be, but it tells automated checker what the assertEquals should be)
+
+{% highlight coffeescript %}
+# right
+[1,2,3].map (x) -> x * 2
+# => [ 2, 4, 6 ]
+
+# very wrong!
+[1,2,3].map (x) -> x * 2
+
+# right; only add for important/results statements
+evens = x for x in [0..10] by 2
+evens.some (x) -> x == 6
+# => true
+
+# less wrong; may require tweaking the automatic checker
+[1,2,3].map (x) -> x * 2 # => [ 2, 4, 6 ]
+
+# less wrong (possibly not wrong at all--the output merely does not match what the coffee interpreter renders)
+[1,2,3].map (x) -> x * 2
+# => [2,4,6]
+{% endhighlight %}
+
+Not all snippets evaluate to something useful. For example, array.forEach has side effects but does not return anything. Also, the console.log() and alert() commands are also side-effect-only commands that return nothing. When possible, try to have your snippets evaluate to something inspectable, and leave displaying to the console or browser out of it. (Unless your snippet is _about_ displaying to the console or browser.)
+
+When in doubt about what output to show, try evaluating your snippet in the coffee interpreter and see what IT thinks. Ideally your output should match, or at least be machine-comparable.
 
 
 h1. Grindy HOWTOs
@@ -86,6 +126,7 @@ Here's why.
 
 One fussy little bit, the chapter name should match the directory the chapter is in, otherwise the page won't render correctly. For example, if you're writing a recipe for arrays, make sure the chapter is "Arrays", not "arrays" or "aray" ...or especially not "Chapter Name".
 
+
 h2. How to Add a Chapter
 
 * Open chapters/index.textile and your chapter's name to the yaml list of chapters.
@@ -111,7 +152,9 @@ mkdir dates_and_times
 
 Now create a new page in that chapter (remember to add its YAML front matter) and once jekyll regenerates the chapter index, your new page should appear.
 
+
 h1. FAQ
+
 
 h2. I Have a Weird Recipe. Should I Share It?
 
@@ -134,9 +177,11 @@ h2. Can I Edit An Existing Recipe?
 
 Yes. Please improve anything and everything! Be sure to test your changes and make sure that your solution really is better.
 
+
 h2. I Have a Really Efficient Solution, But It's Not As Readable As the Existing Recipe. Should I Add It?
 
 See the "Weird Recipe" note above. Do real people in the real world ever hit the performance constraint? If so, then by all means, add your strategy to the existing solution, and be sure to explain why your solution is not idiomatic. If a reader really has that problem, they'll be glad for the extra options.
+
 
 h2. I Have A Problem/Solution, But It's Basically Just JavaScript. Should I Add It?
 
