@@ -14,8 +14,6 @@ chapters:
 - AJAX
 ---
 
-{% comment %} Hack to count up actual recipes {% endcomment %}
-{% capture recipe_count %}{% endcapture %}
 
 {% for chapter in page.chapters %}
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
@@ -26,12 +24,10 @@ h2. <a href="{{ url }}">{{ chapter }}</a>
  {% for page in site.pages %}
     {% if page.url contains url %}
       {% unless page.url == indexurl %}
-        {% capture recipe_count %}word {{ recipe_count }}{% endcapture %}
-        * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
+       * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
       {% endunless %}
     {% endif %}
   {% endfor %}
 {% endfor %}
 
-_The CoffeeScript Cookbook currently has {{ recipe_count | number_of_words }} recipes in {{ page.chapters | size }} chapters._
 
