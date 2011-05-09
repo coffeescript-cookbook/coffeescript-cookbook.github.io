@@ -4,5 +4,8 @@ exclude:
   - CNAME
   - TODO.textile
   - script
+  - Procfile
+  - Gemfile
+  - Gemfile.lock
 
 
