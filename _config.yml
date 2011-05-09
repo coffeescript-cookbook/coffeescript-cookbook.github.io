@@ -1,4 +1,5 @@
 pygments: true
+lsi: false
 exclude:
   - README
   - CNAME

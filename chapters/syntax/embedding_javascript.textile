@@ -1,0 +1,35 @@
+---
+layout: recipe
+title: Embedding JavaScript
+chapter: Syntax
+---
+
+h2. Problem
+
+You want to include some found/pre-written JavaScript code inline with your CoffeeScript
+
+h2. Solution
+
+Wrap the JavaScript with backticks:
+
+{% highlight coffeescript %}
+`function greet(name) {
+alert("Hello "+name);
+}`
+
+# Back to CoffeeScript
+greet "Coffee"
+{% endhighlight %}
+
+h2. Discussion
+
+This is a simple way to integrate small snippets of JavaScript code into your CoffeeScript without converting it over to use CoffeeScript syntax. As shown in the "CoffeeScript Language Reference":http://jashkenas.github.com/coffee-script/#embedded you can mix to the two languages to a certain extent:
+
+{% highlight coffeescript %}
+hello = `function (name) {
+alert("Hello "+name)
+}`
+hello "Coffee"
+
+{% endhighlight %}
+Here the "hello" variable is still in CoffeeScript, but is assigned a function written in JavaScript.

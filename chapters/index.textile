@@ -14,6 +14,7 @@ chapters:
 - AJAX
 ---
 
+
 {% for chapter in page.chapters %}
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
   {% capture indexurl %}{{ url }}/index.html{% endcapture %}
@@ -23,9 +24,10 @@ h2. <a href="{{ url }}">{{ chapter }}</a>
  {% for page in site.pages %}
     {% if page.url contains url %}
       {% unless page.url == indexurl %}
-        * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
+       * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
       {% endunless %}
     {% endif %}
   {% endfor %}
 {% endfor %}
+
 

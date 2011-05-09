@@ -1,0 +1,34 @@
+---
+layout: recipe
+title: Filtering Arrays
+chapter: Filtering Arrays
+---
+
+h2. Problem
+
+You want to be able to filter arrays based on a boolean condition.
+
+h2. Solution
+
+Extend the Array prototype to add a filter function which will take a callback and perform a comprension over itself, collecting all elements for which the callback is true.
+
+{% highlight coffeescript %}
+# Extending Array's prototype
+Array::filter = (callback) ->
+  element for element in this when callback(element)
+
+array = [1..10]
+
+# Filter odd elements
+filtered_array = array.filter (x) -> x % 2 == 0
+# => [2,4,6,8,10]
+
+# Filter elements less than or equal to 5:
+gt_five = (x) -> x > 5
+filtered_array = array.filter gt_five
+# => [6,7,8,9,10]
+{% endhighlight %}
+
+h2. Discussion
+
+This is similair to using ruby's Array#select method.
