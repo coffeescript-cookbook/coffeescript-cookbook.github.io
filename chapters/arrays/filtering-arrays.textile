@@ -20,11 +20,13 @@ Array::filter = (callback) ->
 array = [1..10]
 
 # Filter odd elements
-filtered_array = array.filter (x) -> x % 3 == 0 # => [2,4,6,8,10]
+filtered_array = array.filter (x) -> x % 2 == 0
+# => [2,4,6,8,10]
 
 # Filter elements less than or equal to 5:
 gt_five = (x) -> x > 5
-filtered_array = array.filter gt_five # => [6,7,8,9,10]
+filtered_array = array.filter gt_five
+# => [6,7,8,9,10]
 {% endhighlight %}
 
 h2. Discussion
