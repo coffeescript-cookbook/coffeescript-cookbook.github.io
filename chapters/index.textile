@@ -15,12 +15,16 @@ chapters:
 ---
 
 {% for chapter in page.chapters %}
-h2. {{chapter}}
-
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
-  {% for page in site.pages %}
+  {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+
+h2. <a href="{{ url }}">{{ chapter }}</a>
+
+ {% for page in site.pages %}
     {% if page.url contains url %}
-      * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
+      {% unless page.url == indexurl %}
+        * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
+      {% endunless %}
     {% endif %}
   {% endfor %}
 {% endfor %}

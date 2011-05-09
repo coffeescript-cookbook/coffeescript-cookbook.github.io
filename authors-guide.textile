@@ -15,6 +15,7 @@ h2. General Guidelines
 * Try to write well-styled, idiomatic CoffeeScript.
 * Try to stay within the Problem/Solution/Discussion format. If you can't think of a good problem for your recipe... hang onto it for a while.
 * Sharing code that you think might only be used rarely is fine. Sharing esoteric code tricks is less so. There's a difference between sharing a translator for an obscure format and sharing a weird bit-shifting trick that does fast but inaccurate multiplication.
+* Don't forget to add your name to the authors page!
 
 h2. Use Cookbook Problem/Solution/Discussion Format
 
@@ -89,6 +90,7 @@ h2. How to Add a Chapter
 
 * Open chapters/index.textile and your chapter's name to the yaml list of chapters.
 * cd into chapters/ and create the directory for the chapter name. Downcase the name and replace spaces with underscores.
+* add an index.textile file that uses <tt>layout: chapter</tt>. For convenience, just copy the index.textile from another chapter and update the yaml frontmatter to reflect the name of your new chapter.
 
 For example, to add a chapter called "Dates and Times", you would add it to the chapters array:
 
