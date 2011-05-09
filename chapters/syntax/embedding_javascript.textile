@@ -6,7 +6,7 @@ chapter: Syntax
 
 h2. Problem
 
-You want to include some found/pre-written JavaScript code inline with your CoffeeScript
+You want to include some found/pre-written JavaScript code inline with your CoffeeScript.
 
 h2. Solution
 
@@ -14,11 +14,12 @@ Wrap the JavaScript with backticks:
 
 {% highlight coffeescript %}
 `function greet(name) {
-alert("Hello "+name);
+return "Hello "+name;
 }`
 
 # Back to CoffeeScript
 greet "Coffee"
+# => "Hello Coffee"
 {% endhighlight %}
 
 h2. Discussion
@@ -27,9 +28,10 @@ This is a simple way to integrate small snippets of JavaScript code into your Co
 
 {% highlight coffeescript %}
 hello = `function (name) {
-alert("Hello "+name)
+return "Hello "+name
 }`
 hello "Coffee"
+# => "Hello Coffee"
 
 {% endhighlight %}
 Here the "hello" variable is still in CoffeeScript, but is assigned a function written in JavaScript.
