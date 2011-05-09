@@ -1,3 +1,77 @@
+/* Minimal reset */
+
+* {
+	vertical-align: baseline;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Colors */
+
+a, .header a:visited {
+  color: #26ADE4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 1px #DCEEF5;
+}
+
+hr {
+  border-top: 1px solid #eee;
+  margin: 19px 0 20px 0;
+}
+
+/* Layout (margins, padding) */
+
+pre {
+  padding: 20px;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+p, .header { margin-bottom: 20px; }
+
+ul {
+  list-style: none;
+}
+
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Typography */
+
+body {
+  text-rendering: optimizeLegibility;
+  color: #373837;
+  font-family: Palatino, "Palatino Linotype", serif;
+  text-shadow: 0 0 1px #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 20px;
+}
+
+pre {
+  font-family: Monaco, Monospace;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 25px; line-height: 40px; }
+h2 { font-size: 20px; line-height: 40px; }
+h3 { font-size: 16px; line-height: 20px; }
+
+/* Syntax Highlighting */
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
