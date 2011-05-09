@@ -10,11 +10,13 @@ You want to repeat a string.
 
 h2. Solution
 
-Use a list comprehension that ignores the list:
+Use a map or a list comprehension, and flatten it:
 
 {% highlight coffeescript %}
-# repeat 'foo' 10 times
 ('foo' for dummy in [1..10]).join ''
+# => "foofoofoofoofoofoofoofoofoofoo"
+
+([1..10].map (x) -> 'foo').join ''
 # => "foofoofoofoofoofoofoofoofoofoo"
 {% endhighlight %}
 
