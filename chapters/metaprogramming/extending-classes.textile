@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Extending Classes
-chapter: Objects
+chapter: Metaprogramming
 ---
 
 h2. Problem

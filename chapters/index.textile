@@ -9,6 +9,7 @@ chapters:
 - Dates and Times
 - Math
 - Functions
+- Metaprogramming
 - jQuery
 - Regular Expressions
 - AJAX
