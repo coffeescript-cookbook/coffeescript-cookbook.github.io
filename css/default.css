@@ -1,3 +1,85 @@
+/* Minimal reset */
+
+* {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+article, header, section, footer {
+  display: block;
+}
+
+/* Colors */
+
+a, .header a:visited {
+  color: #26ADE4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 0 #DCEEF5;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  padding-top: 22px;
+  margin: 21px 0 22px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* Layout (margins, padding) */
+
+pre {
+  padding: 22px;
+  line-height: 22px;
+  margin: 22px 0;
+}
+
+p, header, section { margin-bottom: 22px; }
+
+ul {
+  list-style: none;
+}
+
+ul, ol {
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+/* Typography */
+
+body {
+  text-rendering: optimizeLegibility;
+  color: #373837;
+  font-family: Palatino, "Palatino Linotype", serif;
+  text-shadow: 0 0 0 transparent;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 22px;
+}
+
+pre {
+  font-family: Monaco, Monospace;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 30px; line-height: 44px; }
+h2 { font-size: 22px; line-height: 44px; }
+h3 { font-size: 18px; line-height: 22px; }
+
+/* Syntax Highlighting */
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */

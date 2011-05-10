@@ -5,17 +5,24 @@
     <link rel="stylesheet" href="/css/default.css" type="text/css">
   </head>
   <body>
-<div class="header">
-  <h2>
-    <a href="/">CoffeeScript Cookbok:</a>
-    <a href="/chapters">Chapters</a> &raquo;
-    <a href="/chapters/{{ page.chapter | downcase }}">{{ page.chapter }}</a> &raquo;
-    {{ page.title }}</h2>
-</div>
-{{ content }}
-<hr />
-<p>Is this recipe wrong, incomplete, or non idiomatic? Help fix it by reading the <a href="/contributing">Contributor's Guide</a>!</p>
-<p><a href="/license"><img border="0" src="/images/cc_by_badge.png"></a></p>
+    <header>
+      <h1>
+        <a href="/">CoffeeScript Cookbook</a> &raquo;
+        <a href="/chapters/{{ page.chapter | downcase }}">{{ page.chapter }}</a> &raquo;
+        {{ page.title }}
+      </h1>
+      <a href="/chapters">Chapter Index</a> |
+      <a href="/contributing">Contributing</a> |
+      <a href="/authors">Authors</a> |
+      <a href="/license">License</a>
+    </header>
+    <section class="content">
+      {{ content }}
+    </section>
+    <footer>
+      <p>Is this recipe wrong, incomplete, or non idiomatic? Help fix it by reading the <a href="/contributing">Contributor's Guide</a>!</p>
+      <a href="/license"><img src="/images/cc_by_badge.png" /></a>
+    </footer>
   </body>
 </html>
 
