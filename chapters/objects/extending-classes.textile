@@ -10,10 +10,10 @@ You want to extend a class to add new functionality or replace old.
 
 h2. Solution
 
-Assign your new function to the prototype of the object or class.
+Use :: to assign your new function to the prototype of the object or class.
 
 {% highlight coffeescript %}
-String.prototype.capitalize = () ->
+String::capitalize = () ->
   (this.split(/\s+/).map (word) -> word[0].toUpperCase() + word[1..-1].toLowerCase()).join ' '
 
 "foo bar     baz".capitalize()
@@ -22,7 +22,5 @@ String.prototype.capitalize = () ->
  
 h2. Discussion
 
-Objects in JavaScript (and thus, in CoffeeScript) have a prototype member that defines what member functions should be available on all objects based on that prototype. Or, if you prefer more object-oriented terminology, functions added to the prototype object are shared among all instances of that class.
-
-If this were a JavaScript Cookbook, we would now have a spirited debate over the fact that you cannot extend a class in JavaScript because it doesn't actually have classes, but instead merely prototype objects. Thank goodness this is a CoffeeScript Cookbook! Because now we don't have to be silly.
+Objects in JavaScript (and thus, in CoffeeScript) have a prototype member that defines what member functions should be available on all objects based on that prototype. In CoffeeScript, you can access the prototype directly via the :: operator.
 
