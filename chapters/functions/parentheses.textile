@@ -13,12 +13,14 @@ h2. Solution
 Use parentheses anyway.
 
 Another alternative is to utilise the do-notation like so:
+
 {% highlight coffeescript %}
 notify = -> alert "Hello, user!"
 do notify if condition
 {% endhighlight %}
 
 This compiles to the following JavaScript:
+
 {% highlight javascript %}
 var notify;
 notify = function() {
@@ -27,7 +29,7 @@ notify = function() {
 if (condition) {
 	notify();
 }
-{% endhiglight %}
+{% endhighlight %}
 
 h2. Discussion
 
