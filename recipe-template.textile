@@ -1,4 +1,14 @@
 ---
+layout: default
+title: Recipe Template
+---
+
+h2. Sample recipe template
+
+Create a new *my_recipe.textile* file and use this text as a start.
+
+<pre>
+---
 layout: recipe
 title: Title of The Recipe
 chapter: Chapter Name
@@ -15,4 +25,4 @@ Do this about it.
 h2. Discussion
 
 Here's why.
-
+</pre>
