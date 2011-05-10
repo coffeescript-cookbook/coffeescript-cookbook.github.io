@@ -19,31 +19,31 @@ a, .header a:visited {
 
 a:hover {
   text-decoration: underline;
-  text-shadow: 0 0 1px #DCEEF5;
+  text-shadow: 0 0 0 #DCEEF5;
 }
 
 hr {
   border-top: 1px solid #eee;
-  margin: 19px 0 20px 0;
+  margin: 21px 0 22px 0;
 }
 
 /* Layout (margins, padding) */
 
 pre {
-  padding: 20px;
-  line-height: 20px;
-  margin: 20px 0;
+  padding: 22px;
+  line-height: 22px;
+  margin: 22px 0;
 }
 
-p, .header { margin-bottom: 20px; }
+p, .header { margin-bottom: 22px; }
 
 ul {
   list-style: none;
 }
 
 ul, ol {
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left: 22px;
+  margin-bottom: 22px;
 }
 
 /* Typography */
@@ -52,14 +52,15 @@ body {
   text-rendering: optimizeLegibility;
   color: #373837;
   font-family: Palatino, "Palatino Linotype", serif;
-  text-shadow: 0 0 1px #fff;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 20px;
+  text-shadow: 0 0 0 transparent;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 22px;
 }
 
 pre {
   font-family: Monaco, Monospace;
+  font-size: 14px;
 }
 
 h1, h2, h3 {
@@ -67,9 +68,9 @@ h1, h2, h3 {
   padding: 0;
 }
 
-h1 { font-size: 25px; line-height: 40px; }
-h2 { font-size: 20px; line-height: 40px; }
-h3 { font-size: 16px; line-height: 20px; }
+h1 { font-size: 30px; line-height: 44px; }
+h2 { font-size: 22px; line-height: 44px; }
+h3 { font-size: 18px; line-height: 22px; }
 
 /* Syntax Highlighting */
 .highlight .hll { background-color: #ffffcc }
