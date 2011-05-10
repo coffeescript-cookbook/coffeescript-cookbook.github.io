@@ -7,7 +7,7 @@ We want you to write recipes and make the site better!
 Contributing
 -----------
 
-Here’s the Contribution Recipe:
+You can find details about contributing [on the site](http://coffeescriptcookbook.com/contributing). For now here is a simple formula:
 
 1. Fork the repository at [GitHub](http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com)
 2. Do awesomeness!
