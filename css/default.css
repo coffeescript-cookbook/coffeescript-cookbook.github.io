@@ -19,7 +19,7 @@ a, .header a:visited {
 
 a:hover {
   text-decoration: underline;
-  text-shadow: 0 0 1px #DCEEF5;
+  text-shadow: 0 0 0 #DCEEF5;
 }
 
 hr {
@@ -52,7 +52,7 @@ body {
   text-rendering: optimizeLegibility;
   color: #373837;
   font-family: Palatino, "Palatino Linotype", serif;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 0 0 0 transparent;
   font-size: 14px;
   line-height: 20px;
   margin: 20px;
