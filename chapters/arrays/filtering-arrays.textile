@@ -10,7 +10,16 @@ You want to be able to filter arrays based on a boolean condition.
 
 h2. Solution
 
-Extend the Array prototype to add a filter function which will take a callback and perform a comprension over itself, collecting all elements for which the callback is true.
+Use Array.filter (ECMAScript 5):
+
+{% highlight coffeescript %}
+array = [1..10]
+
+array.filter (x) -> x > 5
+# => [6,7,8,9,10]
+{% endhighlight %}
+
+In pre-EC5 implementations, extend the Array prototype to add a filter function which will take a callback and perform a comprension over itself, collecting all elements for which the callback is true.
 
 {% highlight coffeescript %}
 # Extending Array's prototype
