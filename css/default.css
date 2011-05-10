@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+article, header, section, footer {
+  display: block;
+}
+
 /* Colors */
 
 a, .header a:visited {
@@ -22,9 +26,12 @@ a:hover {
   text-shadow: 0 0 0 #DCEEF5;
 }
 
-hr {
+footer {
   border-top: 1px solid #eee;
+  padding-top: 22px;
   margin: 21px 0 22px 0;
+  color: #888;
+  font-size: 14px;
 }
 
 /* Layout (margins, padding) */
@@ -35,7 +42,7 @@ pre {
   margin: 22px 0;
 }
 
-p, .header { margin-bottom: 22px; }
+p, header, section { margin-bottom: 22px; }
 
 ul {
   list-style: none;

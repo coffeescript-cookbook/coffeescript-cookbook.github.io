@@ -5,20 +5,21 @@
     <link rel="stylesheet" href="/css/default.css" type="text/css">
   </head>
   <body>
-  <div class="header">
-    <h1><a href="/">CoffeeScript Cookbook</a></h1>
-    <a href="/chapters">Chapter Index</a> |
-    <a href="/contributing">Contributing</a> |
-    <a href="/authors">Authors</a> |
-    <a href="/license">License</a>
-  </div>
-
-<h1>Chapter: {{ page.title }}</h1>
-  
-{{ content }}
-  <hr />
-<p>Don't see the recipe you want? Add it yourself by reading the <a href="/contributing">Contributor's Guide</a>, or request it by adding it to <a href="/wanted-recipes">Wanted Recipes</a>.</p>
-<p><a href="/license"><img border="0" src="/images/cc_by_badge.png"></a></p>
-</body>
+    <header>
+      <h1><a href="/">CoffeeScript Cookbook</a></h1>
+      <a href="/chapters">Chapter Index</a> |
+      <a href="/contributing">Contributing</a> |
+      <a href="/authors">Authors</a> |
+      <a href="/license">License</a>
+    </header>
+    <section class="content">
+      <h2>{{ page.title }}</h2>
+      {{ content }}
+    </section>
+    <footer>
+      <p>Don't see the recipe you want? Add it yourself by reading the <a href="/contributing">Contributor's Guide</a>, or request it by adding it to <a href="/wanted-recipes">Wanted Recipes</a>.</p>
+      <a href="/license"><img src="/images/cc_by_badge.png" /></a>
+    </footer>
+  </body>
 </html>
 
