@@ -14,7 +14,7 @@ Here’s the Contribution Recipe:
 3. Send a pull request to [coffeescript-cookbook](http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com)
 4. If we merge your pull request, you get commit access. BAM. Go back to step 2 and stay there as long as you want.
 
-Here are some relevent links from the site.
+Here are some relevant links from the site.
 
 * [Contributing](http://coffeescriptcookbook.com/contributing)
 * [Recipe Template](http://coffeescriptcookbook.com/recipe-template)
