@@ -1,0 +1,22 @@
+---
+layout: recipe
+title: Max Array Value
+chapter: Arrays
+---
+
+h2. Problem
+
+You need to find the largest value contained in an array
+
+h2. Solution
+
+Use javascript's Math.max, along with a for loop
+
+{% highlight coffeescript %}
+max = Math.max(max or= num, num) for num in [12,32,11,67,1,3]
+# => 67
+{% endhighlight %}
+
+h2. Discussion
+
+or= takes care of the initial assignment
