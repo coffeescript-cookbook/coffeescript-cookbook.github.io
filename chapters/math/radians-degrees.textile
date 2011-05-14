@@ -20,7 +20,7 @@ radiansToDegrees = (radians) ->
 radiansToDegrees(1)
 # => 57.29577951308232
 
-# To convert from degrees to radians (Answer is for 1)
+# To convert from degrees to radians
 degreesToRadians = (degrees) ->
     radians = degrees * Math.PI / 180
 

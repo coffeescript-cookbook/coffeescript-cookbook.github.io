@@ -19,7 +19,6 @@ h2. Objects
 
 h2. Strings
 
-* Find a substring in a string  # not by regex! JS indexOf(), lastIndexOf()
 * HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
 * Splitting a string # JS "foo bar baz".split ' ' # => [ 'foo', 'bar', 'baz' ]
 * substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
