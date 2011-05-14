@@ -17,9 +17,15 @@ Use Javascript's Math.PI and a simple formula to convert between the two.
 radiansToDegrees = (radians) ->
     degrees = radians * 180 / Math.PI
 
-# To convert from degrees to radians
+radiansToDegrees(1)
+# => 57.29577951308232
+
+# To convert from degrees to radians (Answer is for 1)
 degreesToRadians = (degrees) ->
     radians = degrees * Math.PI / 180
+
+degreesToRadians(1)
+# => 0.017453292519943295
 {% endhighlight %}
 
 h2. Discussion

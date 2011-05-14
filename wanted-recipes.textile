@@ -59,7 +59,6 @@ h2. Dates and Times
 
 h2. Math
 
-* Converting between degrees and radians
 * square root # JS Math.sqrt
 * Constants # JS Math.PI, Math.E
 * floor, ceil, round # JS Math.floor, Math.ceil, Math.round
