@@ -1,0 +1,27 @@
+---
+layout: recipe
+title: Using Heregexes
+chapter: Regular Expressions
+---
+
+h2. Problem
+
+You need to write a complex regular expression.
+
+h2. Solution
+
+Use Coffeescript's "heregexes" -- extended regular expressions that ignore internal whitespace and can contain comments.
+
+{% highlight coffeescript %}
+pattern = ///
+  ^\(?(\d{3})\)? # Capture area code, ignore optional parens
+  [-\s]?(\d{3})  # Capture prefix, ignore optional dash or space
+  -?(\d{4})      # Capture line-number, ignore optional dash
+///
+[area_code, prefix, line] = "(555)123-4567".match(pattern)[1..3]
+# => ['555', '123', '4567']
+{% endhighlight %}
+
+h2. Discussion
+
+Breaking up your complex regular expressions and commenting key sections makes them a lot more decipherable and maintainable. For example, changing this regex to allow an optional space between the prefix and line number would now be fairly obvious.
