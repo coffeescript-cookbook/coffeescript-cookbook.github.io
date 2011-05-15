@@ -8,7 +8,7 @@
    <header>
       <h1>
         <a href="/">CoffeeScript Cookbook</a> &raquo;
-        <a href="/chapters/{{ page.chapter | downcase }}">{{ page.chapter }}</a> &raquo;
+        <a href="/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}">{{ page.chapter }}</a> &raquo;
         {{ page.title }}
       </h1>
       <a href="/chapters">Chapter Index</a> |
