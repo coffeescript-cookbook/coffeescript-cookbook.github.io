@@ -6,7 +6,7 @@ chapter: Arrays
 
 h2. Problem
 
-You need to find the largest value contained in an array
+You need to find the largest value contained in an array.
 
 h2. Solution
 
