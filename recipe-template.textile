@@ -18,9 +18,11 @@ h2. Problem
 
 You have a problem.
 
+
 h2. Solution
 
 Do this about it.
+
 
 h2. Discussion
 
