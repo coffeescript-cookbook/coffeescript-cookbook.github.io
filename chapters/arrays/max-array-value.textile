@@ -10,7 +10,7 @@ You need to find the largest value contained in an array.
 
 h2. Solution
 
-In ECMAScript 5, use <tt>Array.reduce</tt>. In older javascripts, use Math.max over a list comprehension:
+In ECMAScript 5, use <tt>Array#reduce</tt>. In older javascripts, use Math.max over a list comprehension:
 
 {% highlight coffeescript %}
 # ECMAScript 5
