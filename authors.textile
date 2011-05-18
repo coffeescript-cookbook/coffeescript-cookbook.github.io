@@ -11,6 +11,7 @@ _The following people are totally rad and awesome because they have contributed 
 * John Ford _jwford@gmail.com_
 * Steven Reid _steven @ reidnorthwest . com_
 * David Moulton _dave@themoultons.net_
+* Sebastian Slomski _sebastian@simple-systems.org_
 * ...You! What are you waiting for? Check out the <a href="/contributing">contributing</a> section and get cracking!
 
 

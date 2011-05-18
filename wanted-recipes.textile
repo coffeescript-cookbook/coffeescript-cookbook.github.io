@@ -10,12 +10,10 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 
 h2. Syntax
 
-* list comp gotcha: y = x for x in [1..3]; y # => 3; but y = (x for x in [1..3]); y # => [ 1, 2, 3 ]
 * Ensuring variables are closed over # with "do"
 
 h2. Objects
-
-* cloning an object (see http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-a-javascript-object ) -- snag both the generic JS version, port to CS, also snag the jQuery version and port to CS+jQ.
+* Chaning the methods of an object
 
 h2. Strings
 
@@ -26,6 +24,7 @@ h2. Strings
 * Uppercasing a string # JS toUpperCase()
 * Lowercasing a string # JS toLowerCase()
 * Replacing substrings
+* Trimming whitespace from the end of a string
 
 h2. Arrays
 
@@ -46,6 +45,8 @@ evens.every even
 * Filtering arrays # [1..10.filter (x) -> x % 2 == 0 # => [ 2, 4, 6, 8, 10 ]
 * Detecting presence of matching items in an array # [1..10].some (x) -> x % 2 == 0 # => true
 * Processing an array item by item # [10..1].forEach (x) -> console.log x # => nothing;, but a countdown is displayed on the console
+* Creating a string from an array
+* Replace all duplicates of an array
 
 h2. Dates and Times
 
@@ -53,6 +54,7 @@ h2. Dates and Times
 * Holidays: Calculating Easter
 * Holidays: Calculating US Thanksgiving
 * Holidays: Calculating CA Thanksgiving
+* Number of days between two dates
 
 h2. Math
 
@@ -63,6 +65,7 @@ h2. Math
 * Logarithms # Math.log
 * Finding the base-n log # Math.log(num) / Math.log(base)
 * Exponents # Math.exp
+* Check if a creditcard is valid (checksum, Luhn algorithm)
 
 h2. Functions
 
@@ -105,7 +108,6 @@ console.log [1,2,3,4,5].map (x) ->
 
 h2. jQuery
 
-* Callback bindings # using => instead of ->
 * jQuery AJAX from CS
 
 h2. Regular Expressions
@@ -113,10 +115,12 @@ h2. Regular Expressions
 * Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]
 * Searching for substrings # "foo bar baz".search(/ba./) # => 4
 * Replacing substrings # "foo bar baz".replace( /ba./, 'foo') # => "foo foo baz"
+* Replace HTML tags with named HTML entities # <br/> => &lt;br/&gt;
 
 h2. AJAX
 
 * Getting data from a remote server # using raw XHTTPRequest instead of jQuery's $.ajax
 
+h2. Design patterns
 
-
+* Singleton pattern
