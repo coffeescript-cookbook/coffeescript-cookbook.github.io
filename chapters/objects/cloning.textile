@@ -6,7 +6,7 @@ chapter: Objects
 
 h2. Problem
 
-You want to clone an object with all its sub-objects
+You want to clone an object with all its sub-objects.
 
 h2. Solution
 
@@ -36,16 +36,13 @@ console.log x.foo isnt y.foo, x.foo, y.foo
 
 h2. Discussion
 
-The difference between copying an object through assignement and through this
-clone-function is how they handle references.
-The assignement only copies the object's reference, whereas the clone-function
-creates a complete new object by
+The difference between copying an object through assignment and through this clone-function is how they handle references. The assignment only copies the object's reference, whereas the clone-function creates a complete new object by
+
 * creating a new object like the source object,
 * copying all attributes form the source object to the new object and
-* repeating these steps for all sub-objects by calling the clone-function
-  recursively.
+* repeating these steps for all sub-objects by calling the clone-function recursively.
 
-Example of an assignement copy:
+Example of an assignment copy:
 {% highlight coffeescript %}
 x =
   foo: 'bar'
