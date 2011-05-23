@@ -142,3 +142,85 @@ h3 { font-size: 18px; line-height: 22px; }
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+/* Recipe Card Styles */
+
+  section.recipe_card{
+    width:960px;
+    margin:auto;
+    color:#000;
+    box-shadow:1px 1px 3px #000;
+  }
+
+
+/* lazily pushing recipe content from edges */
+    .recipe > *{
+      padding:0 15px;
+    }
+
+.recipe_card .title{
+  border-bottom:2px solid #fcabbd;
+  text-align: center;
+}
+
+.recipe h2{
+  line-height:40px;
+  margin-bottom:5px;
+}
+
+.recipe p{
+  margin-bottom: 35px;
+}
+
+/* fixes formating after highlights and paragraphs*/
+  .highlight + h2{
+    margin-top:-5px;
+  }
+
+  .recipe p + p{
+    padding-top:5px;
+  }
+
+
+/* pre stylings should be changed on line 39 */
+  .recipe pre{
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 55px;
+    line-height:40px;
+  }
+
+/* creates ruled paper effect */
+/* adapted from code by Jeffrey Way (jeffrey-way.com)*/
+  section.recipe{
+    padding-top:10px;
+    line-height:40px;
+  
+    background: 
+  		-webkit-gradient(
+  			linear,
+  			left top, left bottom,
+  			from(#dbe6da),
+  			color-stop(4%, #ffffff)
+  		);
+		
+  	background: 
+  		-moz-repeating-linear-gradient(
+  			top,
+  			#ffffff,
+  			#ffffff 38px,
+  			#dbe6da 40px
+  		);
+		
+  	background: 
+  		repeating-linear-gradient(
+  			top,
+  			#ffffff,
+  			#ffffff 38px,
+  			#dbe6da 40px
+  		);		
+		
+  	-webkit-background-size: 100% 40px;
+  }
