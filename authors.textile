@@ -10,6 +10,7 @@ _The following people are totally rad and awesome because they have contributed 
 * David Brady _ratgeyser@gmail.com_
 * John Ford _jwford@gmail.com_
 * Steven Reid _steven @ reidnorthwest . com_
+* Aaron Weinberger _aw9994@cs.ship.edu_
 * ...You! What are you waiting for? Check out the <a href="/contributing">contributing</a> section and get cracking!
 
 
