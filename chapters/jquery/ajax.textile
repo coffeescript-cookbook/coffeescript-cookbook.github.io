@@ -40,4 +40,4 @@ $(document).ready ->
 
 h2. Discussion
 
-See the "jQuery AJAX API":http://api.jquery.com/jQuery.ajax/ for additional methods and options.
+The jQuery and $ variables can be used interchangeably. See also "Callback bindings":../jquery/callback-bindings-jquery.
