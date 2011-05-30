@@ -108,7 +108,7 @@ console.log [1,2,3,4,5].map (x) ->
 
 h2. jQuery
 
-* jQuery AJAX from CS
+* 
 
 h2. Regular Expressions
 
