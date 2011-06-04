@@ -1,0 +1,54 @@
+---
+layout: recipe
+title: Builder Pattern
+chapter: Design Patterns
+---
+
+h2. Problem
+
+You need to prepare a complicated, multi-part object, more than once or with varying configurations.
+
+h2. Solution
+
+Create a Builder to encapsulate the production process.
+{% highlight coffeescript %}
+TodoTxtBuilder = (defaultParameters={ }) ->
+    date: new Date(defaultParameters.date) or new Date
+    contexts: defaultParameters.contexts or [ ]
+    projects: defaultParameters.projects or [ ]
+    priority: defaultParameters.priority or undefined
+    
+    newTodo: (description, parameters={ }) ->
+        date = (parameters.date and new Date(parameters.date)) or this.date
+        contexts = this.contexts.concat(parameters.contexts or [ ])
+        projects = this.projects.concat(parameters.projects or [ ])
+        priorityLevel = parameters.priority or this.priority
+        
+        createdAt = [date.getFullYear(), date.getMonth()+1, date.getDate()].join("-")
+        contextNames = ("@" + context for context in contexts).join(" ")
+        projectNames = ("+" + project for project in projects).join(" ")
+        priority = if priorityLevel then "(" + priorityLevel + ")" else ""
+        
+        [priority, createdAt, description, contextNames, projectNames].reduce (whole, part) ->
+            if part then (whole and whole + " ") + part else whole
+
+builder = new TodoTxtBuilder({date: "10/13/2011"})
+
+builder.newTodo "Wash laundry"
+
+# => 2011-10-13 Wash laundry
+
+builder = new TodoTxtBuilder({date: "10/13/2011", contexts: ["work"]})
+
+builder.newTodo "Show the new design pattern to Sean", {contexts: ["desk", "xpSession"]}
+
+# => '2011-10-13 Show the new design pattern to Sean @work @desk @xpSession'
+
+builder.newTodo "Remind Lucy about the failing unit tests", {contexts: ["meeting"], projects: ["compilerRefactor"], priority: 'A'}
+
+# => '(A) 2011-10-13 Remind Lucy about the failing unit tests @work @meeting +compilerRefactor'
+{% endhighlight %}
+
+h2. Discussion
+Based on the <a href="http://todotxt.com">Todo.txt</a> format, the TodoTxtBuilder class takes care of all the heavy lifting of text generation and lets the programmer focus on the unique elements of each todo item.  A command line tool tool or GUI could plug into this code and retain support for later, more advanced versions of the format with ease.
+
