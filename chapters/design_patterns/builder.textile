@@ -36,13 +36,13 @@ builder.newTodo "Wash laundry"
 
 # => 2011-10-13 Wash laundry
 
-builder = new TodoTxtBuilder(date: "10/13/2011", contexts: ["work"])
+workBuilder = new TodoTxtBuilder(date: "10/13/2011", contexts: ["work"])
 
-builder.newTodo "Show the new design pattern to Sean", contexts: ["desk", "xpSession"]
+workBuilder.newTodo "Show the new design pattern to Sean", contexts: ["desk", "xpSession"]
 
 # => '2011-10-13 Show the new design pattern to Sean @work @desk @xpSession'
 
-builder.newTodo "Remind Lucy about the failing unit tests", contexts: ["meeting"], projects: ["compilerRefactor"], priority: 'A'
+workBuilder.newTodo "Remind Lucy about the failing unit tests", contexts: ["meeting"], projects: ["compilerRefactor"], priority: 'A'
 
 # => '(A) 2011-10-13 Remind Lucy about the failing unit tests @work @meeting +compilerRefactor'
 
@@ -51,3 +51,34 @@ builder.newTodo "Remind Lucy about the failing unit tests", contexts: ["meeting"
 h2. Discussion
 
 Based on the <a href="http://todotxt.com">Todo.txt</a> format, the TodoTxtBuilder class takes care of all the heavy lifting of text generation and lets the programmer focus on the unique elements of each todo item.  A command line tool tool or GUI could plug into this code and retain support for later, more advanced versions of the format with ease.
+
+h3. Pre-Construction
+
+Instead of creating a new instance of the needed object from scratch every time, we shift the burden to a separate object that we can then tweak during the object creation process.
+
+{% highlight coffeescript %}
+builder = new TodoTxtBuilder(date: "10/13/2011")
+
+builder.newTodo "Order new netbook"
+
+# => '2011-10-13 Order new netbook'
+
+builder.projects.push "summerVacation"
+
+builder.newTodo "Buy suntan lotion"
+
+# => '2011-10-13 Buy suntan lotion +summerVacation'
+
+builder.contexts.push "phone"
+
+builder.newTodo "Order tickets"
+
+# => '2011-10-13 Order tickets @phone +summerVacation'
+
+delete builder.contexts[0]
+
+builder.newTodo "Fill gas tank"
+
+# => '2011-10-13 Fill gas tank +summerVacation'
+{% endhighlight %}
+
