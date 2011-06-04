@@ -30,19 +30,19 @@ TodoTxtBuilder = (defaultParameters={ }) ->
         [priority, createdAt, description, contextNames, projectNames].reduce (whole, part) ->
             if part then (whole and whole + " ") + part else whole
 
-builder = new TodoTxtBuilder({date: "10/13/2011"})
+builder = new TodoTxtBuilder(date: "10/13/2011")
 
 builder.newTodo "Wash laundry"
 
 # => 2011-10-13 Wash laundry
 
-builder = new TodoTxtBuilder({date: "10/13/2011", contexts: ["work"]})
+builder = new TodoTxtBuilder(date: "10/13/2011", contexts: ["work"])
 
-builder.newTodo "Show the new design pattern to Sean", {contexts: ["desk", "xpSession"]}
+builder.newTodo "Show the new design pattern to Sean", contexts: ["desk", "xpSession"]
 
 # => '2011-10-13 Show the new design pattern to Sean @work @desk @xpSession'
 
-builder.newTodo "Remind Lucy about the failing unit tests", {contexts: ["meeting"], projects: ["compilerRefactor"], priority: 'A'}
+builder.newTodo "Remind Lucy about the failing unit tests", contexts: ["meeting"], projects: ["compilerRefactor"], priority: 'A'
 
 # => '(A) 2011-10-13 Remind Lucy about the failing unit tests @work @meeting +compilerRefactor'
 
