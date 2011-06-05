@@ -14,7 +14,7 @@ h2. Solution
 Use the Decorator pattern to structure the application of changes.
 
 {% highlight coffeescript %}
-MiniMarkdown = (line) ->
+miniMarkdown = (line) ->
     if match = line.match /^(#+)\s*(.*)$/
         headerLevel = match[1].length
         headerText = match[2]
@@ -25,7 +25,7 @@ MiniMarkdown = (line) ->
         else
             ''
 
-StripComments = (line) ->
+stripComments = (line) ->
     line.replace /\s*\/\/.*$/, ''
 
 TextProcessor = (processors) ->
@@ -48,7 +48,7 @@ exampleText = '''
               A line // with a comment
               '''
 
-processor = new TextProcessor [StripComments, MiniMarkdown]
+processor = new TextProcessor [stripComments, miniMarkdown]
 
 processor.processString exampleText
 
@@ -57,9 +57,9 @@ processor.processString exampleText
 
 h2. Discussion
 
-With the TextProcessor object ready to wrangle all of the text processors together, the miniMarkdown, stripComments, and any future functions can focus exclusively on handling nothing but a single line of text.  Future developers only have to write functions that return a string and add it to the array of processors in order to partake in the process.
+The TextProcessor serves the role of Decorator and binds the individual, specialized text processors together.  This frees up the miniMarkdown, stripComments, and any future components to focus on handling nothing but a single line of text.  Future developers only have to write functions that return a string and add it to the array of processors.
 
-We can even modify the existing Decorator object on the fly:
+We can even modify the existing Decorator object on the fly.  We could add a processor for transforming text smilies into images, for example, but only when the end user enables the feature:
 
 {% highlight coffeescript %}
 smilies =
@@ -70,12 +70,16 @@ smilies =
 
 smilieExpander = (line) ->
     if line
-        (line = line.replace symbol, "{#{text}}") for symbol, text of smilies
+        (line = line.replace symbol, "<img src='#{text}.png' alt='#{text}' />") for symbol, text of smilies
     line
 
 processor.processors.unshift smilieExpander
 
 processor.processString "# A header that makes you :) // you may even laugh"
 
-# => '<h1>A header that makes you {smile}</h1>'
+# => "<h1>A header that makes you <img src='smile.png' alt='smile' /></h1>"
+
+processor.processors.shift()
+
+# => "<h1>A header that makes you :)</h1>"
 {% endhighlight %}
