@@ -1,0 +1,76 @@
+---
+layout: recipe
+title: Strategy Pattern
+chapter: Design Patterns
+---
+
+h2. Problem
+
+You have more than one way to solve a problem but you need to choose (or even switch) between them at run time.
+
+h2. Solution
+
+Encapsulate your algorithms inside of Strategy objects.
+
+Given an unsorted list, for example, we can change the sorting algorithm under different circumstances.
+
+{% highlight coffeescript %}
+StringSorter = (algorithm) ->
+    algorithm: algorithm
+    sort: (list) ->
+    	this.algorithm list
+
+bubbleSort = (list) ->
+    anySwaps = false
+    swapPass = ->
+        for r in [0..list.length-1]
+            if list[r] > list[r+1]
+                anySwaps = true
+                [list[r], list[r+1]] = [list[r+1], list[r]]
+    
+    swapPass()
+    while anySwaps
+        anySwaps = false
+        swapPass()
+    list
+
+reverseBubbleSort = (list) ->
+    anySwaps = false
+    swapPass = ->
+        for r in [list.length-1..1]
+            if list[r] < list[r-1]
+                anySwaps = true
+                [list[r], list[r-1]] = [list[r-1], list[r]]
+    
+    swapPass()
+    while anySwaps
+        anySwaps = false
+        swapPass()
+    list
+
+sorter = new StringSorter bubbleSort
+
+unsortedList = ['e', 'b', 'd', 'c', 'x', 'a']
+
+sorter.sort unsortedList
+
+# => ['a', 'b', 'c', 'd', 'e', 'x']
+
+unsortedList.push 'w'
+
+# => ['a', 'b', 'c', 'd', 'e', 'x', 'w']
+
+sorter.algorithm = reverseBubbleSort
+
+sorter.sort unsortedList
+
+# => ['a', 'b', 'c', 'd', 'e', 'w', 'x']
+{% endhighlight %}
+
+h2. Discussion
+
+Like a skilled general, we must prepare to change our plans under constantly-changing circumstances.  At the end of the example, we know that only the newest item in the array is out of order.  We can then speed the sort up by switching to an algorithm that starts from the end of the array.
+
+h3. Exercises
+
+* Expand StringSorter into an AlwaysSortedArray class that implements all of the functionality of a regular array but which automatically sorts new items based on the method of insertion (e.g. push vs. shift).

@@ -147,7 +147,6 @@ h2. Design patterns
 ** Memento
 ** Observer
 ** State
-** Strategy
 ** Template Method
 ** Visitor
 
