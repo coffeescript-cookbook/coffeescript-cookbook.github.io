@@ -6,7 +6,7 @@ chapter: Design Patterns
 
 h2. Problem
 
-You have more than one way to solve a problem but you need to choose (or even switch) between them at run time.
+You have more than one way to solve a problem but you need to choose (or even switch) between these methods at run time.
 
 h2. Solution
 
@@ -69,7 +69,7 @@ sorter.sort unsortedList
 
 h2. Discussion
 
-Like a skilled general, we must prepare to change our plans under constantly-changing circumstances.  At the end of the example, we know that only the newest item in the array is out of order.  We can then speed the sort up by switching to an algorithm that starts from the end of the array.
+"No plan survives first contact with the enemy", nor users, but we can use the knowledge gained from changing circumstances to adapt.  Near the end of the example, for instance, the newest item in the array now lies out of order.  Knowing that detail, we can then speed the sort up by switching to an algorithm optimized for that exact scenario with nothing but a simple reassignment.
 
 h3. Exercises
 

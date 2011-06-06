@@ -133,7 +133,6 @@ h2. Design patterns
 ** Adapter
 ** Bridge
 ** Composite
-** Decorator
 ** Facade
 ** Flyweight
 ** Proxy

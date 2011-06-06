@@ -8,10 +8,9 @@ h2. Problem
 
 You have a set of data that you need to process in multiple, possibly varying ways.
 
-
 h2. Solution
 
-Use the Decorator pattern to structure the application of changes.
+Use the Decorator pattern in order to structure how you apply the changes.
 
 {% highlight coffeescript %}
 miniMarkdown = (line) ->
@@ -26,7 +25,7 @@ miniMarkdown = (line) ->
             ''
 
 stripComments = (line) ->
-    line.replace /\s*\/\/.*$/, ''
+    line.replace /\s*\/\/.*$/, '' # Removes one-line, double-slash C-style comments
 
 TextProcessor = (processors) ->
     processors: processors
@@ -55,11 +54,21 @@ processor.processString exampleText
 # => "<h1>A level 1 header</h1>\n<p>A regular line</p>\n\n<h2>A level 2 header</h2>\n<p>A line</p>"
 {% endhighlight %}
 
+h3. Results
+
+{% highlight html %}
+<h1>A level 1 header</h1>
+<p>A regular line</p>
+
+<h2>A level 1 header</h2>
+<p>A line</p>
+{% endhighlight %}
+
 h2. Discussion
 
-The TextProcessor serves the role of Decorator and binds the individual, specialized text processors together.  This frees up the miniMarkdown, stripComments, and any future components to focus on handling nothing but a single line of text.  Future developers only have to write functions that return a string and add it to the array of processors.
+The TextProcessor serves the role of Decorator by binding the individual, specialized text processors together.  This frees up the miniMarkdown and stripComments components to focus on handling nothing but a single line of text.  Future developers only have to write functions that return a string and add it to the array of processors.
 
-We can even modify the existing Decorator object on the fly.  We could add a processor for transforming text smilies into images, for example, but only when the end user enables the feature:
+We can even modify the existing Decorator object on the fly:
 
 {% highlight coffeescript %}
 smilies =
