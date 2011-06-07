@@ -15,11 +15,12 @@ Create a Builder to encapsulate the object production process.
 The <a href="http://todotxt.com">Todo.txt</a> format provides an advanced but still plain-text method for maintaining lists of to-do items.  Typing out each item by hand would provide exhausting and error-prone, however, so a TodoTxtBuilder class could save us the trouble:
 
 {% highlight coffeescript %}
-TodoTxtBuilder = (defaultParameters={ }) ->
-    date: new Date(defaultParameters.date) or new Date
-    contexts: defaultParameters.contexts or [ ]
-    projects: defaultParameters.projects or [ ]
-    priority: defaultParameters.priority or undefined
+class TodoTxtBuilder
+    constructor: (defaultParameters={ }) ->
+        @date = new Date(defaultParameters.date) or new Date
+        @contexts = defaultParameters.contexts or [ ]
+        @projects = defaultParameters.projects or [ ]
+        @priority =  defaultParameters.priority or undefined
     newTodo: (description, parameters={ }) ->
         date = (parameters.date and new Date(parameters.date)) or @date
         contexts = @contexts.concat(parameters.contexts or [ ])
