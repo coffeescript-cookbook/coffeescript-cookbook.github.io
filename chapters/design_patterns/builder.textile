@@ -26,17 +26,17 @@ TodoTxtBuilder = (defaultParameters={ }) ->
         projects = @projects.concat(parameters.projects or [ ])
         priorityLevel = parameters.priority or @priority
         createdAt = [date.getFullYear(), date.getMonth()+1, date.getDate()].join("-")
-        contextNames = ("@#{context}" for context in contexts).join(" ")
-        projectNames = ("+#{project}" for project in projects).join(" ")
+        contextNames = ("@#{context}" for context in contexts when context).join(" ")
+        projectNames = ("+#{project}" for project in projects when project).join(" ")
         priority = if priorityLevel then "(#{priorityLevel})" else ""
-        [priority, createdAt, description, contextNames, projectNames].reduce (whole, part) ->
-            if part then (whole and whole + " ") + part else whole
+        todoParts = [priority, createdAt, description, contextNames, projectNames]
+        (part for part in todoParts when part.length > 0).join " "
 
 builder = new TodoTxtBuilder(date: "10/13/2011")
 
 builder.newTodo "Wash laundry"
 
-# => 2011-10-13 Wash laundry
+# => '2011-10-13 Wash laundry'
 
 workBuilder = new TodoTxtBuilder(date: "10/13/2011", contexts: ["work"])
 
