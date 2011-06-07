@@ -15,8 +15,7 @@ Encapsulate your algorithms inside of Strategy objects.
 Given an unsorted list, for example, we can change the sorting algorithm under different circumstances.
 
 {% highlight coffeescript %}
-StringSorter = (algorithm) ->
-    algorithm: algorithm
+StringSorter = (@algorithm) ->
     sort: (list) ->
         @algorithm list
 
