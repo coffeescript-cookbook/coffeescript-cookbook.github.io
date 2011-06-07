@@ -35,9 +35,9 @@ TextProcessor = (processors) ->
         else
             existing
     processLine: (text) ->
-        this.processors.reduce this.reducer, text
+        @processors.reduce @reducer, text
     processString: (text) ->
-        (this.processLine(line) for line in text.split("\n")).join("\n")
+        (@processLine(line) for line in text.split("\n")).join("\n")
 
 exampleText = '''
               # A level 1 header

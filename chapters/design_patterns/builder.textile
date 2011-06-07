@@ -21,10 +21,10 @@ TodoTxtBuilder = (defaultParameters={ }) ->
     projects: defaultParameters.projects or [ ]
     priority: defaultParameters.priority or undefined
     newTodo: (description, parameters={ }) ->
-        date = (parameters.date and new Date(parameters.date)) or this.date
-        contexts = this.contexts.concat(parameters.contexts or [ ])
-        projects = this.projects.concat(parameters.projects or [ ])
-        priorityLevel = parameters.priority or this.priority
+        date = (parameters.date and new Date(parameters.date)) or @date
+        contexts = @contexts.concat(parameters.contexts or [ ])
+        projects = @projects.concat(parameters.projects or [ ])
+        priorityLevel = parameters.priority or @priority
         createdAt = [date.getFullYear(), date.getMonth()+1, date.getDate()].join("-")
         contextNames = ("@#{context}" for context in contexts).join(" ")
         projectNames = ("+#{project}" for project in projects).join(" ")

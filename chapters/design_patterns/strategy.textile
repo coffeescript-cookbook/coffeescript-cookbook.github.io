@@ -18,7 +18,7 @@ Given an unsorted list, for example, we can change the sorting algorithm under d
 StringSorter = (algorithm) ->
     algorithm: algorithm
     sort: (list) ->
-    	this.algorithm list
+        @algorithm list
 
 bubbleSort = (list) ->
     anySwaps = false
