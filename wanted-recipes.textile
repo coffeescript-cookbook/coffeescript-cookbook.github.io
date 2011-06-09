@@ -28,7 +28,6 @@ h2. Strings
 
 h2. Arrays
 
-* Using Arrays to Swap Variables # [x,y] = [y,x]
 * Reducing arrays to values (ruby inject) with reduce # [1..10].reduce (a,b) -> a+b # 55
 * Reducing arrays in reverse order # JS reduceRight 
 {% highlight coffeescript %}
