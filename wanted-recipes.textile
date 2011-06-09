@@ -13,7 +13,6 @@ h2. Syntax
 * Ensuring variables are closed over # with "do"
 
 h2. Objects
-* Chaning the methods of an object
 
 h2. Strings
 
