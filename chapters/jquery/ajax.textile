@@ -1,0 +1,33 @@
+---
+layout: recipe
+title: Ajax
+chapter: jQuery
+---
+
+h2. Problem
+
+You need to make an ajax request using jQuery.
+
+
+h2. Solution
+
+{% highlight coffeescript %}
+jQuery ->
+  console.log "document loaded"
+  $('form').submit (e) ->
+    console.log "form submit"
+    e.preventDefault()
+    form = this
+    
+    $.ajax
+      type: "POST"
+      url: $(form).attr('action')
+      data: $(form).serialize()
+      success: -> 
+        console.log("success")
+{% endhighlight %}
+
+
+h2. Discussion
+
+The jQuery and $ variables can be used interchangeably. See also "Callback bindings":../jquery/callback-bindings-jquery.
