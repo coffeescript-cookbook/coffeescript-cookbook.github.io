@@ -123,4 +123,30 @@ h2. AJAX
 
 h2. Design patterns
 
-* Singleton pattern
+* Creational Patterns
+** Abstract Factory
+** Factory Method
+** Prototype
+** Singleton
+
+* Structural Patterns
+** Adapter
+** Bridge
+** Composite
+** Facade
+** Flyweight
+** Proxy
+
+* Behavioral Patterns
+** Chain of Responsibility
+** Command
+** Interpreter
+** Iterator
+** Mediator
+** Memento
+** Observer
+** State
+** Template Method
+** Visitor
+
+
