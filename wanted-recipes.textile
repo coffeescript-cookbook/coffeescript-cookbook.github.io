@@ -107,8 +107,6 @@ console.log [1,2,3,4,5].map (x) ->
 
 h2. jQuery
 
-* jQuery AJAX from CS
-
 h2. Regular Expressions
 
 * Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]

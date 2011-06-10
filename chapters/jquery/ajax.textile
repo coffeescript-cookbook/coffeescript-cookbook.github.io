@@ -1,0 +1,43 @@
+---
+layout: recipe
+title: AJAX
+chapter: jQuery
+---
+
+h2. Problem
+
+You want to make AJAX calls using jQuery.
+
+h2. Solution
+
+{% highlight coffeescript %}
+$ ?= require 'jquery' # For Node.js compatibility
+
+$(document).ready ->
+	# Basic Examples
+	$.get '/', (data) ->
+		$('body').append "Successfully got the page."
+
+	$.post '/',
+		userName: 'John Doe'
+		favoriteFlavor: 'Mint'
+		(data) -> $('body').append "Successfully posted to the page."
+	
+	# Advanced Settings
+	$.ajax '/',
+		type: 'GET'
+		dataType: 'html' error: (jqXHR, textStatus, errorThrown) ->
+			$('body').append "AJAX Error: #{textStatus}"
+		success: (data, textStatus, jqXHR) ->
+			$('body').append "Successful AJAX call: #{data}"
+	
+	# For jQuery 1.5+
+	request = $.get '/'
+	request.success (data) -> $('body').append "Successfully got the page again."
+	request.error (jqXHR, textStatus, errorThrown) -> $('body').append "AJAX Error: ${textStatus}."
+
+{% endhighlight %}
+
+h2. Discussion
+
+See the "jQuery AJAX API":http://api.jquery.com/jQuery.ajax/ for additional methods and options.
