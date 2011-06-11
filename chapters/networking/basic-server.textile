@@ -1,0 +1,45 @@
+---
+layout: recipe
+title: Basic Server
+chapter: Networking
+---
+
+h2. Problem
+
+You want to provide a service over a network.
+
+
+h2. Solution
+
+Create a basic TCP server.
+
+h3. Node.js
+
+{% highlight coffeescript %}
+net = require 'net'
+
+domain = 'localhost'
+port = 9001
+
+server = net.createServer (socket) ->
+	console.log "Received connection from #{socket.remoteAddress}"
+	socket.write "Hello, World!\n"
+	socket.end()
+
+console.log "Listening to #{domain}:#{port}"
+server.listen port, domain
+{% endhighlight %}
+
+h3. Example Usage
+
+Accessed by the <a href="/chapters/networking/basic-client.html">Basic Client</a>:
+
+*$ coffee basic-server.coffee*
+Listening to localhost:9001
+Received connection from 127.0.0.1
+Received connection from 127.0.0.1
+[...]
+
+h2. Discussion
+
+See also the <a href="/chapters/networking/basic-client.html">Basic Client</a>, the <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server</a>, and the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client recipes</a>.

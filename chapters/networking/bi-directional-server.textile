@@ -1,0 +1,56 @@
+---
+layout: recipe
+title: Bi-Directional Server
+chapter: Networking
+---
+
+h2. Problem
+
+You want to provide a service over a network while maintaining a connection with clients.
+
+
+h2. Solution
+
+Create a bi-directional TCP server.
+
+h3. Node.js
+
+{% highlight coffeescript %}
+net = require 'net'
+
+domain = 'localhost'
+port = 9001
+
+server = net.createServer (socket) ->
+	console.log "New connection from #{socket.remoteAddress}"
+
+	socket.on 'data', (data) ->
+		console.log "#{socket.remoteAddress} sent: #{data}"
+		others = server.connections - 1
+		socket.write "You have #{others} #{others == 1 and "peer" or "peers"} on this server"
+
+console.log "Listening to #{domain}:#{port}"
+server.listen port, domain
+{% endhighlight %}
+
+h3. Example Usage
+
+Accessed by the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>:
+
+*$ coffee bi-directional-server.coffee*
+Listening to localhost:9001
+New connection from 127.0.0.1
+127.0.0.1 sent: Ping
+127.0.0.1 sent: Ping
+127.0.0.1 sent: Ping
+[...]
+
+h2. Discussion
+
+The bulk of the work lies in the _on 'data'_ handler, which processes all of the input from the client.
+
+See also the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>, the <a href="/chapters/networking/basic-client.html">Basic Client</a>, and the <a href="/chapters/networking/basic-server.html">Basic Server</a> recipes.
+
+h3. Exercises
+* Add support for choosing the target domain and port based on command-line arguments or from a configuration file.
+

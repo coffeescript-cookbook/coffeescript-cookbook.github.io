@@ -114,6 +114,11 @@ h2. Regular Expressions
 * Replacing substrings # "foo bar baz".replace( /ba./, 'foo') # => "foo foo baz"
 * Replace HTML tags with named HTML entities # <br/> => &lt;br/&gt;
 
+h2. Networking
+
+* Basic HTTP server
+* Basic HTTP client
+
 h2. AJAX
 
 * Getting data from a remote server # using raw XHTTPRequest instead of jQuery's $.ajax
