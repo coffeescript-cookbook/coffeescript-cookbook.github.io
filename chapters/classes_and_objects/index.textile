@@ -1,7 +1,7 @@
 ---
 layout: chapter
-title: Objects
-chapter: Objects
+title: Classes and Objects
+chapter: Classes and Objects
 ---
 
 {% capture url %}/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}{% endcapture %}
