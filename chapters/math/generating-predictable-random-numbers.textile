@@ -28,36 +28,21 @@ class Rand
     @seed = seed
 
   # return a random integer 0 <= n < @modulo
-  randn:
+  randn: ->
     # new_seed = (a * seed + c) % m
     @seed = (@multiplier*@seed + @offset) % @modulo
 
  # return a random float 0 <= f < 1.0
-  rand: ->
+  randf: ->
     this.randn() / @modulo
 
   # return a random int 0 <= f < n
-  randi: (n) ->
-    Math.floor(this.rand() * n)
+  rand: (n) ->
+    Math.floor(this.randf() * n)
 
- r = new Rand 0
-r.randn().toString(16)
-# => "3c6ef35f"
-
-r.randn().toString(16)
-# => "47502932"
-
-r.randn().toString(16)
-# => "d1ccf6e9"
-
-r.randn().toString(16)
-# => "aaf95334"
-
-r.randn().toString(16)
-# => "6252e503"
-
-r.randn().toString(16)
-# => "9f2ec686"
+  # return a random int min <= f < max
+  rand2: (min, max) ->
+    min + this.rand(max-min)
 {% endhighlight %}
 
 h2. Discussion
