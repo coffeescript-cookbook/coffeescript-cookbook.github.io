@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Create an object literal if it does not already exist
-chapter: Objects
+chapter: Classes and Objects
 ---
 
 h2. Problem
