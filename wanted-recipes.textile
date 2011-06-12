@@ -133,7 +133,6 @@ h2. Design patterns
 
 * Structural Patterns
 ** Adapter
-** Bridge
 ** Composite
 ** Facade
 ** Flyweight
