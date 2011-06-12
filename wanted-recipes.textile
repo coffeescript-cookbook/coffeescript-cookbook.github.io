@@ -145,7 +145,6 @@ h2. Design patterns
 ** Interpreter
 ** Iterator
 ** Mediator
-** Memento
 ** Observer
 ** State
 ** Template Method
