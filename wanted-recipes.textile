@@ -127,7 +127,6 @@ h2. Design patterns
 
 * Creational Patterns
 ** Abstract Factory
-** Factory Method
 ** Prototype
 ** Singleton
 
