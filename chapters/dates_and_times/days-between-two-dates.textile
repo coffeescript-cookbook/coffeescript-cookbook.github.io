@@ -1,0 +1,41 @@
+---
+layout: recipe
+title: Get Days Between two Dates
+chapter: Dates and Times
+---
+
+h2. Problem
+
+You need to find how much seconds minutes, hours, days, months or years has passed between two dates.
+
+h2. Solution
+
+Use JavaScript's Date function  getTime(). Which provides how much time in miliseconds has passed since 01/01/1970:
+
+{% highlight coffeescript %}
+DAY = 1000 * 60 * 60  * 24
+
+d1 = new Date('02/01/2011')
+d2 = new Date('02/06/2011')
+
+days_passed = Math.round((d2.getTime() - d1.getTime()) / DAY)
+{% endhighlight %}
+
+h2. Discussion
+
+Using miliseconds makes the life easier to avoid overflow mistakes with Dates. So we first calculate how much miliseconds has a day.
+Then, given two distincit dates, just get the diference in miliseconds betwen two dates and then divide by how much miliseconds has a 
+day. It will get you the days between two distinct dates.
+
+If you'd like to calculate the hours between two dates objects you can do that just by dividing the diference in miliseconds by the
+convertion of miliseconds to hours. The same goes to minutes and seconds.
+
+{% highlight coffeescript %}
+HOUR = 1000 * 60 * 60
+
+d1 = new Date('02/01/2011 02:20')
+d2 = new Date('02/06/2011 05:20')
+
+hour_passed = Math.round((d2.getTime() - d1.getTime()) / HOUR)
+{% endhighlight %}
+
