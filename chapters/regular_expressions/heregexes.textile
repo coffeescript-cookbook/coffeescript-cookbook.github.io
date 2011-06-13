@@ -25,3 +25,12 @@ pattern = ///
 h2. Discussion
 
 Breaking up your complex regular expressions and commenting key sections makes them a lot more decipherable and maintainable. For example, changing this regex to allow an optional space between the prefix and line number would now be fairly obvious.
+
+h3. Whitespace characters in heregexes
+
+Whitespace is ignored in heregexes -- so what do you do if you need to match a
+literal ASCII space?
+
+One solution is to use the @\s@ character class, which will match spaces, tabs
+and line breaks. If you only want to match a space, though, you'll need to use
+@\x20@ to denote a literal ASCII space.
