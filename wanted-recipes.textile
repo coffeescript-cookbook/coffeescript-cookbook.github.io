@@ -141,7 +141,6 @@ h2. Design patterns
 * Behavioral Patterns
 ** Chain of Responsibility
 ** Command
-** Interpreter
 ** Iterator
 ** Mediator
 ** Observer
