@@ -10,6 +10,14 @@
   margin: 0;
 }
 
+em {
+  font-style: italic;
+}
+
+code {
+  font-family: courier;
+}
+
 article, header, section, footer {
   display: block;
 }
