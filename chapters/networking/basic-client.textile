@@ -13,7 +13,7 @@ h2. Solution
 
 Create a basic TCP client.
 
-h3. Node.js
+h3. In Node.js
 
 {% highlight coffeescript %}
 net = require 'net'
@@ -35,10 +35,17 @@ h3. Example Usage
 
 Accessing the <a href="/chapters/networking/basic-server.html">Basic Server</a>:
 
-*$ coffee basic-client.coffee*
+{% highlight console %}
+$ coffee basic-client.coffee
 Opened connection to localhost:9001
 Received: Hello, World!
+{% endhighlight %}
 
 h2. Discussion
 
-See also the <a href="/chapters/networking/basic-server.html">Basic Server</a>, the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>, and the <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server recipes</a>.
+The most important work takes place in the _connection.on 'data'_ handler, where the client receives its response from the server and would most likely arrange for responses to it.
+
+See also the <a href="/chapters/networking/basic-server.html">Basic Server</a>, <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>, and <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server recipes</a>.
+
+h3. Exercises
+* Add support for choosing the target domain and port based on command-line arguments or from a configuration file.
