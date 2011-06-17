@@ -22,10 +22,7 @@ $(document).ready ->
 		userName: 'John Doe'
 		favoriteFlavor: 'Mint'
 		(data) -> $('body').append "Successfully posted to the page."
-{% endhighlight %}
 
-jQuery 1.5 and later have added a new, supplimental API for handling different callbacks.
-	
 	# Advanced Settings
 	$.ajax '/',
 		type: 'GET'
@@ -34,11 +31,14 @@ jQuery 1.5 and later have added a new, supplimental API for handling different c
 		success: (data, textStatus, jqXHR) ->
 			$('body').append "Successful AJAX call: #{data}"
 	
-	# For jQuery 1.5+
+{% endhighlight %}
+
+jQuery 1.5 and later have added a new, supplimental API for handling different callbacks.
+	
+{% highlight coffeescript %}
 	request = $.get '/'
 	request.success (data) -> $('body').append "Successfully got the page again."
 	request.error (jqXHR, textStatus, errorThrown) -> $('body').append "AJAX Error: ${textStatus}."
-
 {% endhighlight %}
 
 h2. Discussion
