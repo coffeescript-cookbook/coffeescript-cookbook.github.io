@@ -6,35 +6,15 @@ chapter: jQuery
 
 h2. Problem
 
-You need to make an AJAX request using jQuery.
+You want to make AJAX calls using jQuery.
 
 h2. Solution
 
 {% highlight coffeescript %}
-$ ?= require 'jquery' # Optional. For Node.js compatibility
+$ ?= require 'jquery' # For Node.js compatibility
 
-jQuery ->
-  console.log "document loaded"
-  $('form').submit (e) ->
-    console.log "form submit"
-    e.preventDefault()
-    form = this
-    
-    $.ajax
-      type: "POST"
-      url: $(form).attr('action')
-      data: $(form).serialize()
-      success: -> 
-        console.log("success")
-
-{% endhighlight %}
-
-h2. Discussion
-
-In addition to the Swiss Army knife of jQuery AJAX methods - _ajax()_ - the library also provides convenience methods for specific kinds of requests.  Note that the _jQuery_ and _$_ variables can be used interchangeably.
-
-{% highlight coffeescript %}
-$ ->
+$(document).ready ->
+	# Basic Examples
 	$.get '/', (data) ->
 		$('body').append "Successfully got the page."
 
@@ -46,10 +26,21 @@ $ ->
 
 jQuery 1.5 and later have added a new, supplimental API for handling different callbacks.
 	
-{% highlight coffeescript %}
+	# Advanced Settings
+	$.ajax '/',
+		type: 'GET'
+		dataType: 'html' error: (jqXHR, textStatus, errorThrown) ->
+			$('body').append "AJAX Error: #{textStatus}"
+		success: (data, textStatus, jqXHR) ->
+			$('body').append "Successful AJAX call: #{data}"
+	
+	# For jQuery 1.5+
 	request = $.get '/'
 	request.success (data) -> $('body').append "Successfully got the page again."
 	request.error (jqXHR, textStatus, errorThrown) -> $('body').append "AJAX Error: ${textStatus}."
+
 {% endhighlight %}
 
-See also "Callback bindings":../jquery/callback-bindings-jquery and the "jQuery AJAX API":http://api.jquery.com/jQuery.ajax/ for additional methods and options.
+h2. Discussion
+
+The jQuery and $ variables can be used interchangeably. See also "Callback bindings":../jquery/callback-bindings-jquery.
