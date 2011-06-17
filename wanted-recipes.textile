@@ -94,14 +94,6 @@ foo 1, 2, 3
 {% endhighlight %}
 
 * Variable arguments with splats
-* Recursion of unnamed functions with arguments.callee 
-
-{% highlight coffeescript %}
-console.log [1,2,3,4,5].map (x) ->
-  if x <= 1 then return 1
-  return x * arguments.callee(x-1)
-# => [1, 2, 6, 24, 120 ]
-{% endhighlight %}
 
 h2. jQuery
 

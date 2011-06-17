@@ -1,0 +1,33 @@
+---
+layout: recipe
+title: Recursive Functions
+chapter: Functions
+---
+
+h2. Problem
+
+You want to call a function from within that same function.
+
+h2. Solution
+
+With a named function:
+
+{% highlight coffeescript %}
+ping = ->
+	console.log "Pinged"
+	setTimeout ping, 1000
+{% endhighlight %}
+
+With an unnamed function, using @arguments.callee@:
+
+{% highlight coffeescript %}
+delay = 1000
+
+setTimeout((->
+	console.log "Pinged"
+	setTimeout arguments.callee, delay
+	), delay)
+{% endhighlight %}
+
+h2. Discussion
+
