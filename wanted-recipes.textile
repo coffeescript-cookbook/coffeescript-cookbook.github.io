@@ -26,12 +26,6 @@ h2. Strings
 
 h2. Arrays
 
-* Reducing arrays to values (ruby inject) with reduce # [1..10].reduce (a,b) -> a+b # 55
-* Reducing arrays in reverse order # JS reduceRight 
-{% highlight coffeescript %}
-["example", "contrived ", "pretty ", "a ", "is ", "here "].reduceRight (x,y) -> x+y
-# => 'here is a pretty contrived example'
-{% endhighlight %}
 * Testing every element in an array
 {% highlight coffeescript %}
 evens = (x for x in [0..10] by 2)
