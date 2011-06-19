@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Converting Radians and Degrees
+title: Faster Fibonacci algorithm
 chapter: Math
 ---
 
