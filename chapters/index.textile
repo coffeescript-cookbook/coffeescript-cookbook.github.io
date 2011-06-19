@@ -21,16 +21,21 @@ chapters:
 {% for chapter in page.chapters %}
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
   {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+<div id="{{ chapter | downcase }}">
 
-h2. <a href="{{ url }}">{{ chapter }}</a>
+h2(#{{chapter | replace: ' ', '_' | downcase}}_header). "{{ chapter }}":{{ url }} | "(show_arrow)&darr;":/chapters#/
 
- {% for page in site.pages %}
+<div id="{{ chapter | downcase }}_list" class="recipe_list">
+  {% for page in site.pages %}
     {% if page.url contains url %}
       {% unless page.url == indexurl %}
        * <a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a> 	
       {% endunless %}
     {% endif %}
   {% endfor %}
+</div>
+  
+</div>
 {% endfor %}
 
 
