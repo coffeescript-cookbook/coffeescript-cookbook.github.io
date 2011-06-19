@@ -93,8 +93,6 @@ foo 1, 2, 3
 # => 6
 {% endhighlight %}
 
-* Variable arguments with splats
-
 h2. jQuery
 
 h2. Regular Expressions

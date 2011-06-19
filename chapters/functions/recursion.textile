@@ -31,3 +31,5 @@ setTimeout((->
 
 h2. Discussion
 
+While @arguments.callee@ allows for the recursion of anonymous functions and might have the advantage in a very memory-intensive application, named functions keep their purpose more explicit and make for more maintainable code.
+
