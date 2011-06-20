@@ -3,28 +3,25 @@ layout: default
 title: Recipe Template
 ---
 
-h2. Sample recipe template
+## Sample recipe template
 
-Create a new *my_recipe.textile* file and use this text as a start.
+Create a new _my_recipe.md_ file and use this text as a start.
 
-<pre>
+{% highlight text %}
 ---
 layout: recipe
 title: Title of The Recipe
 chapter: Chapter Name
 ---
-
-h2. Problem
+## Problem
 
 You have a problem.
 
-
-h2. Solution
+## Solution
 
 Do this about it.
 
-
-h2. Discussion
+## Discussion
 
 Here's why.
-</pre>
+{% endhighlight %}

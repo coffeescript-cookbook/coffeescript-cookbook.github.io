@@ -3,23 +3,23 @@ layout: default
 title: Developer's Guide
 ---
 
-h1. Developer's Guide
+# Developer's Guide
 
 _Please help out by updating this page_
 
-h3. Operating System
+### Operating System
 
 It works on Mac OSX. Probably works without any changes or issues on linux. A masochist could probably get it working on Windows.
 
-h2. Installation
+## Installation
 
-h3. Clone the repo
+### Clone the repo
 
 {% highlight bash %}
 git clone git://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com.git
 {% endhighlight %}
 
-h3. Create a Ruby Gemset
+### Create a Ruby Gemset
 
 Optional, but highly recommended.
 
@@ -28,16 +28,16 @@ $ rvm gemset create jekyll
 $ echo 'rvm gemset use jekyll' >> .rvmrc
 {% endhighlight %}
 
-h3. Install Required Gems
+### Install Required Gems
 
 {% highlight bash %}
 gem install jekyll   # needed for testing building the site
-gem install RedCloth # needed for .textile rendering
+gem install RedCloth # needed for .md rendering
 gem install serve    # needed for resolving .html files w/o extension
 gem install thin     # optional; more efficient webserver than Webrick but not strictly necessary
 {% endhighlight %}
 
-h3. Install pygments
+### Install pygments
 
 You'll need python installed for this. Macs and most linuces come with it preinstalled.
 
@@ -45,9 +45,9 @@ You'll need python installed for this. Macs and most linuces come with it preins
 easy_install pygments   # for syntax highlighting
 {% endhighlight %}
 
-h2. Building and Viewing the Website
+## Building and Viewing the Website
 
-h3. Run jekyll
+### Run jekyll
 
 Open a terminal window, cd into the project folder and run jekyll from the project root.
 
@@ -55,20 +55,18 @@ Open a terminal window, cd into the project folder and run jekyll from the proje
 jekyll --auto
 {% endhighlight %}
 
-Leave this window running while you work. Any time you change a file, jekyll will rerender it into the <tt>_site</tt> folder.
+Leave this window running while you work. Any time you change a file, jekyll will rerender it into the `_site` folder.
 
-h3. Run serve
+### Run serve
 
-Open another terminal window, cd into the project folder, then cd into the <tt>_site</tt> subfolder, and run
+Open another terminal window, cd into the project folder, then cd into the `_site` subfolder, and run
 
 {% highlight bash %}
 serve
 {% endhighlight %}
 
-This will start a webserver in the <tt>_site</tt> folder. Open a browser and visit <tt>http://localhost:4000/</tt> and you should see the site.
+This will start a webserver in the `_site` folder. Open a browser and visit `http://localhost:4000/` and you should see the site.
 
-h2. Minituiae and Other Trivialities
+## Minituiae and Other Trivialities
 
-jekyll can take a second or two to catch up when you save a file. If you edit a file and don't see the changes in your browser, give it a second or two and try again.
-
-
+jekyll can take a second or two to catch up when you save a file. If you edit a file and don't see the changes in your browser, give it a second or two and try again. You may also see Maruku warnings, but as long as it prints `Successfully generated site` you should be alright.

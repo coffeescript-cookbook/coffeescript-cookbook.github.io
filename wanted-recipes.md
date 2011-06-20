@@ -2,19 +2,19 @@
 layout: default
 title: Wanted Recipes
 ---
-h1. Wanted Recipes
+# Wanted Recipes
 
 Here's a list of recipes we think we need. Pick one, implement it, and remove it from the page. Alternately, add a quick note here for a recipe you'd like to see so someone else can add it.
 
 In the notes below, "JS" means the recipe is just a simple passthrough to an existing JavaScript method.
 
-h2. Syntax
+## Syntax
 
 * Ensuring variables are closed over # with "do"
 
-h2. Objects
+## Objects
 
-h2. Strings
+## Strings
 
 * HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
 * substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
@@ -24,7 +24,7 @@ h2. Strings
 * Replacing substrings
 * Trimming whitespace from the end of a string
 
-h2. Arrays
+## Arrays
 
 * Testing every element in an array
 {% highlight coffeescript %}
@@ -39,12 +39,12 @@ evens.every even
 * Creating a string from an array
 * Replace all duplicates of an array
 
-h2. Dates and Times
+## Dates and Times
 
 * Calculating the phase of the moon
 * Number of days between two dates
 
-h2. Math
+## Math
 
 * square root # JS Math.sqrt
 * Constants # JS Math.PI, Math.E
@@ -55,7 +55,7 @@ h2. Math
 * Exponents # Math.exp
 * Check if a creditcard is valid (checksum, Luhn algorithm)
 
-h2. Functions
+## Functions
 
 * Nested functions
 
@@ -84,25 +84,25 @@ foo 1, 2, 3
 # => 6
 {% endhighlight %}
 
-h2. jQuery
+## jQuery
 
-h2. Regular Expressions
+## Regular Expressions
 
 * Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]
 * Searching for substrings # "foo bar baz".search(/ba./) # => 4
 * Replacing substrings # "foo bar baz".replace( /ba./, 'foo') # => "foo foo baz"
 * Replace HTML tags with named HTML entities # <br/> => &lt;br/&gt;
 
-h2. Networking
+## Networking
 
 * Basic HTTP server
 * Basic HTTP client
 
-h2. AJAX
+## AJAX
 
 * Getting data from a remote server # using raw XHTTPRequest instead of jQuery's $.ajax
 
-h2. Design patterns
+## Design patterns
 
 * Creational Patterns
 ** Abstract Factory
@@ -125,5 +125,3 @@ h2. Design patterns
 ** State
 ** Template Method
 ** Visitor
-
-
