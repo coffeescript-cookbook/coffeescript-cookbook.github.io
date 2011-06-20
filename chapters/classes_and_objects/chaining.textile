@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Chaining Calls to an Object
-chapter: Objects
+chapter: Classes and Objects
 ---
 
 h2. Problem
