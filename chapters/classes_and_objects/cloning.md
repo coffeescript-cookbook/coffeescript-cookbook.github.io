@@ -42,6 +42,7 @@ The difference between copying an object through assignment and through this clo
 * repeating these steps for all sub-objects by calling the clone-function recursively.
 
 Example of an assignment copy:
+
 {% highlight coffeescript %}
 x =
   foo: 'bar'
