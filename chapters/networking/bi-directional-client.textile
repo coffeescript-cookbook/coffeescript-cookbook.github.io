@@ -42,7 +42,7 @@ connection.on 'end', (data) ->
 
 h3. Example Usage
 
-Accessing the <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server</a>:
+Accessing the <a href="/chapters/networking/bi-directional-server">Bi-Directional Server</a>:
 
 {% highlight console %}
 $ coffee bi-directional-client.coffee
@@ -61,7 +61,7 @@ h2. Discussion
 
 This particular example initiates contact with the server and starts the conversation in the @connection.on 'connect'@ handler.  The bulk of the work in a real client, however, will lie in the @connection.on 'data'@ handler, which processes output from the server.  The @ping@  function only recurses in order to illustrate continuous communication with the server and can be removed from a real client.
 
-See also the <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server</a>, <a href="/chapters/networking/basic-client.html">Basic Client</a>, and <a href="/chapters/networking/basic-server.html">Basic Server</a> recipes.
+See also the <a href="/chapters/networking/bi-directional-server">Bi-Directional Server</a>, <a href="/chapters/networking/basic-client">Basic Client</a>, and <a href="/chapters/networking/basic-server">Basic Server</a> recipes.
 
 h3. Exercises
 * Add support for choosing the target domain and port based on command-line arguments or from a configuration file.

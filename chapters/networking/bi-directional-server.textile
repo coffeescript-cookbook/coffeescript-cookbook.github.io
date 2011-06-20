@@ -34,7 +34,7 @@ server.listen port, domain
 
 h3. Example Usage
 
-Accessed by the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>:
+Accessed by the <a href="/chapters/networking/bi-directional-client">Bi-Directional Client</a>:
 
 {% highlight console %}
 $ coffee bi-directional-server.coffee
@@ -50,7 +50,7 @@ h2. Discussion
 
 The bulk of the work lies in the @socket.on 'data'@ handler, which processes all of the input from the client.  A real server would likely pass the data onto another function to process it and generate any responses so that the original handler.
 
-See also the <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a>, <a href="/chapters/networking/basic-client.html">Basic Client</a>, and <a href="/chapters/networking/basic-server.html">Basic Server</a> recipes.
+See also the <a href="/chapters/networking/bi-directional-client">Bi-Directional Client</a>, <a href="/chapters/networking/basic-client">Basic Client</a>, and <a href="/chapters/networking/basic-server">Basic Server</a> recipes.
 
 h3. Exercises
 * Add support for choosing the target domain and port based on command-line arguments or on a configuration file.

@@ -32,7 +32,7 @@ server.listen port, domain
 
 h3. Example Usage
 
-Accessed by the <a href="/chapters/networking/basic-client.html">Basic Client</a>:
+Accessed by the <a href="/chapters/networking/basic-client">Basic Client</a>:
 
 {% highlight console %}
 $ coffee basic-server.coffee
@@ -46,7 +46,7 @@ h2. Discussion
 
 The function passed to @net.createServer@ receives the new socket provided for each new connection to a client.  This basic server simply socializes with its visitors but a hard-working server would pass this socket along to a dedicated handler and then return to the task of waiting for the next client.
 
-See also the <a href="/chapters/networking/basic-client.html">Basic Client</a>, <a href="/chapters/networking/bi-directional-server.html">Bi-Directional Server</a>, and <a href="/chapters/networking/bi-directional-client.html">Bi-Directional Client</a> recipes.
+See also the <a href="/chapters/networking/basic-client">Basic Client</a>, <a href="/chapters/networking/bi-directional-server">Bi-Directional Server</a>, and <a href="/chapters/networking/bi-directional-client">Bi-Directional Client</a> recipes.
 
 h3. Exercises
 * Add support for choosing the target domain and port based on command-line arguments or from a configuration file.

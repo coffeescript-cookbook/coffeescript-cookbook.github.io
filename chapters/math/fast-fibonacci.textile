@@ -16,10 +16,10 @@ talked about on Robin Houston's blog.
 
 Here are a few links talking about the algorithm and ways to improve it:
 # <a href="http://bosker.wordpress.com/2011/04/29/the-worst-algorithm-in-the-world/">http://bosker.wordpress.com/2011/04/29/the-worst-algorithm-in-the-world/</a>
-# <a href="http://www.math.rutgers.edu/~erowland/fibonacci.html">http://www.math.rutgers.edu/~erowland/fibonacci.html</a>
+# <a href="http://www.math.rutgers.edu/~erowland/fibonacci">http://www.math.rutgers.edu/~erowland/fibonacci.html</a>
 # <a href="http://jsfromhell.com/classes/bignumber">http://jsfromhell.com/classes/bignumber</a>
-# <a href="http://www.math.rutgers.edu/~erowland/fibonacci.html">http://www.math.rutgers.edu/~erowland/fibonacci.html</a>
-# <a href="http://bigintegers.blogspot.com/2010/11/square-division-power-square-root.html">http://bigintegers.blogspot.com/2010/11/square-division-power-square-root.html</a>
+# <a href="http://www.math.rutgers.edu/~erowland/fibonacci">http://www.math.rutgers.edu/~erowland/fibonacci.html</a>
+# <a href="http://bigintegers.blogspot.com/2010/11/square-division-power-square-root">http://bigintegers.blogspot.com/2010/11/square-division-power-square-root.html</a>
 # <a href="http://bugs.python.org/issue3451">http://bugs.python.org/issue3451</a>
 
 This code is in gist form here:
