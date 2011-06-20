@@ -16,7 +16,6 @@ chapters:
 - Design Patterns
 ---
 
-
 {% for chapter in page.chapters %}
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
   {% capture indexurl %}{{ url }}/index.html{% endcapture %}
