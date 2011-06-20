@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Filtering Arrays
-chapter: Filtering Arrays
+chapter: Arrays
 ---
 
 h2. Problem
