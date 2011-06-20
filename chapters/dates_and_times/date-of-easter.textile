@@ -6,13 +6,13 @@ chapter: Dates and Times
 
 h2. Problem
 
-You need to find the month and day of the Easter Sunday for given year
+You need to find the month and day of the Easter Sunday for given year.
 
 h2. Solution
 
 The following function returns array with two elements: month (1-12) and day of the Easter Sunday. If no arguments are given
 result is for the current year.
-This is an implementation of http://en.wikipedia.org/wiki/Computus#Anonymous_Gregorian_algorithm in CoffeeScript
+This is an implementation of "Anonymous Gregorian algorithm":http://en.wikipedia.org/wiki/Computus#Anonymous_Gregorian_algorithm in CoffeeScript
 
 {% highlight coffeescript %}
 
