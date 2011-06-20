@@ -5,7 +5,7 @@ title: Recipe Template
 
 ## Sample recipe template
 
-Create a new _my_recipe.md_ file and use this text as a start.
+Create a new `my-recipe.md` file and use this text as a start.
 
 {% highlight text %}
 ---
