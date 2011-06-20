@@ -12,7 +12,7 @@ h2. Solution
 
 The following function returns array with two elements: month (1-12) and day of the Easter Sunday. If no arguments are given
 result is for the current year.
-This is an implementation of "Anonymous Gregorian algorithm":http://en.wikipedia.org/wiki/Computus#Anonymous_Gregorian_algorithm in CoffeeScript
+This is an implementation of "Anonymous Gregorian algorithm":http://en.wikipedia.org/wiki/Computus#Anonymous_Gregorian_algorithm in CoffeeScript.
 
 {% highlight coffeescript %}
 
@@ -40,6 +40,8 @@ h2. Discussion
 
 NB! Javascript numbers months from 0 to 11 so .getMonth() for date in March will return 2, this function will return 3.
 You can modify the function if you want this to be consistent.
+
+The function uses ~~ trick instead of Math.floor().
 
 {% highlight coffeescript %}
 
