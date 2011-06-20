@@ -42,8 +42,6 @@ evens.every even
 h2. Dates and Times
 
 * Calculating the phase of the moon
-* Holidays: Calculating US Thanksgiving
-* Holidays: Calculating CA Thanksgiving
 * Number of days between two dates
 
 h2. Math
