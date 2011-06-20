@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cookbook
+title: Home
 chapters:
 - Syntax
 - Classes and Objects
@@ -16,6 +16,9 @@ chapters:
 - Design Patterns
 ---
 
+<h1>Welcome</h1>
+
+<p>Welcome to the CoffeeScript Cookbook! CoffeeScript recipes for the community <em>by</em> the community. Head over to the <a href="/contributing">Contributing</a> page and see what you can do to help out!</p>
 
 {% for chapter in page.chapters %}
   {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
