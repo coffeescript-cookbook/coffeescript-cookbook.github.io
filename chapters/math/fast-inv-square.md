@@ -24,7 +24,7 @@ Depending on the machine and level of percision this algorithm may still
 provide performance increases over the classic.
 
 To run this, compile the script with coffee:
-    coffee -c <this script>.coffee
+    coffee -c script.coffee
 
 Then copy & paste the compiled js code in to the JavaSript console of your
 browser.
