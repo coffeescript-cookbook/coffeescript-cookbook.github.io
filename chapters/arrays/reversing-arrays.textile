@@ -4,8 +4,6 @@ title: Reversing Arrays
 chapter: Arrays
 ---
 
-h1. Reversing an Array
-
 h2. Problem
 
 You want to reverse an array.

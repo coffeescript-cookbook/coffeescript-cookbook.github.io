@@ -4,8 +4,6 @@ title: Concatenating Arrays
 chapter: Arrays
 ---
 
-h1. Concatenating Arrays
-
 h2. Problem
 
 You want to join two arrays together.

@@ -4,8 +4,6 @@ title: Using Arrays to Swap Variables
 chapter: Arrays
 ---
 
-h1. Using Arrays to Swap Variables
-
 h2. Problem
 
 You want to use an array to swap variables.
