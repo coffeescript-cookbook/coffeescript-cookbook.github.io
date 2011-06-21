@@ -19,10 +19,7 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 * HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
 * substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
 * substring # str.substring(x,y) === str.slice(x,y)  === str[x..y-1] === str[x...y]
-* Uppercasing a string # JS toUpperCase()
-* Lowercasing a string # JS toLowerCase()
 * Replacing substrings
-* Trimming whitespace from the end of a string
 
 ## Arrays
 
@@ -36,7 +33,6 @@ evens.every even
 * Filtering arrays # [1..10.filter (x) -> x % 2 == 0 # => [ 2, 4, 6, 8, 10 ]
 * Detecting presence of matching items in an array # [1..10].some (x) -> x % 2 == 0 # => true
 * Processing an array item by item # [10..1].forEach (x) -> console.log x # => nothing;, but a countdown is displayed on the console
-* Creating a string from an array
 * Replace all duplicates of an array
 
 ## Dates and Times
@@ -91,7 +87,6 @@ foo 1, 2, 3
 * Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]
 * Searching for substrings # "foo bar baz".search(/ba./) # => 4
 * Replacing substrings # "foo bar baz".replace( /ba./, 'foo') # => "foo foo baz"
-* Replace HTML tags with named HTML entities # <br/> => &lt;br/&gt;
 
 ## Networking
 
