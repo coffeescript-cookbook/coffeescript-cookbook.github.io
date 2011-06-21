@@ -15,6 +15,7 @@ The following people are totally rad and awesome because they have contributed r
 * Aaron Weinberger _aw9994@cs.ship.edu_
 * James C. Holder _cs_cookbook@thirdtruck.org_
 * Jason Giedymin _jasong@apache.org_
+* Phil Cohen _github@phlippers.net_
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
