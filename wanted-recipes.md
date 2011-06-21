@@ -19,8 +19,6 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 * HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
 * substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
 * substring # str.substring(x,y) === str.slice(x,y)  === str[x..y-1] === str[x...y]
-* Uppercasing a string # JS toUpperCase()
-* Lowercasing a string # JS toLowerCase()
 * Replacing substrings
 * Trimming whitespace from the end of a string
 
