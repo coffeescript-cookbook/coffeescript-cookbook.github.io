@@ -11,9 +11,9 @@ You want to remove duplicate elements from an array.
 
 {% highlight coffeescript %}
 Array::unique = ->
-  unique = {}
-  unique[@[key]] = @[key] for key in [1...@length]
-  value for key, value of unique
+  output = {}
+  output[@[key]] = @[key] for key in [1...@length]
+  value for key, value of output
 
 [1,1,2,2,2,3,4,5,6,6,6,"a","a","b","d","b","c"].unique()
 # => [ 1, 2, 3, 4, 5, 6, 'a', 'b', 'd', 'c' ]
