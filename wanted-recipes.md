@@ -20,7 +20,6 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 * substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
 * substring # str.substring(x,y) === str.slice(x,y)  === str[x..y-1] === str[x...y]
 * Replacing substrings
-* Trimming whitespace from the end of a string
 
 ## Arrays
 
