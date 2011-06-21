@@ -63,4 +63,3 @@ String::rstrip = -> @replace /\s+$/g, ""
 {% endhighlight %}
 
 For an interesting discussion and benchmarks of JavaScript `trim` performance, see [this blog post](http://blog.stevenlevithan.com/archives/faster-trim-javascript) by Steve Levithan.
-
