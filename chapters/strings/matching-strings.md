@@ -12,6 +12,7 @@ You want to match two or more strings.
 Calculate the edit distance, or number of operations required to transform one string into the other.
 
 {% highlight coffeescript %}
+
 Levenshtein =
   (str1, str2) ->
           
@@ -35,6 +36,7 @@ Levenshtein =
           distance[i - 1][j - 1] + if str1.charAt(i - 1) == str2.charAt(j - 1) then 0 else 1
 
     distance[l1][l2]
+
 {% endhighlight %}
 
 ## Discussion
