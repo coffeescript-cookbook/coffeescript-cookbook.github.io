@@ -62,6 +62,5 @@ String::rstrip = -> @replace /\s+$/g, ""
 # => '  padded string'
 {% endhighlight %}
 
-For an interesting discussion and benchmarks of JavaScript `trim` performance, see [this blog post][1] by Steve Levithan.
+For an interesting discussion and benchmarks of JavaScript `trim` performance, see [this blog post](http://blog.stevenlevithan.com/archives/faster-trim-javascript) by Steve Levithan.
 
-[1] http://blog.stevenlevithan.com/archives/faster-trim-javascript
