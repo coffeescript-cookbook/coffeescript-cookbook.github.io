@@ -12,7 +12,7 @@ You want to remove duplicate elements from an array.
 {% highlight coffeescript %}
 Array::unique = ->
   output = {}
-  output[@[key]] = @[key] for key in [1...@length]
+  output[@[key]] = @[key] for key in [0...@length]
   value for key, value of output
 
 [1,1,2,2,2,3,4,5,6,6,6,"a","a","b","d","b","c"].unique()
