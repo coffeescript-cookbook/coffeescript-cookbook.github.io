@@ -33,7 +33,6 @@ evens.every even
 * Filtering arrays # [1..10.filter (x) -> x % 2 == 0 # => [ 2, 4, 6, 8, 10 ]
 * Detecting presence of matching items in an array # [1..10].some (x) -> x % 2 == 0 # => true
 * Processing an array item by item # [10..1].forEach (x) -> console.log x # => nothing;, but a countdown is displayed on the console
-* Creating a string from an array
 * Replace all duplicates of an array
 
 ## Dates and Times
