@@ -14,6 +14,7 @@ _The following people are totally rad and awesome because they have contributed 
 * Sebastian Slomski _sebastian@simple-systems.org_
 * Aaron Weinberger _aw9994@cs.ship.edu_
 * James C. Holder _cs_cookbook@thirdtruck.org_
+* João Moreno _coffeecb @joaomoreno.com_
 * ...You! What are you waiting for? Check out the <a href="/contributing">contributing</a> section and get cracking!
 
 
