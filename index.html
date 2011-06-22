@@ -1,0 +1,39 @@
+---
+layout: default
+title: Home
+chapters:
+- Syntax
+- Classes and Objects
+- Strings
+- Arrays
+- Dates and Times
+- Math
+- Functions
+- Metaprogramming
+- jQuery
+- Regular Expressions
+- Networking
+- Design Patterns
+---
+
+<h1>Welcome</h1>
+
+<p>Welcome to the CoffeeScript Cookbook! CoffeeScript recipes for the community <em>by</em> the community. Head over to the <a href="/contributing">Contributing</a> page and see what you can do to help out!</p>
+
+{% for chapter in page.chapters %}
+  {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+  {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+
+<h2><a href="{{ url }}">{{ chapter }}</a></h2>
+
+<ul>
+  {% for page in site.pages %}
+    {% if page.url contains url %}
+      {% unless page.url == indexurl %}
+<li><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{% endfor %}

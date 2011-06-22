@@ -1,0 +1,18 @@
+---
+layout: chapter
+title: Networking
+chapter: Networking
+---
+
+{% capture url %}/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+{% capture indexurl %}{{ url }}/index.html{% endcapture %}
+
+<ul>
+{% for page in site.pages %}
+  {% if page.url contains url %}
+    {% unless page.url == indexurl %}
+  <li><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+</ul>

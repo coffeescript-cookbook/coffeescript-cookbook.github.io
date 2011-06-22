@@ -1,12 +1,10 @@
 pygments: true
 lsi: false
 exclude:
-  - README
+  - README.md
   - CNAME
-  - TODO.textile
+  - TODO.md
   - script
   - Procfile
   - Gemfile
   - Gemfile.lock
-
-
