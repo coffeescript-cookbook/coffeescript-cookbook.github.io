@@ -4,17 +4,17 @@ title: Basic HTTP Server
 chapter: Networking
 ---
 
-h2. Problem
+## Problem
 
 You want to create a HTTP server over a network. Over the course of this recipe, we'll go step by step from the smallest server possible to a functional key-value store.
 
-h2. Solution
+## Solution
 
-We'll use "node.js":http://nodejs.org/ 's HTTP library to our own selfish purposes and create the simplest web server possible in Coffeescript.
+We'll use [node.js](http://nodejs.org/)'s HTTP library to our own selfish purposes and create the simplest web server possible in Coffeescript.
 
-h3. Say 'hi\n'
+### Say 'hi\n'
 
-We can start by importing the @http@ module. This module has a nice helper function &mdash; @createServer@ &mdash; which, given a simple request handler, creates a HTTP server. All that's left to do then is have the server listening on a port.
+We can start by importing node.js's HTTP module. This contains `createServer` which, given a simple request handler, returns a HTTP server. We can use that server to listen on a TCP port.
 
 {% highlight coffeescript %}
 http = require 'http'
@@ -22,7 +22,7 @@ server = http.createServer (req, res) -> res.end 'hi\n'
 server.listen 8000
 {% endhighlight %}
 
-To run this example, simply put in a file and run it. You can kill it with @Ctrl-C@. We can test it using the @curl@ command, available on most *nix platforms:
+To run this example, simply put in a file and run it. You can kill it with `Ctrl-C`. We can test it using the `curl` command, available on most \*nix platforms:
 
 {% highlight console %}
 $ curl -D - http://localhost:8000/
@@ -33,7 +33,7 @@ Transfer-Encoding: chunked
 hi
 {% endhighlight %}
 
-h3. What's going on? 
+### What's going on? 
 
 Let's get a little bit more feedback on what's happening on our server. While we're at it, we could also be friendlier to our clients and provide them some HTTP headers.
 
@@ -51,7 +51,7 @@ server = http.createServer (req, res) ->
 server.listen 8000
 {% endhighlight %}
 
-Try to access it once again, but this time use different URL paths, such as @http://localhost:8000/coffee@. You'll see something like this on the server console:
+Try to access it once again, but this time use different URL paths, such as `http://localhost:8000/coffee`. You'll see something like this on the server console:
 
 {% highlight console %}
 $ coffee http-server.coffee 
@@ -60,9 +60,9 @@ GET /coffee
 GET /user/1337
 {% endhighlight %}
 
-h3. GETting stuff
+### GETting stuff
 
-What if our webserver was able to hold some data? We'll try to come up with a simple key-value store in which elements are retrievable via GET requests. Provide a key on the request path and the server will return the corresponding value - or 404 if it doesn't exist.
+What if our webserver was able to hold some data? We'll try to come up with a simple key-value store in which elements are retrievable via GET requests. Provide a key on the request path and the server will return the corresponding value &mdash; or 404 if it doesn't exist.
 
 {% highlight coffeescript %}
 http = require 'http'
@@ -89,6 +89,8 @@ server = http.createServer (req, res) ->
 server.listen 8000
 {% endhighlight %}
 
+We can try several URLs to see how it responds:
+
 {% highlight console %}
 $ curl -D - http://localhost:8000/coffee
 HTTP/1.1 200 OK
@@ -105,9 +107,9 @@ Transfer-Encoding: chunked
 
 {% endhighlight %}
 
-h3. Use your head(ers)
+### Use your head(ers)
 
-Let's face it, @text/plain@ is kind of lame. How about if we use something hip like @application/json@ or @text/xml@? Also, our store retrieval process could use a bit of refactoring &mdash; how about some exception throwing &amp; handling? Let's see what we can come up with:
+Let's face it, `text/plain` is kind of lame. How about if we use something hip like `application/json` or `text/xml`? Also, our store retrieval process could use a bit of refactoring &mdash; how about some exception throwing &amp; handling? Let's see what we can come up with:
 
 {% highlight coffeescript %}
 http = require 'http'
@@ -149,7 +151,7 @@ server = http.createServer (req, res) ->
 server.listen 8000
 {% endhighlight %}
 
-This server will still return the value which matches a given key, or 404 if non-existent. But it will structure the response either in JSON or XML, according to the @Accept@ header. See for yourself:
+This server will still return the value which matches a given key, or 404 if non-existent. But it will structure the response either in JSON or XML, according to the `Accept` header. See for yourself:
 
 {% highlight console %}
 $ curl http://localhost:8000/
@@ -166,7 +168,7 @@ $ curl -H "Accept: image/png" http://localhost:8000/coffee
 Unknown format
 {% endhighlight %}
 
-h3. You gotta give to get back
+### You gotta give to get back
 
 The obvious last step in our adventure is to provide the client the ability to store data. We'll keep our RESTiness by listening to POST requests for this purpose.
 
@@ -232,7 +234,7 @@ server = http.createServer (req, res) ->
 server.listen 8000
 {% endhighlight %}
 
-Notice how the data is received in a POST request. By attaching some handlers on the @'data'@ and @'end'@ events of the request object, we're able to buffer and finally save the data from the client in the @store@.
+Notice how the data is received in a POST request. By attaching some handlers on the `'data'` and `'end'` events of the request object, we're able to buffer and finally save the data from the client in the `store`.
 
 {% highlight console %}
 $ curl -D - http://localhost:8000/cookie
@@ -247,13 +249,13 @@ HTTP/1.1 200 OK # ...
 {"key":"cookie","value":"monster"}
 {% endhighlight %}
 
-h2. Discussion
+## Discussion
 
-Give @http.createServer@ a function in the shape of @(request, response) -> ...@ and it will return a server object, which we can use to listen on a port. Interact with the @request@ and @response@ objects to give the server its behaviour. Listen on port 8000 using @server.listen 8000@.
+Give `http.createServer` a function in the shape of `(request, response) -> ...` and it will return a server object, which we can use to listen on a port. Interact with the `request` and `response` objects to give the server its behaviour. Listen on port 8000 using `server.listen 8000`.
 
-For API and overall information on this subject, check node.js's "http":http://nodejs.org/docs/latest/api/http.html and "https":http://nodejs.org/docs/latest/api/https.html documentation pages. Also, the "HTTP spec":http://www.ietf.org/rfc/rfc2616.txt might come in handy.
+For API and overall information on this subject, check node.js's [http](http://nodejs.org/docs/latest/api/http.html) and [https](http://nodejs.org/docs/latest/api/https.html) documentation pages. Also, the [HTTP spec](http://www.ietf.org/rfc/rfc2616.txt) might come in handy.
 
-h3. Exercises
+### Exercises
 
 * Create a layer in between the server and the developer which would allow the developer to do something like:
 
