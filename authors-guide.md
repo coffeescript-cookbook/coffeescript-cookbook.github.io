@@ -46,13 +46,15 @@ chapter: Strings
 
 Turn on syntax highlighting for CoffeeScript with `highlight coffeescript`.
 
-<div class="highlight"><pre><code>&lbrace;% highlight coffeescript %&rbrace;
+test2
+
+&lbrace;% highlight coffeescript %&rbrace;
 &#35; Calculate the square of a number
 square = (x) -> x * x
 
 square(16)
 &#35; => 256
-&lbrace;% endhighlight %&rbrace;</code></pre></div>
+&lbrace;% endhighlight %&rbrace;
 
 This produces the following:
 

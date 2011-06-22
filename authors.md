@@ -7,24 +7,24 @@ title: Authors
 
 The following people are totally rad and awesome because they have contributed recipes!
 
-* David Brady _ratgeyser@gmail.com_
-* John Ford _jwford@gmail.com_
-* Steven Reid _steven @ reidnorthwest . com_
-* David Moulton _dave@themoultons.net_
-* Sebastian Slomski _sebastian@simple-systems.org_
-* Aaron Weinberger _aw9994@cs.ship.edu_
-* James C. Holder _cs_cookbook@thirdtruck.org_
-* Jason Giedymin _jasong@apache.org_
-* Phil Cohen _github@phlippers.net_
+* David Brady *ratgeyser@gmail.com*
+* John Ford *jwford@gmail.com*
+* Steven Reid *steven @ reidnorthwest . com*
+* David Moulton *dave@themoultons.net*
+* Sebastian Slomski *sebastian@simple-systems.org*
+* Aaron Weinberger *aw9994@cs.ship.edu*
+* James C. Holder *coffeescriptcookbook.com@thirdtruck.org*
+* Jason Giedymin *jasong@apache.org*
+* Phil Cohen *github@phlippers.net*
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
 
-_The following people are amazingly rad and awesome because they have helped fix the code for the site!_
+*The following people are amazingly rad and awesome because they have helped fix the code for the site!*
 
-* David Brady _ratgeyser@gmail.com_
-* Mike Moore _mike@blowmage.com_
-* Peter Hellberg _peter@c7.se_
+* David Brady *ratgeyser@gmail.com*
+* Mike Moore *mike@blowmage.com*
+* Peter Hellberg *peter@c7.se*
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Designers
