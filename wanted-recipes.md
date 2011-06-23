@@ -90,33 +90,38 @@ foo 1, 2, 3
 
 ## Networking
 
-* Basic HTTP server
-* Basic HTTP client
+* Streaming HTTP server
+* Streaming HTTP client
 
 ## AJAX
 
-* Getting data from a remote server # using raw XHTTPRequest instead of jQuery's $.ajax
+* Getting data from a remote server # using raw XHTTPRequest instead of jQuery's `$.ajax`
 
 ## Design patterns
 
 * Creational Patterns
-** Abstract Factory
-** Prototype
-** Singleton
+  * Abstract Factory
+  * Prototype
+  * Singleton
 
 * Structural Patterns
-** Adapter
-** Composite
-** Facade
-** Flyweight
-** Proxy
+  * Adapter
+  * Composite
+  * Facade
+  * Flyweight
+  * Proxy
 
 * Behavioral Patterns
-** Chain of Responsibility
-** Command
-** Iterator
-** Mediator
-** Observer
-** State
-** Template Method
-** Visitor
+  * Chain of Responsibility
+  * Command
+  * Iterator
+  * Mediator
+  * Observer
+  * State
+  * Template Method
+  * Visitor
+
+## Databases
+
+* MongoDB/Couch access
+* MySQL/PostgreSQL access
