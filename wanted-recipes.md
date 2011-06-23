@@ -109,7 +109,6 @@ foo 1, 2, 3
 
 * Behavioral Patterns
   * Chain of Responsibility
-  * Command
   * Iterator
   * Mediator
   * Observer
