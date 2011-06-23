@@ -86,7 +86,6 @@ foo 1, 2, 3
 
 * Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]
 * Searching for substrings # "foo bar baz".search(/ba./) # => 4
-* Replacing substrings # "foo bar baz".replace( /ba./, 'foo') # => "foo foo baz"
 
 ## Networking
 
