@@ -84,9 +84,6 @@ foo 1, 2, 3
 
 ## Regular Expressions
 
-* Searching for substrings # "foo bar baz".match(/ba./) # => [ 'bar', index: 4, input: 'foo bar baz' ]
-* Searching for substrings # "foo bar baz".search(/ba./) # => 4
-
 ## Networking
 
 * Streaming HTTP server
