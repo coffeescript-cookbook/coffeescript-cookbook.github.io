@@ -87,4 +87,4 @@ builder.newTodo "Fill gas tank"
 ### Exercises
 
 * Expand the project- and context-tag generation code to filter out duplicate entries.
-* Some Todo.txt users like to insert project and context tags inside the description of their to-do items.  * Add code to identify these tags and filter them out of the end tags.
+* Some Todo.txt users like to insert project and context tags inside the description of their to-do items.  Add code to identify these tags and filter them out of the end tags.
