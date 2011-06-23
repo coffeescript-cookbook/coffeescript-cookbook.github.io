@@ -13,11 +13,16 @@ Encapsulate your algorithms inside of Strategy objects.
 
 Given an unsorted list, for example, we can change the sorting algorithm under different circumstances.
 
+###The base class:
+
 {% highlight coffeescript %}
 StringSorter = (@algorithm) ->
-    sort: (list) ->
-        @algorithm list
+    sort: (list) -> @algorithm list
+{% endhighlight %}
 
+###The strategies:
+
+{% highlight coffeescript %}
 bubbleSort = (list) ->
     anySwaps = false
     swapPass = ->
@@ -45,7 +50,11 @@ reverseBubbleSort = (list) ->
         anySwaps = false
         swapPass()
     list
+{% endhighlight %}
 
+###Using the strategies:
+
+{% highlight coffeescript %}
 sorter = new StringSorter bubbleSort
 
 unsortedList = ['e', 'b', 'd', 'c', 'x', 'a']
