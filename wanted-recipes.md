@@ -17,8 +17,14 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 ## Strings
 
 * HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
-* substr # str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
-* substring # str.substring(x,y) === str.slice(x,y)  === str[x..y-1] === str[x...y]
+* substr
+{% highlight coffeescript %}
+str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
+{% endhighlight %}
+* substring
+{% highlight coffeescript %}
+str.substring(x,y) === str.slice(x,y)  === str[x..y-1] === str[x...y]
+{% endhighlight %}
 * Replacing substrings
 
 ## Arrays
@@ -30,10 +36,10 @@ even = (x) -> x % 2 == 0
 evens.every even
 # => true
 {% endhighlight %}
-* Filtering arrays # [1..10.filter (x) -> x % 2 == 0 # => [ 2, 4, 6, 8, 10 ]
-* Detecting presence of matching items in an array # [1..10].some (x) -> x % 2 == 0 # => true
-* Processing an array item by item # [10..1].forEach (x) -> console.log x # => nothing;, but a countdown is displayed on the console
-* Replace all duplicates of an array
+* Detecting presence of matching items in an array
+{% highlight coffeescript %}
+[1..10].some (x) -> x % 2 == 0 # => true
+{% endhighlight %}
 
 ## Dates and Times
 
