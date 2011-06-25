@@ -14,7 +14,7 @@ Use JavaScript's Array concat() method:
 {% highlight coffeescript %}
 ray1 = [1,2,3]
 ray2 = [4,5,6]
-ray3 = ray1.concat(ray2)
+ray3 = ray1.concat ray2
 # => [1, 2, 3, 4, 5, 6]
 {% endhighlight %}
 
