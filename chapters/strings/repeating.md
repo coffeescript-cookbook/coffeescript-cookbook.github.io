@@ -13,7 +13,7 @@ Create an array of n+1 nulls, and then join it with the repetition string as the
 
 {% highlight coffeescript %}
 # create a string of 10 foos
-Array(11).join('foo')
+Array(11).join 'foo'
 
 # => "foofoofoofoofoofoofoofoofoofoo"
 {% endhighlight %}
