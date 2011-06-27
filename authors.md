@@ -32,4 +32,5 @@ The following people are totally rad and awesome because they have contributed r
 
 The following people are astonishingly rad and awesome because they did great design for the site!
 
-* Oh please SOMEBODY put their name here! Check out the [contributing](/contributing) section and get cracking!
+* Tad Thorley
+* ...You! Check out the [contributing](/contributing) section and get cracking!
