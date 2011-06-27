@@ -8,6 +8,10 @@ Here's a list of recipes we think we need. Pick one, implement it, and remove it
 
 In the notes below, "JS" means the recipe is just a simple passthrough to an existing JavaScript method.
 
+## Introduction
+
+We need a better introduction. Right now the first recipe is [Embedding JavaScript](/chapters/syntax/embedding_javascript), which doesn't set the right first impression. How about three or four recipes that hold new users' hands a bit more as the first section?
+
 ## Syntax
 
 * Ensuring variables are closed over # with "do"
