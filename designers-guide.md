@@ -11,4 +11,4 @@ If you have been waiting for your chance to literally _write the designer's guid
 
 ...welcome home.
 
-The default color scheme is based on "Solarized" by Ethan Schoonover: http://ethanschoonover.com/solarized
+The default color scheme is based on [Solarized](http://ethanschoonover.com/solarized) by Ethan Schoonover.
