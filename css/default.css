@@ -23,7 +23,10 @@ article, header, section, footer {
 }
 
 /* Colors */
-
+body {
+  background-color: #073642;
+  color: #93a1a1;
+}
 a, .header a:visited {
   color: #268bd2;
   text-decoration: none;
@@ -35,15 +38,22 @@ a:hover {
 }
 
 footer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #073642;
   padding-top: 22px;
   margin: 21px 0 22px 0;
-  color: #888;
+  color: #586e75;
   font-size: 14px;
 }
 
 /* Layout (margins, padding) */
-
+header {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+section.content {
+  margin-left: 100px;
+  margin-right: 100px;
+}
 pre {
   padding: 22px;
   line-height: 22px;
@@ -65,7 +75,6 @@ ul, ol {
 
 body {
   text-rendering: optimizeLegibility;
-  color: #002b36;
   font-family: Palatino, "Palatino Linotype", serif;
   text-shadow: 0 0 0 transparent;
   font-size: 16px;
