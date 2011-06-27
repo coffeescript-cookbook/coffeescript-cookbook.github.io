@@ -13,7 +13,7 @@ In ECMAScript 5, use `Array#reduce`. In older javascripts, use Math.max over a l
 
 {% highlight coffeescript %}
 # ECMAScript 5
-[12,32,11,67,1,3].reduce (a,b) -> Math.max(a,b)
+[12,32,11,67,1,3].reduce (a,b) -> Math.max a, b
 # => 67
 
 # Pre-EC5

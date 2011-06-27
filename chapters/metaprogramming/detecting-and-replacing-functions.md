@@ -14,7 +14,7 @@ Use `::` to detect the function, and assign to it if it does not exist.
 {% highlight coffeescript %}
 unless Array::filter
   Array::filter = (callback) ->
-    element for element in this when callback(element)
+    element for element in this when callback element
 
 array = [1..10]
 
