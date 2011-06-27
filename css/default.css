@@ -25,14 +25,14 @@ article, header, section, footer {
 /* Colors */
 body {
   background-color: #002b36;
-  color: #93a1a1;
+  color: #839496;
 }
 h1, h2, h3, h4, h5,
 h1 a, h2 a, h3 a, h4 a, h5 a {
   color: #b58900;
 }
 a, .header a:visited {
-  color: #268bd2;
+  color: #b58900;
   text-decoration: none;
 }
 
@@ -81,14 +81,14 @@ body {
   text-rendering: optimizeLegibility;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;;
   text-shadow: 0 0 0 transparent;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   margin: 22px;
 }
 
-pre {
+code {
   font-family: Monaco, Monospace;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5,
@@ -99,13 +99,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a {
   font-weight: lighter;
 }
 
-h1 { font-size: 30px; line-height: 44px; }
-h2 { font-size: 22px; line-height: 44px; }
-h3 { font-size: 18px; line-height: 22px; }
+h1 { font-size: 28px; line-height: 44px; }
+h2 { font-size: 24px; line-height: 36px; }
+h3 { font-size: 20px; line-height: 24px; }
 
-.highlight         { background: #fdf6e3; color: #657b83; line-height: 1em; font-size: 13px; }
-.highlight .lineno { background-color: #eee8d5; color: #93a1a1; padding-left: .5em; padding-right: .5em; }
-.highlight .hll    { background-color: #eee8d5; } /* Don't know what this is... */
+.highlight         { background: #073642; color: #839496; font-size: 18px; line-height: 18px; }
+.highlight .lineno { background-color: #002b36; color: #93a1a1; padding: 0 8px; }
+.highlight .hll    { background-color: #002b36; } /* Don't know what this is... */
 .highlight .c      { color: #93a1a1; font-style: italic; } /* Comment */
 .highlight .err    { color: #dc322f; } /* Error */
 .highlight .g      { color: #839496; } /* Generic */
