@@ -52,8 +52,8 @@ fib_bits = (n) ->
 
 	bits = []
 	while n > 0
-    	[n, bit] = divmodBasic(n, 2)
-    	bits.push(bit)
+    	[n, bit] = divmodBasic n, 2
+    	bits.push bit
 
   	bits.reverse()
   	return bits
@@ -67,7 +67,7 @@ fibFast = (n) ->
 
 	[a, b, c] = [1, 0, 1]
 
-	for bit in fib_bits(n)
+	for bit in fib_bits n
 	    if bit
 	    	[a, b] = [(a+c)*b, b*b + c*c]
 	    else
@@ -88,12 +88,12 @@ divmodBasic = (x, y) ->
 	Burnikel / Ziegler _if_ possible...
 	###
 
-	return [(q = Math.floor(x/y)), (r = if x < y then x else x % y)]
+	return [(q = Math.floor x/y), (r = if x < y then x else x % y)]
 
 start = (new Date).getTime();
 calc_value = fibFast(MAXIMUM_JS_FIB_N)
 diff = (new Date).getTime() - start;
-console.log("[#{calc_value}] took #{diff} ms.")
+console.log "[#{calc_value}] took #{diff} ms."
 {% endhighlight %}
 
 ## Discussion
