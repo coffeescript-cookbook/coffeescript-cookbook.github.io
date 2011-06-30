@@ -128,5 +128,5 @@ foo 1, 2, 3
 
 ## Databases
 
-* MongoDB/Couch access
+* Couch access
 * MySQL/PostgreSQL access
