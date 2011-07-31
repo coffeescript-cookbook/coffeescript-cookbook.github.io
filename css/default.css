@@ -61,6 +61,36 @@ ul, ol {
   margin-bottom: 22px;
 }
 
+nav ul {
+  list-style:none;
+}
+
+nav ul li {
+  border-left:1px solid rgba(0, 0, 0, 0.2);
+  display:inline-block;
+  padding:0 10px;
+}
+
+nav ul li:first-child {
+  border:none;
+}
+
+nav ol {
+  list-style:none;
+}
+
+nav ol li {
+  display:inline-block;
+}
+
+nav ol.breadcrumbs li:before {
+  content: '\000bb\000a0'; /* Insert &raquo;&nbsp; between list items. */
+}
+
+nav ol.breadcrumbs li:first-child:before {
+  content: '';
+}
+
 /* Typography */
 
 body {
