@@ -61,6 +61,20 @@ ul, ol {
   margin-bottom: 22px;
 }
 
+nav ul {
+  list-style:none;
+}
+
+nav ul li {
+  border-left:1px solid rgba(0, 0, 0, 0.2);
+  display:inline-block;
+  padding:0 10px;
+}
+
+nav ul li:first-child {
+  border:none;
+}
+
 /* Typography */
 
 body {
