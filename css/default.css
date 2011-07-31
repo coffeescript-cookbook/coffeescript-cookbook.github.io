@@ -75,6 +75,22 @@ nav ul li:first-child {
   border:none;
 }
 
+nav ol {
+  list-style:none;
+}
+
+nav ol li {
+  display:inline-block;
+}
+
+nav ol.breadcrumbs li:before {
+  content: '\000bb\000a0'; /* Insert &raquo;&nbsp; between list items. */
+}
+
+nav ol.breadcrumbs li:first-child:before {
+  content: '';
+}
+
 /* Typography */
 
 body {
