@@ -5,12 +5,14 @@
     <link rel="stylesheet" href="/css/default.css" type="text/css">
   </head>
   <body>
-   <header>
+    <header>
       <h1><a href="/">CoffeeScript Cookbook</a></h1>
       <nav>
-        <a href="/">Home</a> &raquo;
-        <a href="/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}">{{ page.chapter }}</a> &raquo;
-        {{ page.title }}
+        <ol class="breadcrumbs">
+          <li><a href="/">Home</a></li>
+          <li><a href="/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}">{{ page.chapter }}</a></li>
+          <li>{{ page.title }}</li>
+        </ol>
       </nav>
     </header>
     <section class="content">

@@ -17,20 +17,24 @@ chapters:
 - Databases
 ---
 
-{% for chapter in page.chapters %}
-  {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
-  {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+<ol id="chapters">
+  {% for chapter in page.chapters %}
+    {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+    {% capture indexurl %}{{ url }}/index.html{% endcapture %}
 
-<h2><a href="{{ url }}">{{ chapter }}</a></h2>
+    <li class="chapter">
+    <h2><a href="{{ url }}">{{ chapter }}</a></h2>
 
-<ul>
-  {% for page in site.pages %}
-    {% if page.url contains url %}
-      {% unless page.url == indexurl %}
-<li><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
-      {% endunless %}
-    {% endif %}
+    <ul id="recipes">
+      {% for page in site.pages %}
+        {% if page.url contains url %}
+          {% unless page.url == indexurl %}
+            <li class="recipe"><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    </li>
+
   {% endfor %}
 </ul>
-
-{% endfor %}
