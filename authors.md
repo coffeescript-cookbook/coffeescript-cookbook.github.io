@@ -26,6 +26,7 @@ The following people are totally rad and awesome because they have contributed r
 * David Brady *ratgeyser@gmail.com*
 * Mike Moore *mike@blowmage.com*
 * Peter Hellberg *peter@c7.se*
+* Jamie Gaskins *jgaskins@gmail.com*
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Designers
