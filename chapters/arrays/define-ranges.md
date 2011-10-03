@@ -5,11 +5,11 @@ chapter: Arrays
 ---
 ## Problem
 
-You want to define range in array.
+You want to define a range in an array.
 
 ## Solution
 
-There are two method to define range of an array element in CoffeeScript.
+There are two ways to define a range of array elements in CoffeeScript.
 
 {% highlight coffeescript %}
 
@@ -44,4 +44,4 @@ myLargeArray = [10...1]
 
 Inclusive range always define by '..' operator.
 
-Exclusive range difine by '...', and always omit the last value. 
+Exclusive range define by '...', and always omit the last value. 
