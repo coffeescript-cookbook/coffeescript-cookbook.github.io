@@ -44,4 +44,4 @@ myLargeArray = [10...1]
 
 Inclusive range always define by '..' operator.
 
-Exclusive range difine by '...', and always omit the last value. 
+Exclusive range define by '...', and always omit the last value. 
