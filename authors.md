@@ -17,6 +17,7 @@ The following people are totally rad and awesome because they have contributed r
 * Jason Giedymin *jasong@apache.org*
 * Phil Cohen *github@phlippers.net*
 * João Moreno *coffeecb @joaomoreno .com*
+* Jeff Pickhardt *pickhardt (at) gmail (dot) com*
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
