@@ -16,7 +16,7 @@ $ ->
       @products = []
 
       $('.product').click (event) =>
-        @add $(event.target).attr 'id'
+        @add $(event.currentTarget).attr 'id'
 
     add: (product) ->
       @products.push product
