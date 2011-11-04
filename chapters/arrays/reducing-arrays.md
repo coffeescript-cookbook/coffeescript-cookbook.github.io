@@ -25,9 +25,9 @@ Or it may be something more complex such as aggregating elements from a list int
 
 {% highlight coffeescript %}
 people =
-    { name: '', age: 10 }
-    { name: '', age: 16 }
-    { name: '', age: 17 }
+    { name: 'alec', age: 10 }
+    { name: 'bert', age: 16 }
+    { name: 'chad', age: 17 }
 
 people.reduce (x, y) ->
     x[y.name]= y.age
