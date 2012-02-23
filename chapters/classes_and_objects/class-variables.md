@@ -9,18 +9,22 @@ You want to create a class variable.
 
 ## Solution
 
-Use json notation in the class body; use `::` to access it outside:
-
 {% highlight coffeescript %}
 class Zoo
-  MAX_ANIMALS: 50
+  @MAX_ANIMALS: 50
+  MAX_ZOOKEEPERS: 3
 
-Zoo::MAX_ZOOKEEPERS = 5
-
-Zoo::MAX_ANIMALS
+console.log Zoo.MAX_ANIMALS
 # => 50
+
+console.log Zoo.MAX_ZOOKEEPERS
+# => undefined (it is an instance variable)
+
+zoo = new Zoo
+console.log zoo.MAX_ZOOKEEPERS
+# => 3
 {% endhighlight %}
 
 ## Discussion
 
-Coffeescript will store these values on the class prototype (e.g. Zoo.prototype.MAX_ANIMALS) rather than on individual object instances, which conserves memory and gives a central location to store class-level values.
+Coffeescript will store these values on the object itself rather than on the object prototype (and thus on individual object instances), which conserves memory and gives a central location to store class-level values.
