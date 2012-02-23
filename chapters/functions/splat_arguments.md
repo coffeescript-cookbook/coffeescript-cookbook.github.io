@@ -37,7 +37,7 @@ loadTruck = (firstDibs, secondDibs, tooSlow..., leftAtHome) ->
 		passengerSeat: leftAtHome
 
 loadTruck("Amanda", "Joel", "Bob", "Mary", "Phillip", "Austin")
-# => { truck: { driversSeat: "Amanda", passengerSeat: "Joel", trunkBed: ["Bob", "Mary", "Phillip"] }, taxi: "Austin" }
+# => { truck: { driversSeat: 'Amanda', passengerSeat: 'Joel', trunkBed: [ 'Bob', 'Mary', 'Phillip' ] }, taxi: { passengerSeat: 'Austin' } }
 
 loadTruck("Amanda")
 # => { truck: { driversSeat: "Amanda", passengerSeat: undefined, trunkBed: [] }, taxi: undefined }
