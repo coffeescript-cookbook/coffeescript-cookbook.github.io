@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Extending Classes
+title: Extending Built-in Objects
 chapter: Metaprogramming
 ---
 ## Problem
