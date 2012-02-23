@@ -18,6 +18,7 @@ The following people are totally rad and awesome because they have contributed r
 * Phil Cohen *github@phlippers.net*
 * João Moreno *coffeecb @joaomoreno .com*
 * Jeff Pickhardt *pickhardt (at) gmail (dot) com*
+* Frederic Hemberger
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
