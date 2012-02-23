@@ -13,7 +13,7 @@ Use JavaScript's Array toString() method:
 
 {% highlight coffeescript %}
 ["one", "two", "three"].toString()
-# => 'three,two,one'
+# => 'one,two,three'
 {% endhighlight %}
 
 ## Discussion
