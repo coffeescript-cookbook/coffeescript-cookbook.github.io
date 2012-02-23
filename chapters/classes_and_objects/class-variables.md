@@ -14,14 +14,14 @@ class Zoo
   @MAX_ANIMALS: 50
   MAX_ZOOKEEPERS: 3
 
-console.log Zoo.MAX_ANIMALS
+Zoo.MAX_ANIMALS
 # => 50
 
-console.log Zoo.MAX_ZOOKEEPERS
+Zoo.MAX_ZOOKEEPERS
 # => undefined (it is an instance variable)
 
 zoo = new Zoo
-console.log zoo.MAX_ZOOKEEPERS
+zoo.MAX_ZOOKEEPERS
 # => 3
 {% endhighlight %}
 
