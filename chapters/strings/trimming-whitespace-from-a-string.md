@@ -37,7 +37,7 @@ To trim only trailing whitespace, use the following:
 Opera, Firefox and Chrome all have a native string prototype `trim` method, and the other browsers could add one as well. For this particular method, I would use the built-in method where possible, otherwise create a polyfill:
 
 {% highlight coffeescript %}
-if !String::trim? then String::trim = -> @replace /^\s+|\s+$/g, ""
+unless String::trim then String::trim = -> @replace /^\s+|\s+$/g, ""
 
 "  padded string  ".trim
 # => 'padded string'
