@@ -9,7 +9,14 @@ You need to find the largest value contained in an array.
 
 ## Solution
 
-In ECMAScript 5, you can use `Array#reduce`. For compatibility with older javascripts, use Math.max.apply:
+You can use Math.max() JavaScript method along with splats.
+
+{% highlight coffeescript %}
+Math.max [12, 32, 11, 67, 1, 3]...
+# => 67
+{% endhighlight %}
+
+Alternatively, it's possible to use ES5 `reduce` method. For backward compatibility with older JavaScript implementations, use Math.max.apply:
 
 {% highlight coffeescript %}
 # ECMAScript 5
@@ -23,4 +30,4 @@ Math.max.apply(null, [12,32,11,67,1,3])
 
 ## Discussion
 
-`Math.max` compares two numbers and returns the larger of the two; the rest of this recipe (both versions) is just iterating over the array to find the largest one.
+`Math.max` compares every argument and returns the largest number from arguments. The ellipsis (`...`) converts every array value into argument which is given to the function. You can also use it with other functions which take variable ammount of arguments, such as `console.log`.
