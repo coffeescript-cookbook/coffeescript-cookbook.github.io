@@ -18,12 +18,13 @@ array.filter (x) -> x > 5
 # => [6,7,8,9,10]
 {% endhighlight %}
 
-In pre-EC5 implementations, extend the Array prototype to add a filter function which will take a callback and perform a comprension over itself, collecting all elements for which the callback is true.
+In pre-EC5 implementations, extend the Array prototype to add a filter function which will take a callback and perform a comprension over itself, collecting all elements for which the callback is true. Be sure to check if the function is already implemented before overwriting it:
 
 {% highlight coffeescript %}
 # Extending Array's prototype
-Array::filter = (callback) ->
-  element for element in this when callback(element)
+unless Array::filter
+  Array::filter = (callback) ->
+    element for element in this when callback(element)
 
 array = [1..10]
 
