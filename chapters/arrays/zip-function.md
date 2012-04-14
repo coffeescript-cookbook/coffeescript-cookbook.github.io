@@ -15,15 +15,9 @@ Use the following CoffeeScript code:
 # Usage: zip(arr1, arr2, arr3, ...)
 zip = () ->
   lengthArray = (arr.length for arr in arguments)
-  length = Math.max.apply(Math, lengthArray)
-  argumentLength = arguments.length
-  results = []
+  length = Math.max(lengthArray...)
   for i in [0...length]
-    semiResult = []
-    for arr in arguments
-      semiResult.push arr[i]
-    results.push semiResult
-  return results
+    arr[i] for arr in arguments
 
 zip([0, 1, 2, 3], [0, -1, -2, -3])
 # => [[0, 0], [1, -1], [2, -2], [3, -3]]
