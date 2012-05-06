@@ -122,7 +122,7 @@ To run our tests, simply open SpecRunner.html in a web browser.  In our example 
 
 <img src="images/jasmine_failing_all.jpg" alt="All failing tests" />
 
-It appears our tests are failing because Jasmine can not find the variable Calculator.  That's because it has not been created yet.  Let's do that now by creating a new file named js/calculator.coffee.
+It appears our tests are failing because Jasmine cannot find the variable Calculator.  That's because it has not been created yet.  Let's do that now by creating a new file named js/calculator.coffee.
 
 
 {% highlight coffeescript %}
@@ -137,7 +137,7 @@ Compile calculator.coffee and refresh the browser to re-run the test suite.
 
 <img src="images/jasmine_failing_better.jpg" alt="Still failing, but better" />
 
-We now have 4 failures instead of our previous 8.  That's a 50% improvment with only one line of code.
+We now have 4 failures instead of our previous 8.  That's a 50% improvement with only one line of code.
 
 ## <span style="color: green;">Getting the Tests to Pass</span>
 
@@ -165,7 +165,7 @@ When we refresh we see they all pass.
 
 Now that our tests pass, we should look to see if our code or our test(s) can be refactored.
 
-In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.  
+In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initialization code into a routine that runs before each test.  
 
 Luckily Jasmine has a beforeEach function just for this purpose.
 
