@@ -163,7 +163,11 @@ When we refresh we see they all pass.
 
 ## <span style="color: green;">Refactoring the Tests</span>
 
-Now that our tests pass, we should look to see if our code or our test(s) can be refactored.  In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.  Luckily Jasmine has a beforeEach function just for this purpose.
+Now that our tests pass, we should look to see if our code or our test(s) can be refactored.
+
+In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.  
+
+Luckily Jasmine has a beforeEach function just for this purpose.
 
 {% highlight coffeescript %}
 
