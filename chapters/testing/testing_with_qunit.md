@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: With QUint
+title: Testing with QUint
 chapter: Testing
 ---
 ## Problem

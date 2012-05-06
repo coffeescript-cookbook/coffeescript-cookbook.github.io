@@ -1,12 +1,17 @@
 ---
 layout: recipe
-title: With Jasmine
+title: Testing with Jasmine
 chapter: Testing
 ---
 ## Problem
 
-You have some CoffeeScript and you want to verify that it is working correctly.  You decide to the use
-Jasmine test framework for your tests.
+You are writing a new calculator library using CoffeeScript code and you want to verify it functions as expected.  You decide to use the <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a> test framework.
+
+## Discussion
+
+When using the Jasmine test framework, you write tests in a spec that describe the expected functionality of the code to be tested.
+
+For example, we expect our calculator will be able to add and subtract both positive and negative numbers correctly.  Our spec is listed below.
 
 {% highlight coffeescript %}
 
@@ -14,6 +19,155 @@ Jasmine test framework for your tests.
 
 describe 'Calculator', ->
 
+	it 'can add two positive numbers', ->
+		calculator = new Calculator()
+		result = calculator.add 2, 3
+		expect(result).toBe 5
+
+	it 'can handle negative number addition', ->
+		calculator = new Calculator()
+		result = calculator.add -10, 5
+		expect(result).toBe -5
+
+	it 'can subtract two positive numbers', ->
+		calculator = new Calculator()
+		result = calculator.subtract 10, 6
+		expect(result).toBe 4
+
+	it 'can handle negative number subtraction', ->
+		calculator = new Calculator()
+		result = calculator.subtract 4, -6
+		expect(result).toBe 10
+
+{% endhighlight %}
+
+
+### Configuring Jasmine
+
+Before you can run your tests, you must download and configure Jasmine.  This involves:
+1. Download the latest <a href="http://pivotal.github.com/jasmine/download.html" target="_blank">Jasmine</a> zip file
+2. Create a spec and a spec/jasmine folder in your project
+3. Extract the Jasmine files into the spec/jasmine folder
+4. Create a test runner
+
+### Create a Test Runner
+
+Jasmine can run your tests within a web browser by using a spec runner HTML file.  The spec runner is a simple HTML page that links the necessary JavaScript and CSS files for both Jasmine and your code.  A sample is below.
+
+{% highlight html linenos %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+  <link rel="shortcut icon" type="image/png" href="spec/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="spec/jasmine/jasmine.css">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="spec/jasmine/jasmine.js"></script>
+  <script src="spec/jasmine/jasmine-html.js"></script>
+  <script src="spec/jasmine/jasmine-jquery-1.3.1.js"></script>
+
+  <!-- include source files here... -->
+  <script src="js/calculator.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/calculatorSpec.js"></script>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+</body>
+</html>
+
+{% endhighlight %}
+
+This spec runner can be downloaded from this GitHub <a href="https://gist.github.com/2623232" target="_blank">gist</a>.
+
+To use the SpecRunner.html, simply reference your compiled JavaScript files and compiled tests after jasmine.js and its dependencies.
+
+In the example, you can see we include our yet-to-be-developed calculator.js file (line 14) and the our compiled calculatorSpec.js file (line 17).
+
+## <span style="color: red;">Running the Tests</span>
+
+To run our tests, simply open SpecRunner.html in a web browser.  In this example we see 4 failing specs with a total of 8 failures (below).
+
+<img src="images/jasmine_failing_all.jpg" alt="All failing tests" />
+
+It appears our tests are failing because Jasmine can not find the variable Calculator.  That's because it has not been created yet.  Let's do that now in a new file named js/calculator.coffee.
+
+
+{% highlight coffeescript %}
+
+# calculator.coffee
+
+window.Calculator = class Calculator
+
+{% endhighlight %}
+
+When we re-run we see the following.
+
+<img src="images/jasmine_failing_better.jpg" alt="Still failing, but better" />
+
+We now have 4 failures instead of our previous 8.  That's a 50% improvment with 1 line of code.  Not bad.
+
+## <span style="color: green;">Getting the Tests to Pass</span>
+
+Let's implement our methods and see if we can get these tests to pass.
+
+{% highlight coffeescript %}
+
+# calculator.coffee
+
+window.Calculator = class Calculator
+	add: (a, b) ->
+		a + b
+
+	subtract: (a, b) ->
+		a - b 
+
+{% endhighlight %}
+
+When we refresh we see they all pass.
+
+<img src="images/jasmine_passing.jpg" alt="All passing" />
+
+
+## <span style="color: green;">Refactoring the Tests</span>
+
+Now that our tests pass, we should look to see if our code or our test(s) can be refactored.  In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.
+
+{% highlight coffeescript %}
+
+describe 'Calculator', ->
 	calculator = null
 
 	beforeEach ->
@@ -37,44 +191,6 @@ describe 'Calculator', ->
 
 {% endhighlight %}
 
-## Discussion
-
-This test describes our Calculator and tests that it can add and subtract positive and negative numbers.
-
-To test our specification (spec), we need to set up our test framework.  Refer to the <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a> website to download the framework.  It's super easy.  In the following example, we have our SpecRunner.html set up referencing the Jasmine JavaScript llibrary and css files.  Our tests are also referenced.  You can see the result of running out tests below.
-<img src="images/jasmine_failing_all.jpg" alt="All failing tests" />
-
-The tests are all failing, complaining that Calculator does not exist.  Of course it doesn't, we haven't created it yet.  Let's do that now.
-
-{% highlight coffeescript %}
-
-# calculator.coffee
-
-window.Calculator = class Calculator
-
-{% endhighlight %}
-
-When we re-run we see the following.
-
-<img src="images/jasmine_failing_better.jpg" alt="Still failing, but better" />
-
-We now have 4 failures instead of our previous 8.  That's a 50% improvment with 1 line of code.  Not bad.
-
-Let's implement our methods and see if we can get these tests to pass.
-
-{% highlight coffeescript %}
-
-# calculator.coffee
-
-window.Calculator = class Calculator
-	add: (a, b) ->
-		a + b
-
-	subtract: (a, b) ->
-		a - b 
-
-{% endhighlight %}
-
-When we refresh we see they all pass.
+When we recompile our spec and refresh the browser we see the tests still all pass.
 
 <img src="images/jasmine_passing.jpg" alt="All passing" />

@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: With Mocha
+title: Testing with Mocha
 chapter: Testing
 ---
 ## Problem
