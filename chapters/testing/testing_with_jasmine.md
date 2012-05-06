@@ -5,13 +5,13 @@ chapter: Testing
 ---
 ## Problem
 
-You are writing a new calculator library using CoffeeScript code and you want to verify it functions as expected.  You decide to use the <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a> test framework.
+You are writing a simple calculator using CoffeeScript and you want to verify it functions as expected.  You decide to use the <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a> test framework.
 
 ## Discussion
 
-When using the Jasmine test framework, you write tests in a spec that describe the expected functionality of the code to be tested.
+When using the Jasmine test framework, you write tests in a specification (spec) file that describes the expected functionality of the code to be tested.
 
-For example, we expect our calculator will be able to add and subtract both positive and negative numbers correctly.  Our spec is listed below.
+For example, we expect our calculator will be able to add and subtract and will function correctly with both positive and negative numbers.  Our spec is listed below.
 
 {% highlight coffeescript %}
 
@@ -45,10 +45,10 @@ describe 'Calculator', ->
 ### Configuring Jasmine
 
 Before you can run your tests, you must download and configure Jasmine.  This involves:
-1. Download the latest <a href="http://pivotal.github.com/jasmine/download.html" target="_blank">Jasmine</a> zip file
-2. Create a spec and a spec/jasmine folder in your project
-3. Extract the Jasmine files into the spec/jasmine folder
-4. Create a test runner
+1. downloading the latest <a href="http://pivotal.github.com/jasmine/download.html" target="_blank">Jasmine</a> zip file;
+2. creating a spec and a spec/jasmine folder in your project;
+3. extracting the downloaded Jasmine files into the spec/jasmine folder; and
+4. creating a test runner.
 
 ### Create a Test Runner
 
@@ -114,15 +114,15 @@ This spec runner can be downloaded from this GitHub <a href="https://gist.github
 
 To use the SpecRunner.html, simply reference your compiled JavaScript files and compiled tests after jasmine.js and its dependencies.
 
-In the example, you can see we include our yet-to-be-developed calculator.js file (line 14) and the our compiled calculatorSpec.js file (line 17).
+In the above example, we include our yet-to-be-developed calculator.js file on line 14 and our compiled calculatorSpec.js file on line 17.
 
 ## <span style="color: red;">Running the Tests</span>
 
-To run our tests, simply open SpecRunner.html in a web browser.  In this example we see 4 failing specs with a total of 8 failures (below).
+To run our tests, simply open SpecRunner.html in a web browser.  In our example we see 4 failing specs with a total of 8 failures (below).
 
 <img src="images/jasmine_failing_all.jpg" alt="All failing tests" />
 
-It appears our tests are failing because Jasmine can not find the variable Calculator.  That's because it has not been created yet.  Let's do that now in a new file named js/calculator.coffee.
+It appears our tests are failing because Jasmine can not find the variable Calculator.  That's because it has not been created yet.  Let's do that now by creating a new file named js/calculator.coffee.
 
 
 {% highlight coffeescript %}
@@ -133,11 +133,11 @@ window.Calculator = class Calculator
 
 {% endhighlight %}
 
-When we re-run we see the following.
+Compile calculator.coffee and refresh the browser to re-run the test suite.
 
 <img src="images/jasmine_failing_better.jpg" alt="Still failing, but better" />
 
-We now have 4 failures instead of our previous 8.  That's a 50% improvment with 1 line of code.  Not bad.
+We now have 4 failures instead of our previous 8.  That's a 50% improvment with only one line of code.
 
 ## <span style="color: green;">Getting the Tests to Pass</span>
 
@@ -163,7 +163,7 @@ When we refresh we see they all pass.
 
 ## <span style="color: green;">Refactoring the Tests</span>
 
-Now that our tests pass, we should look to see if our code or our test(s) can be refactored.  In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.
+Now that our tests pass, we should look to see if our code or our test(s) can be refactored.  In our spec file, each test creates its own calculator instance.  This can make our tests quite repetitive especially for larger test suites.  Ideally, we should consider moving that initializaton code into a routine that runs before each test.  Luckily Jasmine has a beforeEach function just for this purpose.
 
 {% highlight coffeescript %}
 
