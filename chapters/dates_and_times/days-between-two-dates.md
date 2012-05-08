@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Get Days Between two Dates
+title: Get Days Between Two Dates
 chapter: Dates and Times
 ---
 ## Problem

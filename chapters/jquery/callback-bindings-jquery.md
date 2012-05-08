@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Callback bindings # using => instead of ->
+title: Callback Bindings # using => instead of ->
 chapter: jQuery
 ---
 ## Problem

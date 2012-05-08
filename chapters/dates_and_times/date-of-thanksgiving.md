@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Calculate the date of Thanksgiving (USA and Canada)
+title: Calculate the Date of Thanksgiving (USA and Canada)
 chapter: Dates and Times
 ---
 ## Problem

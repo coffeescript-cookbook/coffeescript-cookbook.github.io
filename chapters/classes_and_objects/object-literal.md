@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Create an object literal if it does not already exist
+title: Create an Object Literal if It Does Not Already Exist
 chapter: Classes and Objects
 ---
 ## Problem

@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Python-like zip function
+title: Python-like Zip Function
 chapter: Arrays
 ---
 ## Problem

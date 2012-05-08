@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: A random integer function
+title: A Random Integer Function
 chapter: Math
 ---
 ## Problem

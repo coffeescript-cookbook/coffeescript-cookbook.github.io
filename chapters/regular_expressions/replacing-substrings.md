@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Replacing substrings
+title: Replacing Substrings
 chapter: Regular Expressions
 ---
 ## Problem

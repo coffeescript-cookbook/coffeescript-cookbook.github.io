@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Calculate the date of Easter Sunday
+title: Calculate the Date of Easter Sunday
 chapter: Dates and Times
 ---
 ## Problem

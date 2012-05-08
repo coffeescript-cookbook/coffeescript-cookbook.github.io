@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: When Function Parentheses are not Optional
+title: When Function Parentheses Are Not Optional
 chapter: Functions
 ---
 ## Problem
