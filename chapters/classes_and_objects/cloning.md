@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Cloning an object (deep copy)
+title: Cloning an Object (Deep Copy)
 chapter: Classes and Objects
 ---
 ## Problem

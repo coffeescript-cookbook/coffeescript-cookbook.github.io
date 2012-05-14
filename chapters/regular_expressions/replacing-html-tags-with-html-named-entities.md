@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Replacing HTML tags with HTML named entities
+title: Replacing HTML Tags with HTML Named Entities
 chapter: Regular Expressions
 ---
 ## Problem

@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Removing duplicate elements from Arrays
+title: Removing Duplicate Elements from Arrays
 chapter: Arrays
 ---
 ## Problem

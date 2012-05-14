@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Create a jQuery plugin
+title: Create a jQuery Plugin
 chapter: jQuery
 ---
 ## Problem

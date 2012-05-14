@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Trimming whitespace from a String
+title: Trimming Whitespace from a String
 chapter: Strings
 ---
 ## Problem

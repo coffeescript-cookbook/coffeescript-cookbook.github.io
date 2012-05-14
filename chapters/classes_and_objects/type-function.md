@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: A CoffeeScript type function
+title: A CoffeeScript Type Function
 chapter: Classes and Objects
 ---
 ## Problem

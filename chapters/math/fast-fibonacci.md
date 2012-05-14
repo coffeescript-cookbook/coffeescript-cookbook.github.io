@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Faster Fibonacci algorithm
+title: Faster Fibonacci Algorithm
 chapter: Math
 ---
 ## Problem

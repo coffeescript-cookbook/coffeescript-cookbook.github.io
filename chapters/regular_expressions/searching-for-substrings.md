@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Searching for substrings
+title: Searching for Substrings
 chapter: Regular Expressions
 ---
 ## Problem
