@@ -25,6 +25,7 @@ randomInt = (lower, upper=0) ->
 
 (randomInt(1, 10) for i in [0...10])
 # => [7,3,9,1,8,5,4,10,10,8]
+{% endhighlight %}
 
 ## Discussion
 
