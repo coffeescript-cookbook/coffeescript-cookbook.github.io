@@ -47,8 +47,7 @@ evens.every even
 
 ## Dates and Times
 
-* Calculating the phase of the moon
-* Number of days between two dates
+* Empty
 
 ## Math
 
@@ -107,8 +106,7 @@ foo 1, 2, 3
 
 * Creational Patterns
   * Abstract Factory
-  * Prototype
-  * Singleton
+  * Prototype 
 
 * Structural Patterns
   * Adapter
