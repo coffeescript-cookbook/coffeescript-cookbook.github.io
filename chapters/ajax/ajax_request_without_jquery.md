@@ -1,7 +1,7 @@
 ---
 layout: recipe
-title: AJAX Request Without jQuery
-chapter: AJAX
+title: Ajax Request Without jQuery
+chapter: Ajax
 ---
 ## Problem
 
@@ -10,37 +10,6 @@ You want to load data from your server via AJAX without using the jQuery library
 ## Solution
 
 You will use the native <a href="http://en.wikipedia.org/wiki/XMLHttpRequest" target="_blank">XMLHttpRequest</a> object.
-
-Begin by making sure the XMLHttpRequest object exsits.
-
-{% highlight coffeescript %}
-# XMLHttpRequest.coffee
-
-if (typeof @XMLHttpRequest == "undefined")
-  console.log 'XMLHttpRequest is undefined'
-
-  @XMLHttpRequest = ->
-    try
-      return new ActiveXObject("Msxml2.XMLHTTP.6.0")
-    catch error
-    try
-      return new ActiveXObject("Msxml2.XMLHTTP.3.0")
-    catch error
-    try
-      return new ActiveXObject("Microsoft.XMLHTTP")
-    catch error
-    throw new Error("This browser does not support XMLHttpRequest.")
-{% endhighlight %}
-
-We can also set up some status codes.
-
-{% highlight coffeescript %}
-READYSTATE_UNINITIALIZED = 0
-READYSTATE_LOADING = 1
-READYSTATE_LOADED = 2
-READYSTATE_INTERACTIVE = 3
-READYSTATE_COMPLETE = 4
-{% endhighlight %}
 
 Let's set up a simple test HTML page with a button.
 
@@ -60,15 +29,25 @@ Let's set up a simple test HTML page with a button.
 </html>
 {% endhighlight %}
 
-Let's finish our XMLHttpRequest.coffee by adding a 'click' event listener then create our XMLHttpRequest object.
+When the button is clicked, we want to send an Ajax request to the server to retrieve some data.  For this sample, we have a small JSON file.
+
+{% highlight javascript %}
+// data.json
+{
+  message: "Hello World"
+}
+{% endhighlight %}
+
+Next, create the CoffeeScript file to hold the page logic.  The code in this file creates a function to be called when the Load Data button is clicked.
 
 {% highlight coffeescript linenos %}
+# XMLHttpRequest.coffee
 loadDataFromServer = ->
   req = new XMLHttpRequest()
 
   req.addEventListener 'readystatechange', ->
-    if req.readyState is READYSTATE_COMPLETE
-      if req.status is 200 or req.status is 304
+    if req.readyState is 4                        # ReadyState Compelte
+      if req.status is 200 or req.status is 304   # Success result codes
         data = eval '(' + req.responseText + ')'
         console.log 'data message: ', data.message
       else
@@ -83,14 +62,41 @@ loadDataButton.addEventListener 'click', loadDataFromServer, false
 
 ## Discussion
 
-In the above code, we create a new XMLHttpRequest instance on line 2.  Then, we add an event listener for the readystatechange event.  This fires whenever the XMLHttpRequest readyState changes.
+In the above code we essentially grab a handle to the button in our HTML (line 16) and add a *click* event listener (line 17).  In our event listener, we define our callback function as loadDataFromServer.
 
-In the event handler we check to see if the readyState = READYSTATE_COMPLETE (value of 4).  Then, we check to see if the status is either 200 or 304, both values are success indicators.
+We define our loadDataFromServer callback beginning on line 2.
+
+We create a XMLHttpRequest request object (line 3) and add a *readystatechange* event handler.  This fires whenever the request's readyState changes.
+
+In the event handler we check to see if the readyState = 4, indicating the request has completed.  Then, we check the request status value.  Both 200 or 304 represent a succsessful request.  Anything else represents an error condition.
 
 If the request was indeed successful, we eval the JSON returned from the server and assign it to a data variable.  At this point, we can use the returned data in any way we need to.
 
 The last thing we need to do is actually make our request.
 
-Line 12 opens a 'GET' request to retreive the data.json file.
+Line 13 opens a 'GET' request to retreive the data.json file.
 
-Line 13 sends our request to the server. 
+Line 14 sends our request to the server. 
+
+## Older Browser Support
+
+If your application needs to target older versions of Internet Explorer, you will need to ensure the XMLHttpRequest object exists.  You can do this by including this code before creating the XMLHttpRequest instance.
+
+{% highlight coffeescript %}
+if (typeof @XMLHttpRequest == "undefined")
+  console.log 'XMLHttpRequest is undefined'
+  @XMLHttpRequest = ->
+    try
+      return new ActiveXObject("Msxml2.XMLHTTP.6.0")
+    catch error
+    try
+      return new ActiveXObject("Msxml2.XMLHTTP.3.0")
+    catch error
+    try
+      return new ActiveXObject("Microsoft.XMLHTTP")
+    catch error
+    throw new Error("This browser does not support XMLHttpRequest.")
+{% endhighlight %}
+
+This code ensures the XMLHttpRequest object is available in the global namespace.
+
