@@ -13,7 +13,7 @@ This is wickedly terse in coffeescript:
 
 {% highlight coffeescript %}
 $ ->
-  console info 'Page is loaded.'
+  console.info 'Page is loaded.'
   # do stuff...
 {% endhighlight %}
 
