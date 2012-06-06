@@ -16,8 +16,8 @@ Given an unsorted list, for example, we can change the sorting algorithm under d
 ###The base class:
 
 {% highlight coffeescript %}
-StringSorter = (@algorithm) ->
-    sort: (list) -> @algorithm list
+StringSorter = (algorithm) ->
+    sort: (list) -> algorithm list
 {% endhighlight %}
 
 ###The strategies:
@@ -26,7 +26,7 @@ StringSorter = (@algorithm) ->
 bubbleSort = (list) ->
     anySwaps = false
     swapPass = ->
-        for r in [0..list.length-1]
+        for r in [0..list.length-2]
             if list[r] > list[r+1]
                 anySwaps = true
                 [list[r], list[r+1]] = [list[r+1], list[r]]
