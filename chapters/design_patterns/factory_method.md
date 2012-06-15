@@ -53,6 +53,9 @@ class Model
 		F = (args) -> window[name].apply @, args
 		F:: = window[name]::
 		new F args
+class Model_Foo extends Model
+
+foo = Model::factory('Foo', constructor, arguments)
 {% endhighlight %}
 
 
