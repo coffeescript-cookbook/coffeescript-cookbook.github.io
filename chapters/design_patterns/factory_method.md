@@ -44,6 +44,18 @@ factory.makeParser("example.md").type # => "Markdown parser"
 factory.makeParser("example.json").type # => "JSON parser"
 {% endhighlight %}
 
+
+Another implementation witch dynamic names (similar to ko3):
+{% highlight coffeescript %}
+class Model
+	factory:  (name, args...) ->
+		name = "Model_#{name}"
+		F = (args) -> window[name].apply @, args
+		F:: = window[name]::
+		new F args
+{% endhighlight %}
+
+
 ## Discussion
 
 In the example, you can ignore the specifics of the file's format and focus on the parsed content.  A more advanced Factory Method might, for instance, also search for versioning data within the file itself before returning a more precise parser (e.g. an HTML5 parser instead of an HTML v4 parser).
