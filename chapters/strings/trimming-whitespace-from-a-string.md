@@ -39,7 +39,7 @@ Opera, Firefox and Chrome all have a native string prototype `trim` method, and 
 {% highlight coffeescript %}
 unless String::trim then String::trim = -> @replace /^\s+|\s+$/g, ""
 
-"  padded string  ".trim
+"  padded string  ".trim()
 # => 'padded string'
 {% endhighlight %}
 
