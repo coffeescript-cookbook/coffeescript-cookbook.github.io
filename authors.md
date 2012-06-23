@@ -20,6 +20,7 @@ The following people are totally rad and awesome because they have contributed r
 * Jeff Pickhardt *pickhardt (at) gmail (dot) com*
 * Frederic Hemberger
 * Mike Hatfield *oakraven13@gmail.com*
+* [Anton Rissanen](http://github.com/antris) *hello@anton.fi*
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
