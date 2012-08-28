@@ -37,4 +37,5 @@ The following people are totally rad and awesome because they have contributed r
 
 The following people are astonishingly rad and awesome because they did great design for the site!
 
+* [Amsul](http://github.com/amsul) reach@amsul.ca
 * ...You! Check out the [contributing](/contributing) section and get cracking!

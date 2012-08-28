@@ -19,24 +19,27 @@ chapters:
 - Testing
 ---
 
-<ol id="chapters">
-  {% for chapter in page.chapters %}
-    {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
-    {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+<article class="content-block">
 
-    <li class="chapter">
-    <h2><a href="{{ url }}">{{ chapter }}</a></h2>
+  <h5 class="sidebar-title">Chapters</h5>
 
-    <ul id="recipes">
-      {% for page in site.pages %}
-        {% if page.url contains url %}
-          {% unless page.url == indexurl %}
-            <li class="recipe"><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
-          {% endunless %}
-        {% endif %}
-      {% endfor %}
-    </ul>
-    </li>
+  <ol class="navigation chapters-list">
+    {% for chapter in page.chapters %}
+      {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+      {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+      <li class="chapter">
+        <h4><a class="chapter-title" href="{{ url }}">{{ chapter }}</a></h4>
+        <ul class="pseudo-list recipes-list">
+          {% for page in site.pages %}
+            {% if page.url contains url %}
+              {% unless page.url == indexurl %}
+                <li class="list-item recipe"><a class="recipe-title" href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ol>
 
-  {% endfor %}
-</ol>
+</article>
