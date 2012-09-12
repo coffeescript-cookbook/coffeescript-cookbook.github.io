@@ -1,7 +1,8 @@
 /*
   Author:         Amsul - http://github.com/amsul
-  Version:        0.8 beta
-  Last Updated:   28 August, 2012
+  Description:    CoffeeScript Cookbook stylings
+  Version:        1.0
+  Last Updated:   11 September, 2012
 */
 
 
@@ -22,13 +23,22 @@
 
 
 
-/*
-    HTML5 element display
+/* ========================================================================
+
+    Cross-browser normalize (from HTML5 Boilerplate v4.0)
+
 ======================================================================== */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; }
-audio:not([controls]) { display: none; }
+
+
+/*
+    HTML5 element display (old browsers)
+======================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden] { display: none; }
 
 
 
@@ -38,8 +48,9 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 16px; text-align: left; line-height: 1.5; }
-body, button, input, select, textarea { font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-weight: 200; color: #424242; }
+html, button, input, select, textarea { font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-weight: 200; color: #424242; }
+
+body { margin: 0; }
 
 
 ::-moz-selection    { background: #b3d4fc; text-shadow: none; }
@@ -52,52 +63,77 @@ body, button, input, select, textarea { font-family: "Lucida Grande", "Lucida Sa
     Links
 ======================================================================== */
 
-a {
-    color: #27ace3;
-    text-decoration: underline;
-}
-
-a:visited {
-}
-
 a:hover,
 a:active {
-    cursor: pointer;
+    outline: 0;
 }
 
 a:focus { outline: thin dotted; }
+
+
 
 
 /*
     Typography
 ======================================================================== */
 
-p, div { word-wrap: break-word; }
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: .83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: .75em;
+    margin: 2.33em 0;
+}
+
+
+p, div {
+    -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word; /* old webkit */
+}
 
 abbr[title] { border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
 
-blockquote { margin: 1em 0 40px; }
+blockquote { margin: 1em 40px; }
 
-dfn, em { font-style: italic; }
+dfn { font-style: italic; }
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+mark { background: #ff0; color: #000; }
 
-ins { background: #ff9; color: #000; text-decoration: none; }
-
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+p, pre { margin: 1em 0; }
 
 pre, code, kbd, samp { font-family: 'Courier', 'Monaco', monospace, serif; font-size: 1em; }
 
-pre { display: table; width: 100%; margin: 0; padding: 24px; }
-
-pre > code { display: block; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 q { quotes: none; }
 q:before, q:after { content: ""; content: none; }
 
-small { font-size: 85%; }
+small { font-size: 80%; }
 
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup { top: -.5em; }
@@ -106,16 +142,21 @@ sub { bottom: -.25em; }
 
 
 
-
 /*
     Lists
 ======================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-
-ul { list-style: disc; }
+dl, menu, ol, ul { margin: 1em 0; }
 
 dd { margin: 0 0 0 40px; }
+
+menu, ol, ul { padding: 0 0 0 40px; }
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
 
 
 
@@ -126,7 +167,7 @@ dd { margin: 0 0 0 40px; }
 
 object, embed, img { max-width: 100%; }
 
-img { border: 0; height: auto; vertical-align: middle; -ms-interpolation-mode: bicubic; }
+img { border: 0; -ms-interpolation-mode: bicubic; }
 
 svg:not(:root) { overflow: hidden; }
 
@@ -136,15 +177,7 @@ svg:not(:root) { overflow: hidden; }
     Figures
 ======================================================================== */
 
-figure {
-    margin: 0;
-}
-
-figcaption {
-    line-height: 1.5;
-    padding: 6px 8px;
-    font-size: 12px;
-}
+figure { margin: 0; }
 
 
 
@@ -154,58 +187,46 @@ figcaption {
     Forms
 ======================================================================== */
 
-form {
-    margin: 0;
-}
+form { margin: 0; }
 
 fieldset {
-    border: 0;
-    margin: 0 0 14px;
-    padding: 0;
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em;
 }
 
 legend { border: 0; padding: 0; white-space: normal; }
 
-
-label {
-}
-
-label:hover {
-    cursor: default;
-    color: #27ace3;
-}
+label:hover { cursor: default; }
 
 
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
 
-
-button, input { line-height: normal; }
-
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-
-button, input[type=button], input[type=reset], input[type=submit], [role=button] { cursor: pointer; -webkit-appearance: button; }
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
 
 button[disabled], input[disabled] { cursor: default; }
 
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-input[type=checkbox], input[type=radio] { box-sizing: border-box; cursor: pointer; padding: 0; margin-right: 5px; }
-
-input[type=file] { cursor: pointer; font-size: 11px; color: #555; }
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+    padding: 0;
+}
 
 input[type=search] {
     -webkit-appearance: textfield;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
-
 textarea { overflow: auto; vertical-align: top; resize: vertical; }
-
-
-input:valid, textarea:valid {  }
-
-input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 
 
@@ -216,70 +237,8 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 table {
     border-spacing: 0;
-    border-collapse: separate;
-    background: #fff;
-    border: 1px solid #ccc;
-    line-height: 1.5;
-
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    border-collapse: collapse;
 }
-
-th,
-td {
-    vertical-align: top;
-    padding: 6px 12px;
-    border-top: 1px solid #e2e2e2;
-    border-right: 1px solid #e2e2e2;
-}
-th:last-child,
-td:last-child {
-    border-right: 0;
-}
-
-thead th {
-    background: #f5f5f5;
-    border-top: 0;
-}
-thead th:first-child {
-    -webkit-border-radius: 5px 0 0 0;
-       -moz-border-radius: 5px 0 0 0;
-            border-radius: 5px 0 0 0;
-}
-thead th:last-child {
-    -webkit-border-radius: 0 5px 0 0;
-       -moz-border-radius: 0 5px 0 0;
-            border-radius: 0 5px 0 0;
-}
-
-tbody th,
-tbody td {
-    font-size: 12px;
-}
-
-tbody tr:nth-child(even) th,
-tbody tr:nth-child(even) td {
-    background-color: #f9f9f9;
-}
-
-tbody tr:last-child th:first-child,
-tbody tr:last-child td:first-child {
-    -webkit-border-radius: 0 0 0 5px;
-       -moz-border-radius: 0 0 0 5px;
-            border-radius: 0 0 0 5px;
-}
-
-tbody tr:last-child th:last-child,
-tbody tr:last-child td:last-child {
-    -webkit-border-radius: 0 0 5px 0;
-       -moz-border-radius: 0 0 5px 0;
-            border-radius: 0 0 5px 0;
-}
-
-
-
-
 
 
 
@@ -307,14 +266,45 @@ tbody tr:last-child td:last-child {
 
 
 
-/*
+/* ========================================================================
 
     Primary styling
 
 ======================================================================== */
 
 
-/** Headings **/
+
+/*
+    Base
+======================================================================== */
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #27ace3;
+}
+
+
 
 h1,
 h2,
@@ -323,7 +313,7 @@ h4,
 h5,
 h6 {
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 h1:first-child,
@@ -402,6 +392,110 @@ ul.plain-list,
 
 
 
+/*
+    Tables
+======================================================================== */
+
+table {
+    background: #fff;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+
+th,
+td {
+    vertical-align: top;
+    padding: 6px 12px;
+    border-top: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+th:last-child,
+td:last-child {
+    border-right: 0;
+}
+
+thead th {
+    background: #f5f5f5;
+    border-top: 0;
+}
+thead th:first-child {
+    -webkit-border-radius: 5px 0 0 0;
+       -moz-border-radius: 5px 0 0 0;
+            border-radius: 5px 0 0 0;
+}
+thead th:last-child {
+    -webkit-border-radius: 0 5px 0 0;
+       -moz-border-radius: 0 5px 0 0;
+            border-radius: 0 5px 0 0;
+}
+
+tbody th,
+tbody td {
+    font-size: 12px;
+}
+
+tbody tr:nth-child(even) th,
+tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tbody tr:last-child th:first-child,
+tbody tr:last-child td:first-child {
+    -webkit-border-radius: 0 0 0 5px;
+       -moz-border-radius: 0 0 0 5px;
+            border-radius: 0 0 0 5px;
+}
+
+tbody tr:last-child th:last-child,
+tbody tr:last-child td:last-child {
+    -webkit-border-radius: 0 0 5px 0;
+       -moz-border-radius: 0 0 5px 0;
+            border-radius: 0 0 5px 0;
+}
+
+
+
+
+/*
+    Form elements
+======================================================================== */
+
+fieldset {
+    border: 0;
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 5px;
+}
+
+label:hover {
+    color: #27ace3;
+}
+
+
+
+
+/*
+    Code blocks
+======================================================================== */
+
+pre { display: table; width: 100%; margin: 0; padding: 24px; }
+
+pre > code { display: block; }
+
+
+
+
+
+
 
 
 
@@ -412,7 +506,8 @@ ul.plain-list,
 
 .container {
     margin-left: 444px;
-    min-width: 640px;
+    min-width: 666px;
+    max-width: 1000px;
     padding: 40px;
 
     -webkit-box-sizing: border-box;
@@ -601,6 +696,39 @@ ul.plain-list,
 
 
 
+/*
+    Active page
+======================================================================== */
+
+.page-active {
+    position: relative;
+    background: #fff;
+    padding-right: 24px;
+
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+}
+
+.page-active:after {
+    content: 'M';
+    position: absolute;
+    top: 4px;
+    right: 0;
+    font-family: 'Entypo';
+    font-size: 36px;
+    line-height: 6px;
+    color: #666;
+}
+
+.recipes-list .page-active:after {
+    top: 1px;
+}
+
+
+
+
+
 
 
 
@@ -633,8 +761,8 @@ ul.plain-list,
 
 
 .hidden { display: none; visibility: hidden; }
-
 .invisible { visibility: hidden; }
+
 
 .thin { font-weight: 100; }
 
@@ -649,12 +777,23 @@ ul.plain-list,
 .alignright { float: right; }
 
 
-.clear:before, .clear:after { content: ""; display: table; }
+.clear:before, .clear:after { content: " "; display: table; }
 .clear:after { clear: both; }
-.clear { zoom: 1; }
+.clear { *zoom: 1; }
 
 
-.ir { border: 0; font: 0/0 a; text-shadow: none; color: transparent; background-color: transparent; }
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
 
 
 
@@ -759,6 +898,28 @@ green:     #859900;
 
 
 
+/* ==========================================================================
+
+    Media Queries
+
+========================================================================== */
+
+@media (max-width: 1110px) {
+
+    body:after {
+        content: 'narrow';
+        display: none;
+    }
+
+    #sidebar {
+        position: absolute;
+        bottom: auto;
+        border-bottom: 1px solid #e0e5e6;
+    }
+
+}
+
+
 
 
 
@@ -768,18 +929,24 @@ green:     #859900;
     Print media queries
 ======================================================================== */
 
-
 @media print {
-    * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; } /* Black prints faster: h5bp.com/s */
-    a, a:visited { text-decoration: underline; }
-    a[href]:after { content: " (" attr(href) ")"; }
-    abbr[title]:after { content: " (" attr(title) ")"; }
-    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } /* Don't show links for images, or javascript/internal links */
-    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-    thead { display: table-header-group; } /* h5bp.com/t */
-    tr, img { page-break-inside: avoid; }
-    img { max-width: 100% !important; }
-    @page { margin: 0.5cm; }
-    p, h2, h3 { orphans: 3; widows: 3; }
-    h2, h3 { page-break-after: avoid; }
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; }
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
 }
+
+
