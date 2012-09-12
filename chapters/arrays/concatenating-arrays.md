@@ -46,6 +46,16 @@ array1
 # => [1, 2, 3, 4, 5, 6]
 {% endhighlight %}
 
+Alternatively, we can pass a CoffeeScript splat (`array2...`) directly into `push()`, avoiding the Array prototype.
+
+{% highlight coffeescript %}
+array1 = [1, 2, 3]
+array2 = [4, 5, 6]
+array1.push array2...
+array1
+# => [1, 2, 3, 4, 5, 6]
+{% endhighlight %}
+
 ## Discussion
 
 CoffeeScript lacks a special syntax for joining arrays, but `concat()` and `push()` are standard JavaScript methods.
