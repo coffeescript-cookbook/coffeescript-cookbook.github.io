@@ -67,6 +67,6 @@ serve
 
 This will start a webserver in the `_site` folder. Open a browser and visit `http://localhost:4000/` and you should see the site.
 
-## Minituiae and Other Trivialities
+## Minutiae and Other Trivialities
 
 jekyll can take a second or two to catch up when you save a file. If you edit a file and don't see the changes in your browser, give it a second or two and try again. You may also see Maruku warnings, but as long as it prints `Successfully generated site` you should be alright.

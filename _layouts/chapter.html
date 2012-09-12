@@ -76,12 +76,12 @@ chapters:
             {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
             {% capture indexurl %}{{ url }}/index.html{% endcapture %}
             <li class="chapter">
-              <div class="sidebar-subtitle"><strong><a class="chapter-title" href="{{ url }}">{{ chapter }}</a></strong></div>
+              <div class="sidebar-subtitle{% if page.url == indexurl %} page-active{% endif %}"><strong><a class="chapter-title" href="{{ url }}">{{ chapter }}</a></strong></div>
               <ul class="pseudo-list recipes-list">
-                {% for page in site.pages %}
-                  {% if page.url contains url %}
-                    {% unless page.url == indexurl %}
-                      <li class="list-item recipe"><a class="recipe-title" href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+                {% for site_page in site.pages %}
+                  {% if site_page.url contains url %}
+                    {% unless site_page.url == indexurl %}
+                      <li class="list-item recipe{% if page.url == site_page.url %} page-active{% endif %}"><a class="recipe-title" href="{{ site_page.url | replace: '.html', '' }}">{{ site_page.title }}</a></li>
                     {% endunless %}
                   {% endif %}
                 {% endfor %}
@@ -93,6 +93,8 @@ chapters:
 
     </aside>
 
-  </body>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+
+ </body>
 </html>
 
