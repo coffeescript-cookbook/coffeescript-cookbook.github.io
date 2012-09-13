@@ -23,7 +23,7 @@ greet "Coffee"
 
 ## Discussion
 
-This is a simple way to integrate small snippets of JavaScript code into your CoffeeScript without converting it over to use CoffeeScript syntax. As shown in the [CoffeeScript Language Reference](http://jashkenas.github.com/coffee-script/#embedded) you can mix to the two languages to a certain extent:
+This is a simple way to integrate small snippets of JavaScript code into your CoffeeScript without converting it over to use CoffeeScript syntax. As shown in the [CoffeeScript Language Reference](http://jashkenas.github.com/coffee-script/#embedded) you can mix the two languages to a certain extent:
 
 {% highlight coffeescript %}
 hello = `function (name) {
