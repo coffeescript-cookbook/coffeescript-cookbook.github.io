@@ -10,7 +10,9 @@ You want to create a class methods and instance methods.
 ## Solution
 
 ### Class Method
+
 {% highlight coffeescript %}
+
 class Songs
   @_titles: 0    # Although it's directly accessible, the leading _ defines it by convention as private property.
 
@@ -28,10 +30,13 @@ Songs.get_count()
 # => 1
 
 song.get_count()
-# => TypeError: Object #<Songs> has no method 'get_count'
+# => TypeError: Object <Songs> has no method 'get_count'
+
 {% endhighlight %}
 
 ### Instance Method
+{% highlight coffeescript %}
+
 class Songs
   _titles: 0    # Although it's directly accessible, the leading _ defines it by convention as private property.
 
@@ -47,6 +52,7 @@ song.get_count()
 
 Songs.get_count()
 # => TypeError: Object function Songs(artist, title) ... has no method 'get_count'
+
 {% endhighlight %}
 
 
