@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.7)
+    RedCloth (4.2.9)
     activesupport (3.0.7)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
