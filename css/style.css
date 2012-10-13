@@ -107,13 +107,6 @@ h6 {
     margin: 2.33em 0;
 }
 
-
-p, div {
-    -ms-word-break: break-all;
-        word-break: break-all;
-        word-break: break-word; /* old webkit */
-}
-
 abbr[title] { border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
