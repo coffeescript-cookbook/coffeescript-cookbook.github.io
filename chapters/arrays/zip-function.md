@@ -15,7 +15,7 @@ Use the following CoffeeScript code:
 # Usage: zip(arr1, arr2, arr3, ...)
 zip = () ->
   lengthArray = (arr.length for arr in arguments)
-  length = Math.max(lengthArray...)
+  length = Math.min(lengthArray...)
   for i in [0...length]
     arr[i] for arr in arguments
 
