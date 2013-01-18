@@ -46,7 +46,7 @@ Here are a couple of examples of how to use your new plugin.
 {% highlight javascript %}
 $("body").pluginName({
   debug: true
-};
+});
 
 {% endhighlight %}
 
