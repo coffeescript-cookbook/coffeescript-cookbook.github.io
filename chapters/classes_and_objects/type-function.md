@@ -5,7 +5,7 @@ chapter: Classes and Objects
 ---
 ## Problem
 
-You'd like to know the type of a function without using typeof. (See http://javascript.crockford.com/remedial.html for more information on why typeof is pretty inferior.)
+You'd like to know the type of a object without using typeof. (See http://javascript.crockford.com/remedial.html for more information on why typeof is pretty inferior.)
 
 ## Solution
 
