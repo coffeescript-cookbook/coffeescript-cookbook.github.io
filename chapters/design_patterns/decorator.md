@@ -27,15 +27,18 @@ stripComments = (line) ->
     line.replace /\s*\/\/.*$/, '' # Removes one-line, double-slash C-style comments
 
 TextProcessor = (@processors) ->
-    reducer: (existing, processor) ->
+    @reducer = (existing, processor) ->
         if processor
             processor(existing or '')
         else
             existing
-    processLine: (text) ->
+            
+    @processLine = (text) ->
         @processors.reduce @reducer, text
-    processString: (text) ->
+    @processString = (text) ->
         (@processLine(line) for line in text.split("\n")).join("\n")
+
+    @
 
 exampleText = '''
               # A level 1 header
