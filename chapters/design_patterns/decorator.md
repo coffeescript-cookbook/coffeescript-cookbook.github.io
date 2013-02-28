@@ -26,7 +26,9 @@ miniMarkdown = (line) ->
 stripComments = (line) ->
     line.replace /\s*\/\/.*$/, '' # Removes one-line, double-slash C-style comments
 
-TextProcessor = (@processors) ->
+class TextProcessor
+    constructor: (@processors) ->
+
     reducer: (existing, processor) ->
         if processor
             processor(existing or '')
