@@ -25,7 +25,8 @@ $(document).ready ->
 	# Advanced Settings
 	$.ajax '/',
 		type: 'GET'
-		dataType: 'html' error: (jqXHR, textStatus, errorThrown) ->
+		dataType: 'html'
+		error: (jqXHR, textStatus, errorThrown) ->
 			$('body').append "AJAX Error: #{textStatus}"
 		success: (data, textStatus, jqXHR) ->
 			$('body').append "Successful AJAX call: #{data}"
