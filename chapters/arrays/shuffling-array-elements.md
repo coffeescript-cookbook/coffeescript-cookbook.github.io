@@ -79,7 +79,7 @@ The following code adds the shuffle function to the Array prototype, which means
 you are able to run it on any array you wish, in a much more direct manner.
 
 {% highlight coffeescript %}
-Array::shuffle = ->
+do -> Array::shuffle ?= ->
   for i in [@length-1..1]
     j = Math.floor Math.random() * (i + 1)
     [@[i], @[j]] = [@[j], @[i]]
@@ -92,7 +92,9 @@ Array::shuffle = ->
 **Note:** Although it's quite common in languages like Ruby, extending native objects is 
 often considered bad practice in JavaScript (see: [Maintainable JavaScript: Don’t modify 
 objects you don’t own][dontown]; [Extending built-in native objects. Evil or not?]
-[extendevil]). 
+[extendevil]). That being said, the code above is really quite safe to add. It only adds
+`Array::shuffle` if it doesn't exist already, thanks to the existential assignment 
+operator (`?=`). That way, we don't overwrite someone else's, or a native browser method.
 
 Also, if you think you'll be using a lot of these utility functions, consider using a
 utility library, like [Lo-dash](http://lodash.com/). They include a lot of nifty 
