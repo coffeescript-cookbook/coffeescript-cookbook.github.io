@@ -53,7 +53,7 @@ exports.CalculatorTest =
 
 Before you can run your tests, you must install Nodeunit:
 
-First of allcreate a package.json file
+First of all create a `package.json` file
 
 {% highlight javascript %}
 {
@@ -85,10 +85,21 @@ $ npm test
 
 The test runner should fail, because we have no calculator.coffee
 
-<img src="images/nodeunit_failing_all.png" alt="All failing tests" />
+    suki@Yuzuki:nodeunit_testing (master)$ npm test
+    npm WARN package.json calculator@0.0.1 No README.md file found!
+
+    > calculator@0.0.1 test /Users/suki/tmp/nodeunit_testing
+    > ./node_modules/.bin/nodeunit test
+
+
+    /Users/suki/tmp/nodeunit_testing/node_modules/nodeunit/lib/nodeunit.js:72
+            if (err) throw err;
+                           ^
+    Error: ENOENT, stat '/Users/suki/tmp/nodeunit_testing/test'
+    npm ERR! Test failed.  See above for more details.
+    npm ERR! not ok code 0
 
 Let's create a simple file 
-
 
 {% highlight coffeescript %}
 
@@ -101,7 +112,39 @@ module.exports = Calculator
 
 And re-run the test suite.
 
-<img src="images/nodeunit_failing_better.png" alt="Still failing, but better" />
+    suki@Yuzuki:nodeunit_testing (master)$ npm test
+    npm WARN package.json calculator@0.0.1 No README.md file found!
+
+    > calculator@0.0.1 test /Users/suki/tmp/nodeunit_testing
+    > ./node_modules/.bin/nodeunit test
+
+
+    calculator.test
+    ✖ CalculatorTest - test can add two positive numbers
+
+    TypeError: Object #<Calculator> has no method 'add'
+      ...
+
+    ✖ CalculatorTest - test can handle negative number addition
+
+    TypeError: Object #<Calculator> has no method 'add'
+      ...
+
+    ✖ CalculatorTest - test can subtract two positive numbers
+
+    TypeError: Object #<Calculator> has no method 'subtract'
+      ...
+
+    ✖ CalculatorTest - test can handle negative number subtraction
+
+    TypeError: Object #<Calculator> has no method 'subtract'
+      ...
+
+
+    FAILURES: 4/4 assertions failed (31ms)
+    npm ERR! Test failed.  See above for more details.
+    npm ERR! not ok code 0
+
 
 ## <span style="color: green;">Getting the Tests to Pass</span>
 
@@ -124,7 +167,20 @@ module.exports = Calculator
 
 When we rerun the tests we see they're all passing:
 
-<img src="images/nodeunit_passing.png" alt="All passing" />
+    suki@Yuzuki:nodeunit_testing (master)$ npm test
+    npm WARN package.json calculator@0.0.1 No README.md file found!
+
+    > calculator@0.0.1 test /Users/suki/tmp/nodeunit_testing
+    > ./node_modules/.bin/nodeunit test
+
+
+    calculator.test
+    ✔ CalculatorTest - test can add two positive numbers
+    ✔ CalculatorTest - test can handle negative number addition
+    ✔ CalculatorTest - test can subtract two positive numbers
+    ✔ CalculatorTest - test can handle negative number subtraction
+
+    OK: 4 assertions (27ms)
 
 
 ## <span style="color: green;">Refactoring the Tests</span>
@@ -168,5 +224,3 @@ exports.CalculatorTest =
 {% endhighlight %}
 
 We can rerun the tests and everything should continue to pass.
-
-<img src="images/nodeunit_passing.png" alt="All passing" />
