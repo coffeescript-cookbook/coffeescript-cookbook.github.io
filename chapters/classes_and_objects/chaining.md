@@ -13,10 +13,11 @@ Return the `this` (i.e. `@`) object after every chained method.
 
 {% highlight coffeescript %}
 class CoffeeCup
-	properties:
-		strength: 'medium'
-		cream: false
-		sugar: false
+	constructor:  ->
+		@properties=
+			strength: 'medium'
+			cream: false
+			sugar: false
 	strength: (newStrength) ->
 		@properties.strength = newStrength
 		@
@@ -57,13 +58,13 @@ addChainedAttributeAccessor = (obj, propertyAttr, attr) ->
 			obj
 
 class TeaCup
-	properties:
-		size: 'medium'
-		type: 'black'
-		sugar: false
-		cream: false
-
-addChainedAttributeAccessor(TeaCup.prototype, 'properties', attr) for attr of TeaCup.prototype.properties
+	constructor:  ->
+		@properties=
+			size: 'medium'
+			type: 'black'
+			sugar: false
+			cream: false
+		addChainedAttributeAccessor(this, 'properties', attr) for attr of @properties
 
 earlgrey = new TeaCup().size('small').type('Earl Grey').sugar('false')
 
