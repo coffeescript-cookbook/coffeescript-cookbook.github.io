@@ -13,6 +13,9 @@ You want to create a class variable.
 class Zoo
   @MAX_ANIMALS: 50
   MAX_ZOOKEEPERS: 3
+  
+  helpfulInfo: =>
+    "Zoos may contain a maximum of #{@constructor.MAX_ANIMALS} animals"
 
 Zoo.MAX_ANIMALS
 # => 50
@@ -23,6 +26,8 @@ Zoo.MAX_ZOOKEEPERS
 zoo = new Zoo
 zoo.MAX_ZOOKEEPERS
 # => 3
+zoo.helpfulInfo()
+# => "Zoos may contain a maximum of 50 animals"
 {% endhighlight %}
 
 ## Discussion
