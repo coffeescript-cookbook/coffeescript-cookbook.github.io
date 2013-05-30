@@ -68,6 +68,10 @@ Array::where = (query, matcher = (a,b) -> a is b) ->
             match += 1 if matcher(item[key], val)
         if match is hit then true else false
 
+cats.where name:"bubbles"
+# => []
+# it's case sensitive
+
 cats.where name:"bubbles", (a, b) -> "#{ a }".toLowerCase() is "#{ b }".toLowerCase()
 # => [ { name: 'Bubbles', favoriteFood: 'mice', age: 1 } ]
 # now it's case insensitive
