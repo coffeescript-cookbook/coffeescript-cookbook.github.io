@@ -1,5 +1,5 @@
 ---
-layout: recipe Observer Pattern
+layout: recipe
 title: Observer Pattern
 chapter: Design patterns
 ---
@@ -20,7 +20,7 @@ class PostOffice
 		subscriber.callback(item) for subscriber in @subscribers when subscriber.item is item
 	subscribe: (to, onNewItemReleased) ->
 		@subscribers.push {'item':to, 'callback':onNewItemReleased}
-    
+
 class MagazineSubscriber
 	onNewMagazine: (item) ->
 		alert "I've got new "+item
@@ -41,7 +41,7 @@ postOffice.notifyNewItemReleased "Mens Health"
 
 ## Discussion
 
-Here you have an observer object (PostOffice) and observable objects (MagazineSubscriber, NewspaperSubscriber). 
-To be notified about an event of publishing new periodical observable object should make subscribtion on PostOffice. 
-Every of subscribed objects is stored internaly in the PostOffice array of subscribtions. 
+Here you have an observer object (PostOffice) and observable objects (MagazineSubscriber, NewspaperSubscriber).
+To be notified about an event of publishing new periodical observable object should make subscribtion on PostOffice.
+Every of subscribed objects is stored internaly in the PostOffice array of subscribtions.
 Every subscriber is notified on new concrete periodical is published.
