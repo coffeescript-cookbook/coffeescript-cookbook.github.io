@@ -1,14 +1,4 @@
 ---
-layout: default
-title: Adapter pattern
----
-
-## Sample recipe template
-
-Create a new `my-recipe.md` file and use this text as a start.
-
-{% highlight text %}
----
 layout: recipe
 title: Adapter patter
 chapter: Design patterns
@@ -17,9 +7,10 @@ chapter: Design patterns
 
 Suppose we have 3-rd party grid component. We want to apply there our own custom sorting but a small problem. Our custom sorter does not implement required interface by grid component.
 To understand the problem completely best example would be an socket from our usual life. Everybody knows this device. In some countries it has 3 pins and in other contries it has only 2 pins. 
-This is exactly right situation to use adapter. 
+This is exactly right situation to use [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern). 
 
 ## Solution
+
 {% highlight coffeescript %}
 # a fragment of 3-rd party grid component
 class AwesomeGrid
@@ -58,5 +49,3 @@ agrid.sort() # sort data with custom sorter through adapter
 
 Adapter is usefull when you have to organize an interaction between two objects with different interfaces. It can happen when you use 3-rd party libraries  or you work with legacy code. 
 In any case be carefull with adapter: it can be helpfull but it can instigate design errors. 
-
-{% endhighlight %}
