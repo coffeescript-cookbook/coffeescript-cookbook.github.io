@@ -20,8 +20,8 @@ To understand the problem completely best example would be an socket from our us
 This is exactly right situation to use adapter. 
 
 ## Solution
-
-#grid component
+{% highlight coffeescript %}
+# a fragment of 3-rd party grid component
 class AwesomeGrid
 	constructor: (@datasource)->
 		@sort_order = 'ASC' 
@@ -51,6 +51,8 @@ class RandomSorterAdapter
 agrid = new AwesomeGrid ['a','b','c','d','e','f']
 agrid.setCustomSorter new RandomSorterAdapter(new RandomSorter)
 agrid.sort() # sort data with custom sorter through adapter
+
+{% endhighlight %}
 
 ## Discussion
 
