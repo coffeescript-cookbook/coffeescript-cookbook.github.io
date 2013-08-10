@@ -62,4 +62,4 @@ Avoid the temptation to modulus the output of this generator. If you need an int
 r.randn() % 2
 {% endhighlight %}
 
-because you will most definitely not get random digits. Use `r.randi(2)` instead.
+because you will most definitely not get random digits. Use `r.rand(2)` instead.
