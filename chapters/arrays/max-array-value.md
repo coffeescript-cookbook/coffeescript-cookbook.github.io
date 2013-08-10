@@ -16,15 +16,11 @@ Math.max [12, 32, 11, 67, 1, 3]...
 # => 67
 {% endhighlight %}
 
-Alternatively, it's possible to use ES5 `reduce` method. For backward compatibility with older JavaScript implementations, use Math.max.apply:
+Alternatively, it's possible to use ES5 `reduce` method. For backward compatibility with older JavaScript implementations, use the above.
 
 {% highlight coffeescript %}
 # ECMAScript 5
 [12,32,11,67,1,3].reduce (a,b) -> Math.max a, b
-# => 67
-
-# Pre-ES5
-Math.max.apply(null, [12,32,11,67,1,3])
 # => 67
 {% endhighlight %}
 
