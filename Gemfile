@@ -1,9 +1,9 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 group :development do
-  gem "RedCloth", "~> 4.2"
-  gem "foreman",  "~> 0.13"
-  gem "serve",    "~> 1.0"
-  gem "jekyll",   "~> 0.10"
-  gem "thin",     "~> 1.2"
+  gem "github-pages"
+  gem "tzinfo-data"
+
+  gem "foreman",  "~> 0.63"
+  gem "serve",    "~> 1.5"
 end
