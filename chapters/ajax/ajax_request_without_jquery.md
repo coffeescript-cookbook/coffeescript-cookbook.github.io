@@ -47,7 +47,8 @@ loadDataFromServer = ->
 
   req.addEventListener 'readystatechange', ->
     if req.readyState is 4                        # ReadyState Compelte
-      if req.status in [200, 304]   # Success result codes
+      successResultCodes = [200, 304]
+      if req.status in successResultCodes
         data = eval '(' + req.responseText + ')'
         console.log 'data message: ', data.message
       else
