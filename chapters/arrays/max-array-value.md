@@ -26,4 +26,4 @@ Alternatively, it's possible to use ES5 `reduce` method. For backward compatibil
 
 ## Discussion
 
-`Math.max` compares every argument and returns the largest number from arguments. The ellipsis (`...`) converts every array value into argument which is given to the function. You can also use it with other functions which take variable ammount of arguments, such as `console.log`.
+`Math.max` compares every argument and returns the largest number from arguments. The ellipsis (`...`) converts every array value into argument which is given to the function. You can also use it with other functions which take variable amount of arguments, such as `console.log`.
