@@ -5,9 +5,12 @@ chapter: Design patterns
 ---
 ## Problem
 
-Suppose we have 3-rd party grid component. We want to apply there our own custom sorting but a small problem. Our custom sorter does not implement required interface by grid component.
-To understand the problem completely best example would be an socket from our usual life. Everybody knows this device. In some countries it has 3 pins and in other countries it has only 2 pins. 
-This is exactly right situation to use [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern). 
+Imagine you are traveling to a foreign country and once at your hotel room you realize your power cord is not compatible with the wall electric socket.
+Luckily you remember you brought with you a socket adapter.
+It will connect to the wall socket on one side and to your power cord on the other side, allowing for communication between them.
+
+The same situation may arise in code, when 2 (or more) instances (of classes, modules, etc.) want to talk to each other, but whose communication protocol (e.i. the language they use to communicate) is different from each other.
+In such a situation, the [Adapter Pattern](//en.wikipedia.org/wiki/Adapter_pattern) comes in handy. It will do the translation, from one side to the other.
 
 ## Solution
 
@@ -47,5 +50,5 @@ agrid.sort() # sort data with custom sorter through adapter
 
 ## Discussion
 
-Adapter is useful when you have to organize an interaction between two objects with different interfaces. It can happen when you use 3-rd party libraries  or you work with legacy code. 
+Adapter is useful when you have to organize an interaction between two objects with different interfaces. It can happen when you use 3rd party libraries  or you work with legacy code. 
 In any case be careful with adapter: it can be helpful but it can instigate design errors. 
