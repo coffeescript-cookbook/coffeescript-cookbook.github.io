@@ -5,9 +5,9 @@ chapter: Design patterns
 ---
 ## Problem
 
-Imagine you are traveling to a foreign country and once at your hotel room you realize your power cord is not compatible with the wall electric socket.
-Luckily you remember you brought with you a socket adapter.
-It will connect to the wall socket on one side and to your power cord on the other side, allowing for communication between them.
+Imagine you are traveling to a foreign country and once at your hotel room you realize your power cord socket is not compatible with the wall socket.
+Luckily, you remembered you've brought your power adapter with you.
+It will connect your power cord socket on one side and wall socket on the other side, allowing for communication between them.
 
 The same situation may arise in code, when 2 (or more) instances (of classes, modules, etc.) want to talk to each other, but whose communication protocol (e.i. the language they use to communicate) is different from each other.
 In such a situation, the [Adapter Pattern](//en.wikipedia.org/wiki/Adapter_pattern) comes in handy. It will do the translation, from one side to the other.
