@@ -54,6 +54,8 @@ class ModuleA
   constructor: ->
     MEDIATOR.wrap @  # We add event capabilities to our module
     @subscribe 'hello', @, (payload) -> console.log "(ModuleA) Received event 'hello' with payload: #{payload}"
+    # The 2 lines above could also have been written:
+    # MEDIATOR.subscribe 'hello', @, (payload) -> console.log "Received event 'hello' with payload: #{payload}"
 
 # Module B
 class ModuleB
@@ -61,6 +63,8 @@ class ModuleB
   constructor: ->
     MEDIATOR.wrap @ # We add event capabilities to our module
     @publish 'hello', 'I am moduleB and I just published!'
+    # The 2 lines above could also have been written:
+    # MEDIATOR.subscribe 'hello', @, (payload) -> console.log "Received event 'hello' with payload: #{payload}"
 
 # Instantiate our 2 modules
 new ModuleA()
