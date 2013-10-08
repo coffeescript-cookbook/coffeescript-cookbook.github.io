@@ -20,13 +20,13 @@ class CoffeeCup
 			sugar: false
 	strength: (newStrength) ->
 		@properties.strength = newStrength
-		@
+		this
 	cream: (newCream) ->
 		@properties.cream = newCream
-		@
+		this
 	sugar: (newSugar) ->
 		@properties.sugar = newSugar
-		@
+		this
 
 morningCup = new CoffeeCup()
 
