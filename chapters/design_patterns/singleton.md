@@ -12,7 +12,7 @@ Many times you only want one, and only one, instance of a class. For example, yo
 
 The publicly available class only contains the method to get the one true instance. The instance is kept within the closure of that public object and is always returned.
 
-This is works because CoffeeScript allows you to define executable statements inside a class definition. However, because most CoffeeScript compiles into a [IIFE][] wrapper you do not have to place the private class inside the class definition if this style suits you. The later might be useful when developing modular code such as found in [CommonJS][] (Node.js) or [Require.js][] (See the discussion for an example).
+This works because CoffeeScript allows you to define executable statements inside a class definition. However, because most CoffeeScript compiles into a [IIFE][] wrapper you do not have to place the private class inside the class definition if this style suits you. The later might be useful when developing modular code such as found in [CommonJS][] (Node.js) or [Require.js][] (See the discussion for an example).
 
 [IIFE]: http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 [CommonJS]: http://www.commonjs.org/
