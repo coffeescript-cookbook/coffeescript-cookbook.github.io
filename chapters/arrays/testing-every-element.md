@@ -12,7 +12,7 @@ You want to be able to check that every element in an array meets a particular c
 Use Array.every (ECMAScript 5):
 
 {% highlight coffeescript %}
-evens = (x for x in [1..10] by 2)
+evens = (x for x in [0..10] by 2)
 
 evens.every (x)-> x % 2 == 0
 # => true
