@@ -24,6 +24,12 @@ percentile = Math.floor(Math.random() * 100)
 dice = Math.floor(Math.random() * 6) + 1
 1 <= dice <= 6
 # => true
+
+max = 42
+min = -13
+range = Math.random() * (max - min) + min
+-13 <= range < 42
+# => true
 {% endhighlight %}
 
 ## Discussion
