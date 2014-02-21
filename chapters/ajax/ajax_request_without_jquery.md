@@ -23,7 +23,7 @@ Let's set up a simple test HTML page with a button.
 <body>
 	<h1>XMLHttpRequest Tester</h1>
 	<button id="loadDataButton">Load Data</button>
-	
+
 	<script type="text/javascript" src="XMLHttpRequest.js"></script>
 </body>
 </html>
@@ -53,7 +53,7 @@ loadDataFromServer = ->
         console.log 'data message: ', data.message
       else
         console.log 'Error loading data...'
-        
+
   req.open 'GET', 'data.json', false
   req.send()
 
@@ -63,7 +63,7 @@ loadDataButton.addEventListener 'click', loadDataFromServer, false
 
 ## Discussion
 
-In the above code we essentially grab a handle to the button in our HTML (line 16) and add a *click* event listener (line 17).  In our event listener, we define our callback function as loadDataFromServer.
+In the above code we grab a handle to the button in our HTML (line 16) and add a *click* event listener (line 17).  In our event listener, we define our callback function as loadDataFromServer.
 
 We define our loadDataFromServer callback beginning on line 2.
 
@@ -77,7 +77,7 @@ The last thing we need to do is actually make our request.
 
 Line 13 opens a 'GET' request to retrieve the data.json file.
 
-Line 14 sends our request to the server. 
+Line 14 sends our request to the server.
 
 ## Older Browser Support
 
@@ -100,4 +100,3 @@ if (typeof @XMLHttpRequest == "undefined")
 {% endhighlight %}
 
 This code ensures the XMLHttpRequest object is available in the global namespace.
-
