@@ -46,7 +46,7 @@ loadDataFromServer = ->
   req = new XMLHttpRequest()
 
   req.addEventListener 'readystatechange', ->
-    if req.readyState is 4                        # ReadyState Compelte
+    if req.readyState is 4                        # ReadyState Complete
       if req.status is 200 or req.status is 304   # Success result codes
         data = eval '(' + req.responseText + ')'
         console.log 'data message: ', data.message
@@ -62,7 +62,7 @@ loadDataButton.addEventListener 'click', loadDataFromServer, false
 
 ## Discussion
 
-In the above code we essentially grab a handle to the button in our HTML (line 16) and add a *click* event listener (line 17).  In our event listener, we define our callback function as loadDataFromServer.
+In the above code we grab a handle to the button in our HTML (line 16) and add a *click* event listener (line 17).  In our event listener, we define our callback function as loadDataFromServer.
 
 We define our loadDataFromServer callback beginning on line 2.
 

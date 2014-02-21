@@ -13,6 +13,7 @@ There are two ways to define a range of array elements in CoffeeScript.
 
 {% highlight coffeescript %}
 
+# inclusive
 myArray = [1..10]
 # => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
@@ -20,6 +21,7 @@ myArray = [1..10]
 
 {% highlight coffeescript %}
 
+# exclusive
 myArray = [1...10]
 # => [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
@@ -42,6 +44,7 @@ myLargeArray = [10...1]
 
 ## Discussion
 
-Inclusive range always define by '..' operator.
+Inclusive ranges are defined by the '..' operator and include the last value.
 
-Exclusive range define by '...', and always omit the last value. 
+Exclusive ranges are defined by '...', and always omit the last value.
+
