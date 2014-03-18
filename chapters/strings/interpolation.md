@@ -11,7 +11,8 @@ CoffeeScript Variable.
 ## Solution
 
 Use CoffeeScript's ruby-like string interpolation instead of
-JavaScript's string addition.
+JavaScript's string addition. You must use Double-quoted strings to 
+allow for interpolation. Single-quoted strings are treated as literals.
 
 Interpolation:
 
