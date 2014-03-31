@@ -8,15 +8,9 @@ Here's a list of recipes we think we need. Pick one, implement it, and remove it
 
 In the notes below, "JS" means the recipe is just a simple passthrough to an existing JavaScript method.
 
-## Introduction
-
-We need a better introduction. Right now the first recipe is [Embedding JavaScript](/chapters/syntax/embedding_javascript), which doesn't set the right first impression. How about three or four recipes that hold new users' hands a bit more as the first section?
-
 ## Syntax
 
 * Ensuring variables are closed over # with "do"
-
-## Objects
 
 ## Strings
 
@@ -44,10 +38,6 @@ evens.every even
 {% highlight coffeescript %}
 [1..10].some (x) -> x % 2 == 0 # => true
 {% endhighlight %}
-
-## Dates and Times
-
-* Empty
 
 ## Math
 
@@ -89,24 +79,11 @@ foo 1, 2, 3
 # => 6
 {% endhighlight %}
 
-## jQuery
-
-## Regular Expressions
-
-## Networking
-
-* Streaming HTTP server
-* Streaming HTTP client
-
-## AJAX
-
-* Getting data from a remote server # using raw XHTTPRequest instead of jQuery's `$.ajax`
-
 ## Design patterns
 
 * Creational Patterns
   * Abstract Factory
-  * Prototype 
+  * Prototype
 
 * Structural Patterns
   * Adapter
