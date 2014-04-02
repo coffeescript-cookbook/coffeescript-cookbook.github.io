@@ -23,7 +23,7 @@ match = /sample/i.test("Sample text")
 # => true
 {% endhighlight %}
 
-The next way to is to call the `exec` method on a `RegExp` pattern or object. The `exec` method returns an array an array with the match information or `null`:
+The next way to is to call the `exec` method on a `RegExp` pattern or object. The `exec` method returns an array with the match information or `null`:
 
 {% highlight coffeescript %}
 match = /s(amp)le/i.exec "Sample text"
