@@ -17,7 +17,7 @@ For example, we expect our calculator will be able to add and subtract and will 
 
 {% highlight coffeescript %}
 
-# tests/calculator.test.coffee
+# test/calculator.test.coffee
 
 Calculator = require '../calculator'
 
