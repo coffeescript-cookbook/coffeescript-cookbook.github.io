@@ -20,7 +20,7 @@ evens.every (x)-> x % 2 == 0
 
 Array.every was addded to Mozilla's Javascript 1.6 and made standard with EcmaScript 5. If you to support browsers that do not implement EC5 then check out [`_.all` from underscore.js][underscore].
 
-For a real world example, prentend you have a multiple select list that looks like:
+For a real world example, pretend you have a multiple select list that looks like:
 
 {% highlight html %}
 <select multiple id="my-select-list">
