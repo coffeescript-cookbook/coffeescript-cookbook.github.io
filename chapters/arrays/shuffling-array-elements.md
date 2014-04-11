@@ -80,9 +80,10 @@ you are able to run it on any array you wish, in a much more direct manner.
 
 {% highlight coffeescript %}
 do -> Array::shuffle ?= ->
-  for i in [@length-1..1]
-    j = Math.floor Math.random() * (i + 1)
-    [@[i], @[j]] = [@[j], @[i]]
+  if @length > 1
+    for i in [@length-1..1]
+      j = Math.floor Math.random() * (i + 1)
+      [@[i], @[j]] = [@[j], @[i]]
   @
 
 [1..9].shuffle()
