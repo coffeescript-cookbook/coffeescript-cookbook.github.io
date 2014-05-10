@@ -12,13 +12,10 @@ You'd like to get a random integer between two integers, inclusive.
 Use the following function.
 
 {% highlight coffeescript %}
-randomInt = (lower, upper=0) ->
-  start = Math.random()
-  if not lower?
-    [lower, upper] = [0, lower]
-  if lower > upper
-    [lower, upper] = [upper, lower]
-  return Math.floor(start * (upper - lower + 1) + lower)
+randomInt = (lower, upper) ->
+  [lower, upper] = [0, lower]     unless upper?           # Called with one argument
+  [lower, upper] = [upper, lower] if lower > upper        # Lower must be less then upper
+  Math.floor(Math.random() * (upper - lower + 1) + lower) # Last statement is a return value
 
 (randomInt(1) for i in [0...10])
 # => [0,1,1,0,0,0,1,1,1,0]
