@@ -6,7 +6,7 @@ title: Wanted Recipes
 
 Here's a list of recipes we think we need. Pick one, implement it, and remove it from the page. Alternately, add a quick note here for a recipe you'd like to see so someone else can add it.
 
-In the notes below, "JS" means the recipe is just a simple passthrough to an existing JavaScript method.
+In the notes below, "JS" means the recipe is just a simple pass-through to an existing JavaScript method.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ In the notes below, "JS" means the recipe is just a simple passthrough to an exi
 
 ## Strings
 
-* HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS impl!
+* HTML methods # JS .sup(), .sub(), .blink(), .link(url), etc. May not exist in your JS implementation!
 * substr
 {% highlight coffeescript %}
 str.substr(x,y)  === str[x..x+y-1] === str[x...x+y]
@@ -48,7 +48,7 @@ evens.every even
 * Logarithms # Math.log
 * Finding the base-n log # Math.log(num) / Math.log(base)
 * Exponents # Math.exp
-* Check if a creditcard is valid (checksum, Luhn algorithm)
+* Check if a credit card is valid (checksum, Luhn algorithm)
 
 ## Functions
 

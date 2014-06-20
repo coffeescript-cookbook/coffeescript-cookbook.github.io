@@ -49,7 +49,7 @@ Singleton.PrivateClass # => undefined
 
 ## Discussion
 
-See in the above example how all instances are outputting from the same instance of the Singleton class. You can also see that the PrivateClass and instance variable are not accessible outside the Singleton class. In essance the Singleton class provides a static method get which returns only one instance of PrivateClass and only one. It also hides the PrivateClass from the world so that you can not create your own.
+See in the above example how all instances are outputting from the same instance of the Singleton class. You can also see that the PrivateClass and instance variable are not accessible outside the Singleton class. In essence the Singleton class provides a static method get which returns only one instance of PrivateClass and only one. It also hides the PrivateClass from the world so that you can not create your own.
 
 The idea of hiding or making private the inner workings is preference. Especially since by default CoffeeScript wraps the compiled code inside it's own IIFE (closure) allowing you to define classes without worry that it might be accessible from outside the file. In this example, note that I am using the idiomatic module export feature to emphasize the publicly accessible portion of the module. (See this discussion for further explanation on [exporting to the global namespace][1]).
 

@@ -77,4 +77,4 @@ cats.where name:"bubbles", (a, b) -> "#{ a }".toLowerCase() is "#{ b }".toLowerC
 # now it's case insensitive
 {% endhighlight %}
 
-it's more a method to deal with collection and it could be rename as "find" but popular libraires like underscore or lodash name it "where". 
+it's more a method to deal with collection and it could be rename as "find" but popular libraries like underscore or lodash name it "where". 

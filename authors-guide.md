@@ -26,7 +26,7 @@ A typical cookbook page will have three sections (four if you count the title):
 
 ## Copyright Issues
 
-Do not post code that is copyrighted by another user, unless you have permission to use that code AND to relicense that code under the [CC BY 3.0](/license) license. If you DO have permission and the author would like credit, please add them to the [authors](/authors) page.
+Do not post code that is copyrighted by another user, unless you have permission to use that code AND to re-license that code under the [CC BY 3.0](/license) license. If you DO have permission and the author would like credit, please add them to the [authors](/authors) page.
 
 Also, just a stylistic note, please do not yank code directly from [http://coffeescript.org/](http://coffeescript.org/) and post it with little or no discussion. The CoffeeScript Cookbook is not affiliated with them. We think they're awesome and want them to like us, too! Make sure that anything taken from [http://coffeescript.org/](http://coffeescript.org/) is permissible use and that it stands alone as a valid recipe. If the recipe is too terse, consider adding more examples and discussion.
 
@@ -163,7 +163,7 @@ If the answer to either question is no, you might have some code that is a "clev
 
 ## What If My Recipe is Inefficient/Too Big/Too Slow?
 
-If it solves a problem to which the alternative is to _not_ solve the problem, share it. Let the reader decide if they want to use it. Sometimes we want tight efficient code, other times we want a robust featureset. If the code has abysmal performance characteristics, be sure to warn the reader in the Discussion.
+If it solves a problem to which the alternative is to _not_ solve the problem, share it. Let the reader decide if they want to use it. Sometimes we want tight efficient code, other times we want a robust feature set. If the code has abysmal performance characteristics, be sure to warn the reader in the Discussion.
 
 ## Can I Edit An Existing Recipe?
 

@@ -71,18 +71,18 @@ The TextProcessor serves the role of Decorator by binding the individual, specia
 We can even modify the existing Decorator object on the fly:
 
 {% highlight coffeescript %}
-smilies =
+smiles =
     ':)' : "smile"
     ':D' : "huge_grin"
     ':(' : "frown"
     ';)' : "wink"
 
-smilieExpander = (line) ->
+smileExpander = (line) ->
     if line
-        (line = line.replace symbol, "<img src='#{text}.png' alt='#{text}' />") for symbol, text of smilies
+        (line = line.replace symbol, "<img src='#{text}.png' alt='#{text}' />") for symbol, text of smiles
     line
 
-processor.processors.unshift smilieExpander
+processor.processors.unshift smileExpander
 
 processor.processString "# A header that makes you :) // you may even laugh"
 

@@ -34,7 +34,7 @@ mouseMoveHandler: (e) ->
 
 someOtherHandler: (e) ->
   @debounce((e) ->
-    # Do something here, but only once 250 milliseconds after initial execuction.
+    # Do something here, but only once 250 milliseconds after initial execution.
   250, true)
 {% endhighlight %}
 

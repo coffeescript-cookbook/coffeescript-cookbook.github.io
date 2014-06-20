@@ -40,7 +40,7 @@ bundle install
 #### Install pygments
 
 You'll need python installed for this.
-Macs and most Linuces come with it preinstalled.
+Macs and most Linuces come with it pre-installed.
 
 {% highlight bash %}
 easy_install pygments # for syntax highlighting
@@ -55,7 +55,7 @@ foreman start
 {% endhighlight %}
 
 Leave this window running while you work.
-Any time you change a file, jekyll will rerender it into the `_site` folder.
+Any time you change a file, jekyll will re-render it into the `_site` folder.
 
 Open a browser and visit <http://localhost:4000/> and you should see the site.
 

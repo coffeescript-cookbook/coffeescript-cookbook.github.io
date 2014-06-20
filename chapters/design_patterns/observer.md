@@ -42,6 +42,6 @@ postOffice.notifyNewItemReleased "Mens Health"
 ## Discussion
 
 Here you have an observer object (PostOffice) and observable objects (MagazineSubscriber, NewspaperSubscriber).
-To be notified about an event of publishing new periodical observable object should make subscribtion on PostOffice.
-Every of subscribed objects is stored internaly in the PostOffice array of subscribtions.
+To be notified about an event of publishing new periodical observable object should make subscription on PostOffice.
+Every of subscribed objects is stored internally in the PostOffice array of subscriptions.
 Every subscriber is notified on new concrete periodical is published.
