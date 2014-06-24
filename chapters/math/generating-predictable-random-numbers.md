@@ -46,7 +46,7 @@ class Rand
 
 ## Discussion
 
-JavaScript and CoffeeScript do not provide a seed-able random number generator. Writing your own will be an exercise in trading off the amount of randomness with the simplicity of the generator. A full discussion of randomness is beyond the scope of this cookbook; for further reading consult Donald Knuth's _The Art of Computer Programming_, Volume II, Chapter 3, "Random Numbers", and _Numerical Recipes in C_, 2nd Edition, Chapter 7, "Random Numbers".
+JavaScript and CoffeeScript do not provide a seedable random number generator. Writing your own will be an exercise in trading off the amount of randomness with the simplicity of the generator. A full discussion of randomness is beyond the scope of this cookbook; for further reading consult Donald Knuth's _The Art of Computer Programming_, Volume II, Chapter 3, "Random Numbers", and _Numerical Recipes in C_, 2nd Edition, Chapter 7, "Random Numbers".
 
 A brief explanation of this random number generator is in order, however. It is a Linear Congruential Pseudorandom Number Generator. LCPRNG's operate on the mathematical formula `I<sub>j+1</sub> = (aI<sub>j</sub>+c) % m`, where a is the multiplier, c is the addition offset, and m is the modulus.
  Each time a random number is requested, a very large multiplication and addition are performed -- "very large" relative to the key space -- and the resulting number is modulused back down into the keyspace.

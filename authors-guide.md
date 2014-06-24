@@ -26,7 +26,7 @@ A typical cookbook page will have three sections (four if you count the title):
 
 ## Copyright Issues
 
-Do not post code that is copyrighted by another user, unless you have permission to use that code AND to re-license that code under the [CC BY 3.0](/license) license. If you DO have permission and the author would like credit, please add them to the [authors](/authors) page.
+Do not post code that is copyrighted by another user, unless you have permission to use that code AND to relicense that code under the [CC BY 3.0](/license) license. If you DO have permission and the author would like credit, please add them to the [authors](/authors) page.
 
 Also, just a stylistic note, please do not yank code directly from [http://coffeescript.org/](http://coffeescript.org/) and post it with little or no discussion. The CoffeeScript Cookbook is not affiliated with them. We think they're awesome and want them to like us, too! Make sure that anything taken from [http://coffeescript.org/](http://coffeescript.org/) is permissible use and that it stands alone as a valid recipe. If the recipe is too terse, consider adding more examples and discussion.
 
