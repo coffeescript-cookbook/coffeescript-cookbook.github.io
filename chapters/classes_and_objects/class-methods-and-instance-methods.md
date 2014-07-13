@@ -5,7 +5,7 @@ chapter: Classes and Objects
 ---
 ## Problem
 
-You want to create a class methods and instance methods.
+You want to create class and instance methods.
 
 ## Solution
 
