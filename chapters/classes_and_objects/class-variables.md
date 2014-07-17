@@ -40,4 +40,51 @@ zoo.helpfulInfo()
 
 ## Discussion
 
-Coffeescript will store these values on the class itself rather than on the prototype it defines.  These are useful for defining variables on classes which can't be overrided by instance attribute variables.
+Coffeescript will store these values on the class itself rather than on the prototype it defines. 
+These are useful for defining variables on classes which can not be overrided by instance attribute variables.
+
+## Warning
+
+Be aware that for non-primitive (mutable) properties (anything execpt `number`, `string`, `boolean`, `null` or `undefined`)
+so (e.g. an array `[]` or a dictionary `{}`)  the variable will be shared among instances.
+
+## Problem
+
+You want to create a class variable for non-primitive type.
+
+## Solution
+
+Create the variable in the constructor
+
+
+{% highlight coffeescript %}
+class Animal 
+
+	# variable is mutable and will be shared across all instances of the prototype
+	favoriteFoodShared : []
+	
+	constructor: ->
+		@favoriteFood = []
+
+bear = new Animal()
+lion = new Animal()
+
+lion.favoriteFood.push "Zebras"
+
+lion.favoriteFood
+# => ["Zebras"]
+
+bear.favoriteFood
+# => []
+
+# here is what happens if you would use modify the mutable variable
+
+lion.favoriteFoodShared.push "Zebras"
+
+lion.favoriteFoodShared
+# => ["Zebras"]
+
+bear.favoriteFoodShared
+# => ["Zebras"]
+
+{% endhighlight %}
