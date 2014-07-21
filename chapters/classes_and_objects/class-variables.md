@@ -40,4 +40,4 @@ zoo.helpfulInfo()
 
 ## Discussion
 
-Coffeescript will store these values on the class itself rather than on the prototype it defines.  These are useful for defining variables on classes which can't be overrided by instance attribute variables.
+Coffeescript will store these values on the class itself rather than on the prototype it defines.  These are useful for defining variables on classes which can't be overwritten by instance attribute variables.
