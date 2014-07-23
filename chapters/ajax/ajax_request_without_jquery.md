@@ -46,7 +46,7 @@ loadDataFromServer = ->
   req = new XMLHttpRequest()
 
   req.addEventListener 'readystatechange', ->
-    if req.readyState is 4                        # ReadyState Compelte
+    if req.readyState is 4                        # ReadyState Complete
       successResultCodes = [200, 304]
       if req.status in successResultCodes
         data = eval '(' + req.responseText + ')'
@@ -69,13 +69,13 @@ We define our loadDataFromServer callback beginning on line 2.
 
 We create a XMLHttpRequest request object (line 3) and add a *readystatechange* event handler.  This fires whenever the request's readyState changes.
 
-In the event handler we check to see if the readyState = 4, indicating the request has completed.  Then, we check the request status value.  Both 200 or 304 represent a succsessful request.  Anything else represents an error condition.
+In the event handler we check to see if the readyState = 4, indicating the request has completed.  Then, we check the request status value.  Both 200 or 304 represent a successful request.  Anything else represents an error condition.
 
 If the request was indeed successful, we eval the JSON returned from the server and assign it to a data variable.  At this point, we can use the returned data in any way we need to.
 
 The last thing we need to do is actually make our request.
 
-Line 13 opens a 'GET' request to retreive the data.json file.
+Line 13 opens a 'GET' request to retrieve the data.json file.
 
 Line 14 sends our request to the server. 
 

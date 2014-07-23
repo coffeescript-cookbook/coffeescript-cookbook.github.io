@@ -9,7 +9,7 @@ You need to find how much seconds minutes, hours, days, months or years has pass
 
 ## Solution
 
-Use JavaScript's Date function  getTime(). Which provides how much time in miliseconds has passed since 01/01/1970:
+Use JavaScript's Date function  getTime(). Which provides how much time in milliseconds has passed since 01/01/1970:
 
 {% highlight coffeescript %}
 DAY = 1000 * 60 * 60  * 24
@@ -22,12 +22,12 @@ days_passed = Math.round((d2.getTime() - d1.getTime()) / DAY)
 
 ## Discussion
 
-Using miliseconds makes the life easier to avoid overflow mistakes with Dates. So we first calculate how much miliseconds has a day.
-Then, given two distincit dates, just get the diference in miliseconds betwen two dates and then divide by how much miliseconds has a
+Using milliseconds makes the life easier to avoid overflow mistakes with Dates. So we first calculate how much milliseconds has a day.
+Then, given two distinct dates, just get the difference in milliseconds between two dates and then divide by how much milliseconds has a
 day. It will get you the days between two distinct dates.
 
-If you'd like to calculate the hours between two dates objects you can do that just by dividing the diference in miliseconds by the
-convertion of miliseconds to hours. The same goes to minutes and seconds.
+If you'd like to calculate the hours between two date objects, you can do that just by dividing the difference in milliseconds by the
+conversion of milliseconds to hours. The same goes for minutes and seconds.
 
 {% highlight coffeescript %}
 HOUR = 1000 * 60 * 60

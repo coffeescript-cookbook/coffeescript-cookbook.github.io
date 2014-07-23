@@ -9,7 +9,7 @@ You have an array of objects and want to reduce them to a value, similar to Ruby
 
 ## Solution
 
-You can simply use Array's `reduce()` and `reduceRight()` methods along with an anonoymous function, keeping the code clean and readable. The reduction may be something simple such as using the `+` operator with numbers or strings.
+You can simply use Array's `reduce()` and `reduceRight()` methods along with an anonymous function, keeping the code clean and readable. The reduction may be something simple such as using the `+` operator with numbers or strings.
 
 {% highlight coffeescript %}
 [1,2,3,4].reduce (x,y) -> x + y

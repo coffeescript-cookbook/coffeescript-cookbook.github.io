@@ -34,7 +34,7 @@ This CoffeeScript Javascript Fast Fibonacci code is
 based on the python code from Robin Houston's blog.
 See below links.
 
-A few things I want to introduce in time are implementions of
+A few things I want to introduce in time are implementations of
 Newtonian, Burnikel / Ziegler, and Binet's algorithms on top
 of a Big Number framework.
 

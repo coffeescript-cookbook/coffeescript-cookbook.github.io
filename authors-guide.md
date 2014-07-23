@@ -163,7 +163,7 @@ If the answer to either question is no, you might have some code that is a "clev
 
 ## What If My Recipe is Inefficient/Too Big/Too Slow?
 
-If it solves a problem to which the alternative is to _not_ solve the problem, share it. Let the reader decide if they want to use it. Sometimes we want tight efficient code, other times we want a robust featureset. If the code has abysmal performance characteristics, be sure to warn the reader in the Discussion.
+If it solves a problem to which the alternative is to _not_ solve the problem, share it. Let the reader decide if they want to use it. Sometimes we want tight efficient code, other times we want a robust feature set. If the code has abysmal performance characteristics, be sure to warn the reader in the Discussion.
 
 ## Can I Edit An Existing Recipe?
 

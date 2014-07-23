@@ -5,7 +5,7 @@ chapter: Dates and Times
 ---
 ## Problem
 
-You need to calculate when is Thanksgivinig in given year.
+You need to calculate when Thanksgiving is in a given year.
 
 ## Solution
 

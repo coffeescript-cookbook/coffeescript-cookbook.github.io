@@ -17,16 +17,16 @@ In this CoffeeScript variant I supply the original classic, and newer optimal
 sized magic number.
 
 Another feature included is the ability to alter the level of precision.
-This is done by controling the number of iterations for performing [Newton's
+This is done by controlling the number of iterations for performing [Newton's
 method][3].
 
-Depending on the machine and level of percision this algorithm may still
+Depending on the machine and level of precision this algorithm may still
 provide performance increases over the classic.
 
 To run this, compile the script with coffee:
     coffee -c script.coffee
 
-Then copy & paste the compiled js code in to the JavaSript console of your
+Then copy & paste the compiled js code in to the JavaScript console of your
 browser.
 
 Note: You will need a browser which supports [typed-arrays][4].
@@ -63,16 +63,16 @@ In this CoffeeScript variant I supply the original classic, and newer optimal
 sized magic number.
 
 Another feature included is the ability to alter the level of precision.
-This is done by controling the number of iterations for performing Newton's
+This is done by controlling the number of iterations for performing Newton's
 method[3].
 
-Depending on the machine and level of percision this algorithm may still
+Depending on the machine and level of precision this algorithm may still
 provide performance increases over the classic.
 
 To run this, compile the script with coffee:
     coffee -c <this script>.coffee
 
-Then copy & paste the compiled js code in to the JavaSript console of your
+Then copy & paste the compiled js code in to the JavaScript console of your
 browser.
 
 Note: You will need a browser which supports typed-arrays[4].

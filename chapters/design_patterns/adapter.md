@@ -19,7 +19,7 @@ In such a situation, the [Adapter Pattern](//en.wikipedia.org/wiki/Adapter_patte
 class AwesomeGrid
 	constructor: (@datasource)->
 		@sort_order = 'ASC' 
-		@sorter = new NullSorter # in this place we use NullObject pattern (another usefull pattern)
+		@sorter = new NullSorter # in this place we use NullObject pattern (another useful pattern)
 	setCustomSorter: (@customSorter) ->
 		@sorter = customSorter
 	sort: () ->

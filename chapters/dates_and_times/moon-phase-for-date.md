@@ -9,7 +9,7 @@ You want to find the current phase of the moon.
 
 ## Solution
 
-The following code provides a method to calcualate the phase of the moon for a given date.
+The following code provides a method to calculate the phase of the moon for a given date.
 
 {% highlight coffeescript %}
 # moonPhase.coffee
