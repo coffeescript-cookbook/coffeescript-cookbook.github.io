@@ -23,7 +23,7 @@ mongo = require 'mongodb'
 
 server = new mongo.Server "127.0.0.1", 27017, {}
 
-client = new mongo.Db 'test', server
+client = new mongo.Db 'test', server, {w:1}
 
 # save() updates existing records or inserts new ones as needed
 exampleSave = (dbErr, collection) ->
@@ -43,7 +43,7 @@ mongo = require 'mongodb'
 
 server = new mongo.Server "127.0.0.1", 27017, {}
 
-client = new mongo.Db 'test', server
+client = new mongo.Db 'test', server, {w:1}
 
 exampleFind = (dbErr, collection) ->
 	console.log "Unable to access database: #{dbErr}" if dbErr
