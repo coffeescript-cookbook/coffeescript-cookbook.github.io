@@ -30,7 +30,7 @@ Use the following function:
 
 ## Discussion
 
-This function was modeled on jQuery's $.type function. (http://api.jquery.com/jQuery.type/)
+This function was modeled on jQuery's [$.type function](http://api.jquery.com/jQuery.type/). 
 
 Note that, as an alternative to type checking, you can often use duck typing and the existential operator together to eliminating the need to examine an object's type, in certain cases.  For example, here is exception-free code that pushes an element to an array, if myArray is in fact an array (or array-like, with a push function), and does nothing otherwise.
 
