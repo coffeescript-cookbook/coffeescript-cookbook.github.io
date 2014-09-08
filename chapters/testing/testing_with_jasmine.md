@@ -5,7 +5,7 @@ chapter: Testing
 ---
 ## Problem
 
-You are writing a simple calculator using CoffeeScript and you want to verify it functions as expected.  You decide to use the <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a> test framework.
+You are writing a simple calculator using CoffeeScript and you want to verify it functions as expected.  You decide to use the <a href="http://jasmine.github.io/" target="_blank">Jasmine</a> test framework.
 
 ## Discussion
 
@@ -45,7 +45,7 @@ describe 'Calculator', ->
 ### Configuring Jasmine
 
 Before you can run your tests, you must download and configure Jasmine.  This involves:
-1. downloading the latest <a href="http://pivotal.github.com/jasmine/download.html" target="_blank">Jasmine</a> zip file;
+1. downloading the latest <a href="https://github.com/pivotal/jasmine/tree/master/dist" target="_blank">Jasmine</a> zip file;
 2. creating a spec and a spec/jasmine folder in your project;
 3. extracting the downloaded Jasmine files into the spec/jasmine folder; and
 4. creating a test runner.
