@@ -20,7 +20,7 @@ class Songs
     @_titles
 
   constructor: (@artist, @title) ->
-    Songs._titles++
+    @constructor._titles++     # Refers to <Classname>._titles, in this case Songs.titles
 
 Songs.get_count()
 # => 0
