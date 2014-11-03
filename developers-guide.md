@@ -9,7 +9,7 @@ _Please help out by updating this page_
 
 ### Operating System
 
-It works on Mac OSX. Probably works without any changes or issues on Linux.
+It works on Mac OS X. Probably works without any changes or issues on Linux.
 A masochist could probably get it working on Windows.
 
 ## Installation
