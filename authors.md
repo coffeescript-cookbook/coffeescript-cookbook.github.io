@@ -23,6 +23,7 @@ The following people are totally rad and awesome because they have contributed r
 * [Anton Rissanen](http://github.com/antris) *hello@anton.fi*
 * Calum Robertson *http://github.com/randusr836*
 * Jake Burkhead *https://github.com/jlburkhead*
+* [Alex Johnson](https://github.com/nonsensery)
 * ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
 
 # Developers
