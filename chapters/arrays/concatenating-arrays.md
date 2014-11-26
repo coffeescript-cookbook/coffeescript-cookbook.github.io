@@ -56,6 +56,16 @@ array1
 # => [1, 2, 3, 4, 5, 6]
 {% endhighlight %}
 
+A more idiomatic approach is to use the splat operator (`...`) directly in an array literal. This can be used to concatenate any number of arrays.
+
+{% highlight coffeescript %}
+array1 = [1, 2, 3]
+array2 = [4, 5, 6]
+array3 = [array1..., array2...]
+array3
+# => [1, 2, 3, 4, 5, 6]
+{% endhighlight %}
+
 ## Discussion
 
 CoffeeScript lacks a special syntax for joining arrays, but `concat()` and `push()` are standard JavaScript methods.
