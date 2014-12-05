@@ -97,8 +97,10 @@ objects you don’t own][dontown]; [Extending built-in native objects. Evil or n
 operator (`?=`). That way, we don't overwrite someone else's, or a native browser method.
 
 Also, if you think you'll be using a lot of these utility functions, consider using a
-utility library, like [Lo-dash](http://lodash.com/). They include a lot of nifty 
+utility library, like [Lo-dash](http://lodash.com/)^†. They include a lot of nifty
 features, like maps and forEach, in a cross-browser, lean, high-performance way. 
+
+^† [Underscore](http://underscorejs.org/) is also a good alternative to Lo-dash.
 
 [dontown]: http://www.nczonline.net/blog/2010/03/02/maintainable-javascript-dont-modify-objects-you-down-own/
 [extendevil]: http://perfectionkills.com/extending-built-in-native-objects-evil-or-not/
