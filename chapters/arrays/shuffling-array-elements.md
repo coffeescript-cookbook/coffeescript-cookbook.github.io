@@ -79,12 +79,11 @@ The following code adds the shuffle function to the Array prototype, which means
 you are able to run it on any array you wish, in a much more direct manner.
 
 {% highlight coffeescript %}
-do -> Array::shuffle ?= ->
-  if @length > 1
-    for i in [@length-1..1]
-      j = Math.floor Math.random() * (i + 1)
-      [@[i], @[j]] = [@[j], @[i]]
-  @
+Array::shuffle ?= ->
+  if @length > 1 then for i in [@length-1..1]
+    j = Math.floor Math.random() * (i + 1)
+    [@[i], @[j]] = [@[j], @[i]]
+  this
 
 [1..9].shuffle()
 # => [ 3, 1, 5, 6, 4, 8, 2, 9, 7 ]
