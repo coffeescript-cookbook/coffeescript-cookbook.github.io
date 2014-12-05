@@ -17,16 +17,16 @@ at the end of the list. This [Fisher-Yates shuffle Visualization] may help you u
 the algorithm.
 
 {% highlight coffeescript %}
-shuffle = (a) ->
-  if a.length >= 2
-    # From the end of the list to the beginning, pick element `i`.
-    for i in [a.length-1..1]
-      # Choose random element `j` to the front of `i` to swap with.
-      j = Math.floor Math.random() * (i + 1)
-      # Swap `j` with `i`, using destructured assignment
-      [a[i], a[j]] = [a[j], a[i]]
-  # Return the shuffled array.
-  a
+shuffle = (source) ->
+  # Arrays with < 2 elements do not shuffle well. Instead make it a noop.
+  return source unless source.length >= 2
+  # From the end of the list to the beginning, pick element `index`.
+  for index in [source.length-1..1]
+    # Choose random element `randomIndex` to the front of `index` to swap with.
+    randomIndex = Math.floor Math.random() * (index + 1)
+    # Swap `randomIndex` with `index`, using destructured assignment
+    [source[index], source[randomIndex]] = [source[randomIndex], source[index]]
+  source
 
 shuffle([1..9])
 # => [ 3, 1, 5, 6, 4, 8, 2, 9, 7 ]
