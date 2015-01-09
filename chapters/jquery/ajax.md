@@ -43,4 +43,4 @@ jQuery 1.5 and later have added a new, supplemental API for handling different c
 
 ## Discussion
 
-The jQuery and $ variables can be used interchangeably. See also [Callback bindings](/chapters/jquery/callback-bindings-jquery).
+The jQuery and $ variables can be used interchangeably. See also [Callback bindings]({{ site.baseurl }}/chapters/jquery/callback-bindings-jquery).

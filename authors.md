@@ -24,7 +24,7 @@ The following people are totally rad and awesome because they have contributed r
 * Calum Robertson *http://github.com/randusr836*
 * Jake Burkhead *https://github.com/jlburkhead*
 * [Alex Johnson](https://github.com/nonsensery)
-* ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
+* ...You! What are you waiting for? Check out the [contributing]({{ site.baseurl }}/contributing) section and get cracking!
 
 # Developers
 
@@ -34,11 +34,11 @@ The following people are totally rad and awesome because they have contributed r
 * Mike Moore *mike@blowmage.com*
 * Peter Hellberg *peter@c7.se*
 * Jamie Gaskins *jgaskins@gmail.com*
-* ...You! What are you waiting for? Check out the [contributing](/contributing) section and get cracking!
+* ...You! What are you waiting for? Check out the [contributing]({{ site.baseurl }}/contributing) section and get cracking!
 
 # Designers
 
 The following people are astonishingly rad and awesome because they did great design for the site!
 
 * [Amsul](http://github.com/amsul) reach@amsul.ca
-* ...You! Check out the [contributing](/contributing) section and get cracking!
+* ...You! Check out the [contributing]({{ site.baseurl }}/contributing) section and get cracking!

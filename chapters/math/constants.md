@@ -45,4 +45,4 @@ Math.LOG10E
 
 ## Discussion
 
-For another example of how a math constant is used in a real world problem, refer to the [Converting Radians and Degrees](/chapters/math/radians-degrees) section of this Math chapter.
+For another example of how a math constant is used in a real world problem, refer to the [Converting Radians and Degrees]({{ site.baseurl }}/chapters/math/radians-degrees) section of this Math chapter.

@@ -41,7 +41,7 @@ connection.on 'end', (data) ->
 
 ### Example Usage
 
-Accessing the [Bi-Directional Server](/chapters/networking/bi-directional-server):
+Accessing the [Bi-Directional Server]({{ site.baseurl }}/chapters/networking/bi-directional-server):
 
 {% highlight console %}
 $ coffee bi-directional-client.coffee
@@ -60,7 +60,7 @@ Connection closed
 
 This particular example initiates contact with the server and starts the conversation in the @connection.on 'connect'@ handler.  The bulk of the work in a real client, however, will lie in the @connection.on 'data'@ handler, which processes output from the server.  The @ping@  function only recurses in order to illustrate continuous communication with the server and can be removed from a real client.
 
-See also the [Bi-Directional Server](/chapters/networking/bi-directional-server), [Basic Client](/chapters/networking/basic-client), and [Basic Server](/chapters/networking/basic-server) recipes.
+See also the [Bi-Directional Server]({{ site.baseurl }}/chapters/networking/bi-directional-server), [Basic Client]({{ site.baseurl }}/chapters/networking/basic-client), and [Basic Server]({{ site.baseurl }}/chapters/networking/basic-server) recipes.
 
 ### Exercises
 

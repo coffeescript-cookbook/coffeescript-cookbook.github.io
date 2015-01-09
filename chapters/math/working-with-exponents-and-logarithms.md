@@ -34,4 +34,4 @@ Math.log(100) / Math.log(10)
 
 ## Discussion
 
-For more information on the Math object see the documentation on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math). Also refer to [Math Constants](/chapters/math/constants) for discussion of the various constants in the Math object.
+For more information on the Math object see the documentation on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math). Also refer to [Math Constants]({{ site.baseurl }}/chapters/math/constants) for discussion of the various constants in the Math object.

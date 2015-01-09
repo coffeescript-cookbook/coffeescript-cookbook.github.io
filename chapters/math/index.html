@@ -11,7 +11,7 @@ chapter: Math
 {% for page in site.pages %}
   {% if page.url contains url %}
     {% unless page.url == indexurl %}
-  <li><a href="{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+  <li><a href="{{ site.baseurl }}{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
     {% endunless %}
   {% endif %}
 {% endfor %}

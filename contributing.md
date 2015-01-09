@@ -15,16 +15,16 @@ Here's the Contribution Recipe:
 
 ## Wanted Recipes
 
-Want to help, but don't know where to start? Want a recipe, but don't know how to write it? Check out the [Wanted Recipes](/wanted-recipes) page!
+Want to help, but don't know where to start? Want a recipe, but don't know how to write it? Check out the [Wanted Recipes]({{ site.baseurl }}/wanted-recipes) page!
 
 ## Authors
 
-Write recipes! Fork the repository, author some pages, and send us a pull request. For more information read the [Author's Guide](/authors-guide).
+Write recipes! Fork the repository, author some pages, and send us a pull request. For more information read the [Author's Guide]({{ site.baseurl }}/authors-guide).
 
 ## Developers
 
-Improve the code! Fork the repository, extend or improve the site coded, and send a pull request. For more information read the [Developer's Guide](/developers-guide).
+Improve the code! Fork the repository, extend or improve the site coded, and send a pull request. For more information read the [Developer's Guide]({{ site.baseurl }}/developers-guide).
 
 ## Designers
 
-Make this site look pretty! Fork the repository, extend, improve or update the design, and send a pull request. For more information read the [Designer's Guide](/designers-guide).
+Make this site look pretty! Fork the repository, extend, improve or update the design, and send a pull request. For more information read the [Designer's Guide]({{ site.baseurl }}/designers-guide).

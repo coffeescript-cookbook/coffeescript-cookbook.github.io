@@ -33,7 +33,7 @@ server.listen port, domain
 
 ### Example Usage
 
-Accessed by the [Bi-Directional Client](/chapters/networking/bi-directional-client):
+Accessed by the [Bi-Directional Client]({{ site.baseurl }}/chapters/networking/bi-directional-client):
 
 {% highlight console %}
 $ coffee bi-directional-server.coffee
@@ -49,7 +49,7 @@ New connection from 127.0.0.1
 
 The bulk of the work lies in the @socket.on 'data'@ handler, which processes all of the input from the client.  A real server would likely pass the data onto another function to process it and generate any responses so that the original handler.
 
-See also the [Bi-Directional Client](/chapters/networking/bi-directional-client), [Basic Client](/chapters/networking/basic-client), and [Basic Server](/chapters/networking/basic-server) recipes.
+See also the [Bi-Directional Client]({{ site.baseurl }}/chapters/networking/bi-directional-client), [Basic Client]({{ site.baseurl }}/chapters/networking/basic-client), and [Basic Server]({{ site.baseurl }}/chapters/networking/basic-server) recipes.
 
 ### Exercises
 

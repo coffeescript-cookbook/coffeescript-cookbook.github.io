@@ -23,15 +23,15 @@ chapters:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>CoffeeScript Cookbook &raquo; {{ page.title }}</title>
-    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link type="image/x-icon" rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
   </head>
   <body>
 
     <section class="container">
 
       <header class="header">
-        <h1><a class="" href="/"><span class="entypo">&oacute;</span><span class="title ir">CoffeeScript Cookbook</span></a></h1>
+        <h1><a class="" href="{{ site.baseurl }}/"><span class="entypo">&oacute;</span><span class="title ir">CoffeeScript Cookbook</span></a></h1>
       </header>
 
       <section class="content">
@@ -39,8 +39,8 @@ chapters:
         <article class="content-block">{{ content }}</article>
 
         <footer class="footer content-block">
-          <p>Don't see a recipe you want? See an entire missing chapter? Add it yourself by reading the <a href="/contributing">Contributor's Guide</a>, or request it by adding it to <a href="/wanted-recipes">Wanted Recipes</a>.</p>
-          <a href="/license"><img src="/images/cc_by_badge.png" /></a>
+          <p>Don't see a recipe you want? See an entire missing chapter? Add it yourself by reading the <a href="{{ site.baseurl }}/contributing">Contributor's Guide</a>, or request it by adding it to <a href="{{ site.baseurl }}/wanted-recipes">Wanted Recipes</a>.</p>
+          <a href="{{ site.baseurl }}/license"><img src="{{ site.baseurl }}/images/cc_by_badge.png" /></a>
         </footer>
 
       </section>
@@ -51,7 +51,7 @@ chapters:
 
       <section class="sidebar-block block-short">
         <nav class="navigation pages-nav home-nav">
-          <h6><a class="nav-link" href="/"><span class="entypo">&oacute;</span>CoffeeScript Cookbook</a></h6>
+          <h6><a class="nav-link" href="{{ site.baseurl }}/"><span class="entypo">&oacute;</span>CoffeeScript Cookbook</a></h6>
           <small class="thin dimmed">(last updated {{ site.time | date: "%d %B, %Y" }})</small>
         </nav>
       </section>
@@ -59,9 +59,9 @@ chapters:
       <section class="sidebar-block">
         <nav class="navigation pages-nav">
           <ul class="plain-list inline-list">
-            <li><a class="nav-link" href="/contributing"><span class="entypo">6</span>Contribute</a></li>
-            <li><a class="nav-link" href="/authors"><span class="entypo">,</span>Authors</a></li>
-            <li><a class="nav-link" href="/license"><span class="entypo">&copy;</span>License</a></li>
+            <li><a class="nav-link" href="{{ site.baseurl }}/contributing"><span class="entypo">6</span>Contribute</a></li>
+            <li><a class="nav-link" href="{{ site.baseurl }}/authors"><span class="entypo">,</span>Authors</a></li>
+            <li><a class="nav-link" href="{{ site.baseurl }}/license"><span class="entypo">&copy;</span>License</a></li>
           </ul>
         </nav>
       </section>
@@ -73,12 +73,12 @@ chapters:
             {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
             {% capture indexurl %}{{ url }}/index.html{% endcapture %}
             <li class="chapter">
-              <div class="sidebar-subtitle{% if page.url == indexurl %} page-active{% endif %}"><strong><a class="chapter-title" href="{{ url }}">{{ chapter }}</a></strong></div>
+              <div class="sidebar-subtitle{% if page.url == indexurl %} page-active{% endif %}"><strong><a class="chapter-title" href="{{ site.baseurl }}{{ url }}">{{ chapter }}</a></strong></div>
               <ul class="pseudo-list recipes-list">
                 {% for site_page in site.pages %}
                   {% if site_page.url contains url %}
                     {% unless site_page.url == indexurl %}
-                      <li class="list-item recipe{% if page.url == site_page.url %} page-active{% endif %}"><a class="recipe-title" href="{{ site_page.url | replace: '.html', '' }}">{{ site_page.title }}</a></li>
+                      <li class="list-item recipe{% if page.url == site_page.url %} page-active{% endif %}"><a class="recipe-title" href="{{ site.baseurl }}{{ site_page.url | replace: '.html', '' }}">{{ site_page.title }}</a></li>
                     {% endunless %}
                   {% endif %}
                 {% endfor %}
@@ -90,7 +90,7 @@ chapters:
 
     </aside>
 
-    <script type="text/javascript" src="/js/scripts.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/scripts.js"></script>
 
  </body>
 </html>

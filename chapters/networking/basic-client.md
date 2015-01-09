@@ -31,7 +31,7 @@ connection.on 'data', (data) ->
 
 ### Example Usage
 
-Accessing the [Basic Server](/chapters/networking/basic-server):
+Accessing the [Basic Server]({{ site.baseurl }}/chapters/networking/basic-server):
 
 {% highlight console %}
 $ coffee basic-client.coffee
@@ -43,7 +43,7 @@ Received: Hello, World!
 
 The most important work takes place in the _connection.on 'data'_ handler, where the client receives its response from the server and would most likely arrange for responses to it.
 
-See also the [Basic Server](/chapters/networking/basic-server), [Bi-Directional Client](/chapters/networking/bi-directional-client), and [Bi-Directional Server](/chapters/networking/bi-directional-server) recipes.
+See also the [Basic Server]({{ site.baseurl }}/chapters/networking/basic-server), [Bi-Directional Client]({{ site.baseurl }}/chapters/networking/bi-directional-client), and [Bi-Directional Server]({{ site.baseurl }}/chapters/networking/bi-directional-server) recipes.
 
 ### Exercises
 

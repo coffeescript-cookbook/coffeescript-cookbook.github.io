@@ -36,6 +36,6 @@ range = Math.random() * (max - min) + min
 
 This is a straight lift from JavaScript.
 
-Note that JavaScript's Math.random() does not allow you to seed the random number generator to force certain values. See [Generating Predictable Random Numbers](/chapters/math/generating-predictable-random-numbers) for that.
+Note that JavaScript's Math.random() does not allow you to seed the random number generator to force certain values. See [Generating Predictable Random Numbers]({{ site.baseurl }}/chapters/math/generating-predictable-random-numbers) for that.
 
 To generate a number from 0 up to (but not including) n, multiply by n. To generate a number from 1 to n (inclusive), multiply by n and add 1.

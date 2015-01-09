@@ -6,7 +6,7 @@ title: Author's Guide
 
 ## tl;dr: Look at Other Recipes, and Blend In
 
-Look at the source of other recipe pages and follow that page structure. Start with the [Developer's Guide](/developers-guide) to get a test version of the cookbook up and running on your machine, and get to work!
+Look at the source of other recipe pages and follow that page structure. Start with the [Developer's Guide]({{ site.baseurl }}/developers-guide) to get a test version of the cookbook up and running on your machine, and get to work!
 
 ## General Guidelines
 
@@ -26,7 +26,7 @@ A typical cookbook page will have three sections (four if you count the title):
 
 ## Copyright Issues
 
-Do not post code that is copyrighted by another user, unless you have permission to use that code AND to relicense that code under the [CC BY 3.0](/license) license. If you DO have permission and the author would like credit, please add them to the [authors](/authors) page.
+Do not post code that is copyrighted by another user, unless you have permission to use that code AND to relicense that code under the [CC BY 3.0]({{ site.baseurl }}/license) license. If you DO have permission and the author would like credit, please add them to the [authors]({{ site.baseurl }}/authors) page.
 
 Also, just a stylistic note, please do not yank code directly from [http://coffeescript.org/](http://coffeescript.org/) and post it with little or no discussion. The CoffeeScript Cookbook is not affiliated with them. We think they're awesome and want them to like us, too! Make sure that anything taken from [http://coffeescript.org/](http://coffeescript.org/) is permissible use and that it stands alone as a valid recipe. If the recipe is too terse, consider adding more examples and discussion.
 
@@ -99,7 +99,7 @@ When in doubt about what output to show, try evaluating your snippet in the coff
 
 ## How to Add a Recipe
 
-Create a new markdown page (or copy the [Recipe Template](/recipe-template). The filename should be about the problem, e.g. `finding-last-day-of-the-month.md` or `reversing-arrays.md`. In your file, start with the following template:
+Create a new markdown page (or copy the [Recipe Template]({{ site.baseurl }}/recipe-template). The filename should be about the problem, e.g. `finding-last-day-of-the-month.md` or `reversing-arrays.md`. In your file, start with the following template:
 
 {% highlight text %}
 ---
@@ -175,7 +175,7 @@ See the "Weird Recipe" note above. Do real people in the real world ever hit the
 
 ## I Have A Problem/Solution, But It's Basically Just JavaScript. Should I Add It?
 
-Yes! CoffeeScript compiles to JavaScript, and that means that some of its functionality comes straight from JavaScript. (For example, see [Reversing Arrays](/chapters/arrays/reversing-arrays).) But if you're programming in CoffeeScript and you need to reverse an array, this Cookbook should stand ready to tell you it's available to you in CoffeeScript -- even if it's just a straight call into a JavaScript library.
+Yes! CoffeeScript compiles to JavaScript, and that means that some of its functionality comes straight from JavaScript. (For example, see [Reversing Arrays]({{ site.baseurl }}/chapters/arrays/reversing-arrays).) But if you're programming in CoffeeScript and you need to reverse an array, this Cookbook should stand ready to tell you it's available to you in CoffeeScript -- even if it's just a straight call into a JavaScript library.
 
 ## I Found a Typo. Is That Enough of a Fix? Does That Count?
 
