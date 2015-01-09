@@ -7,7 +7,7 @@ We want you to write recipes and make the site better!
 Contributing
 -----------
 
-You can find details about contributing [on the site](http://coffeescriptcookbook.com/contributing). For now here is a simple formula:
+You can find details about contributing [on the site](http://coffeescript-cookbook.github.io/contributing). For now here is a simple formula:
 
 1. Fork the repository at [GitHub](http://github.com/coffeescript-cookbook/coffeescript-cookbook.github.com)
 2. Do awesomeness!
@@ -16,11 +16,11 @@ You can find details about contributing [on the site](http://coffeescriptcookboo
 
 Here are some relevant links from the site.
 
-* [Contributing](http://coffeescriptcookbook.com/contributing)
-* [Recipe Template](http://coffeescriptcookbook.com/recipe-template)
-* [Author's Guide](http://coffeescriptcookbook.com/authors-guide)
-* [Developer's Guide](http://coffeescriptcookbook.com/developers-guide)
-* [Designer's Guide](http://coffeescriptcookbook.com/designers-guide)
+* [Contributing](http://coffeescript-cookbook.github.io/contributing)
+* [Recipe Template](http://coffeescript-cookbook.github.io/recipe-template)
+* [Author's Guide](http://coffeescript-cookbook.github.io/authors-guide)
+* [Developer's Guide](http://coffeescript-cookbook.github.io/developers-guide)
+* [Designer's Guide](http://coffeescript-cookbook.github.io/designers-guide)
 
 Jekyll
 ------
@@ -34,4 +34,4 @@ CoffeeScript Cookbook is currently implemented as a jekyll site. Jekyll is aweso
 License
 -------
 
-This site and all contributions are [licensed](http://coffeescriptcookbook.com/LICENSE-CC-BY) under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) license. By submitting information to this site you agree to grant this license to all users of the site, and that your editing of the authors page constitutes satisfactory attribution.
+This site and all contributions are [licensed](http://coffeescript-cookbook.github.io/LICENSE-CC-BY) under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) license. By submitting information to this site you agree to grant this license to all users of the site, and that your editing of the authors page constitutes satisfactory attribution.
