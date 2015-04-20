@@ -24,10 +24,11 @@ You can simply use Array's `reduce()` and `reduceRight()` methods along with an 
 Or it may be something more complex such as aggregating elements from a list into a combined object.
 
 {% highlight coffeescript %}
-people =
+people = [
     { name: 'alec', age: 10 }
     { name: 'bert', age: 16 }
     { name: 'chad', age: 17 }
+]
 
 people.reduce (x, y) ->
     x[y.name]= y.age
