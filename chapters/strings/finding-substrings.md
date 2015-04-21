@@ -25,12 +25,12 @@ message.lastIndexOf "This"
 # => 49
 
 # Count occurrences of a given string within a message
-occurrencesCount = (string, search) ->
+String::occurrences = (search) ->
   regex = new RegExp(search, 'g')
-  (string.match(regex) or []).length
+  (@match(regex) or []).length
 
-occurrencesCount(message, "is")
-# => 4
+message.occurrences("This")
+# => 2
 
 {% endhighlight %}
 
