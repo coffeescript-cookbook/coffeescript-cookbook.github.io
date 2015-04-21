@@ -30,7 +30,7 @@ String::occurrences = (search) ->
   (@match(regex) or []).length
 
 message.occurrences("This")
-# => 2
+# => 3
 
 {% endhighlight %}
 
