@@ -24,8 +24,14 @@ message.indexOf "This", 5
 message.lastIndexOf "This"
 # => 49
 
+# Count occurrences of a given string within a message
+occurrencesCount = (string, search) ->
+  regex = new RegExp(search, 'g')
+  (string.match(regex) or []).length
+
+occurrencesCount(message, "is")
+# => 4
+
 {% endhighlight %}
 
 ## Discussion
-
-Still need recipe to count occurrences of a given string within a message.
