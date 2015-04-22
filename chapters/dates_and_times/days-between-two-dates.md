@@ -5,7 +5,7 @@ chapter: Dates and Times
 ---
 ## Problem
 
-You need to find how much seconds minutes, hours, days, months or years has passed between two dates.
+You need to find how many seconds minutes, hours, days, months or years has passed between two dates.
 
 ## Solution
 
