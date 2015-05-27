@@ -140,4 +140,4 @@ send toasted ham turkey sandwich to 'Rachel' # => "Rachel requested a toasted, w
 send toasted turkey ham swiss sandwich to 'Matt' # => "Matt requested a toasted, white bread sandwich with swiss, ham and turkey"
 {% endhighlight %}
 
-This example allows for layers of functions by how it returns the modified object so that outer functions can modify it in turn.  By borrowing a verb and the particle _to_, the example lends natural grammar to the construction and ends up reading like an actual sentence when used correctly.  This way, both your CoffeeScript skills and your existing language skills can help catch code problems.
+This example allows for layers of functions by how it returns the modified object so that outer functions can modify it in turn.  By borrowing a verb and the preposition _to_, the example lends natural grammar to the construction and ends up reading like an actual sentence when used correctly.  This way, both your CoffeeScript skills and your existing language skills can help catch code problems.
