@@ -66,9 +66,9 @@ class TeaCup
 			cream: false
 		addChainedAttributeAccessor(this, 'properties', attr) for attr of @properties
 
-earlgrey = new TeaCup().size('small').type('Earl Grey').sugar('false')
+earlgrey = new TeaCup().size('small').type('Earl Grey').sugar(false)
 
-earlgrey.properties # => { size: 'small', type: 'Earl Grey', sugar: false }
+earlgrey.properties # => { size: 'small', type: 'Earl Grey', sugar: false, cream: false }
 
 earlgrey.sugar true
 
