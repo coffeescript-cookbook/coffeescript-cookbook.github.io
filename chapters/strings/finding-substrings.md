@@ -25,7 +25,3 @@ message.lastIndexOf "This"
 # => 49
 
 {% endhighlight %}
-
-## Discussion
-
-Still need recipe to count occurrences of a given string within a message.
