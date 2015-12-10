@@ -34,6 +34,7 @@ The following people are totally rad and awesome because they have contributed r
 * Mike Moore *mike@blowmage.com*
 * Peter Hellberg *peter@c7.se*
 * Jamie Gaskins *jgaskins@gmail.com*
+* Sami Pussinen *me@samipussinen.com*
 * ...You! What are you waiting for? Check out the [contributing]({{ site.baseurl }}/contributing) section and get cracking!
 
 # Designers
