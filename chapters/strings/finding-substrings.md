@@ -35,7 +35,3 @@ substrCount message, " a "
 # => 3
 
 {% endhighlight %}
-
-## Discussion
-
-Still need recipe to count occurrences of a given string within a message.
