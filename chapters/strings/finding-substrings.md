@@ -27,11 +27,9 @@ message.lastIndexOf "This"
 
 # Count occurrences of a given string
 
-substrCount = (str, subStr) ->
-
-  re = new RegExp( subStr ,"g" )
-  
-  ( str.match(re) or [] ).length
+    substrCount = (str, subStr) ->
+      re = new RegExp( subStr ,"g" )
+      ( str.match(re) or [] ).length
 
 substrCount message, " a "
 # => 3
