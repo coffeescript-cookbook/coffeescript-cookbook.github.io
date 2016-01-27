@@ -24,14 +24,8 @@ message.indexOf "This", 5
 message.lastIndexOf "This"
 # => 49
 
-
 # Count occurrences of a given string
-
-    substrCount = (str, subStr) ->
-      re = new RegExp( subStr ,"g" )
-      ( str.match(re) or [] ).length
-
-substrCount message, " a "
+message.split " a " .length - 1
 # => 3
 
 {% endhighlight %}
