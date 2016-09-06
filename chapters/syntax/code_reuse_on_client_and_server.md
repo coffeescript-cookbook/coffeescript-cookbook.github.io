@@ -57,7 +57,7 @@ undefined
 
 {% endhighlight %}
 
-In our web page, we can include our module using by including it as a script.
+In our web page, we can include our module by including it as a script.
 
 {% highlight html %}
 
