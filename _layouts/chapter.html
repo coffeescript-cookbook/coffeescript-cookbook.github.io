@@ -1,22 +1,3 @@
----
-chapters:
-- Syntax
-- Classes and Objects
-- Strings
-- Arrays
-- Dates and Times
-- Math
-- Functions
-- Metaprogramming
-- jQuery
-- Ajax
-- Regular Expressions
-- Networking
-- Design Patterns
-- Databases
-- Testing
----
-
 <!doctype html>
 <html>
   <head>
@@ -72,7 +53,7 @@ chapters:
       <section class="sidebar-block">
         <h5 class="sidebar-title">Chapters Index</h5>
         <ol class="navigation chapters-list">
-          {% for chapter in page.chapters %}
+          {% for chapter in site.data.chapters %}
             {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
             {% capture indexurl %}{{ url }}/index.html{% endcapture %}
             <li class="chapter">
@@ -97,4 +78,3 @@ chapters:
 
  </body>
 </html>
-
