@@ -1,6 +1,6 @@
 baseurl: ''
 safe: true
-pygments: true
+highlighter: pygments
 lsi: false
 markdown: redcarpet
 exclude:
