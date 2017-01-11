@@ -12,7 +12,9 @@ You want to lowercase a string.
 Use JavaScript's String toLowerCase() method:
 
 {% highlight coffeescript %}
-"ONE TWO THREE".toLowerCase()
+string = "ONE TWO THREE"
+
+string.toLowerCase()
 # => 'one two three'
 {% endhighlight %}
 
@@ -25,8 +27,8 @@ Use JavaScript's String toLowerCase() method:
 You can add some Ruby-like syntax sugar with the following shortcut:
 
 {% highlight coffeescript %}
-String::downcase = -> @toLowerCase()
-"ONE TWO THREE".downcase()
+String::downcase = (string) -> @toLowerCase()
+string.downcase()
 # => 'one two three'
 {% endhighlight %}
 
@@ -41,7 +43,7 @@ The code above compiles in to the following JavaScript:
 String.prototype.downcase = function() {
   return this.toLowerCase();
 };
-"ONE TWO THREE".downcase();
+string.downcase();
 {% endhighlight %}
 
 **Note:** Although it's quite common in languages like Ruby, extending native objects is often considered bad practice in JavaScript (see: [Maintainable JavaScript: Don’t modify objects you don’t own](http://www.nczonline.net/blog/2010/03/02/maintainable-javascript-dont-modify-objects-you-down-own/); [Extending built-in native objects. Evil or not?](http://perfectionkills.com/extending-built-in-native-objects-evil-or-not/)).
