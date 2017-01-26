@@ -14,7 +14,7 @@ Use a mixOf factory function that generates a mixed superclass for you.
 {% highlight coffeescript %}
 mixOf = (base, mixins...) ->
   class Mixed extends base
-  for mixin in mixins by -1 #earlier mixins override later ones
+  for mixin in mixins.reverse() #earlier mixins override later ones
     for name, method of mixin::
       Mixed::[name] = method
   Mixed
@@ -30,7 +30,7 @@ class PhilosopherMixin
     console.log "hmm..."
     @wise = yes
 
-class DeeperThought extends mixOf DeepThought, PhilosopherMixin
+class DeeperThought extends (mixOf DeepThought, PhilosopherMixin)
   answer: ->
     @pontificate()
     super()
