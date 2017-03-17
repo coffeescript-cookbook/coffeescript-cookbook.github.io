@@ -20,7 +20,29 @@ window.MY_NAMESPACE ?= {}
 This is equivalent to the following JavaScript:
 
 {% highlight javascript %}
-window.MY_NAMESPACE = window.MY_NAMESPACE || {};
+if(window.MY_NAMESPACE === null || window.MY_NAMESPACE === undefined) {
+  window.MY_NAMESPACE = {};
+}
 {% endhighlight %}
 
-Common JavaScript technique, using object literal to define a namespace. This saves us from clobbering the namespace if it already exists.
+## Problem
+
+You want to make a conditonal assignment if it does not exists or if it is falsy (empty, 0, null, false)
+
+## Solution
+
+Use the Conditional assignment operator
+
+{% highlight coffeescript %}
+window.my_variable ||= {}
+{% endhighlight %}
+
+## Discussion
+
+This is equivalent to the following JavaScript:
+
+{% highlight javascript %}
+window.my_variable = window.my_variable || {};
+{% endhighlight %}
+
+Common JavaScript technique, using conditional assignment to ensure that we have an object that is not falsy
