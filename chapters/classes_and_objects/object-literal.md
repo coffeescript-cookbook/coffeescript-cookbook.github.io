@@ -20,7 +20,7 @@ window.MY_NAMESPACE ?= {}
 This is equivalent to the following JavaScript:
 
 {% highlight javascript %}
-if(window.MY_NAMESPACE == null) {
+if(window.MY_NAMESPACE === null || window.MY_NAMESPACE === undefined) {
   window.MY_NAMESPACE = {};
 }
 {% endhighlight %}
