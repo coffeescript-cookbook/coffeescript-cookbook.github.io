@@ -40,7 +40,7 @@ When the button is clicked, we want to send an Ajax request to the server to ret
 
 Next, create the CoffeeScript file to hold the page logic.  The code in this file creates a function to be called when the Load Data button is clicked.
 
-{% highlight coffeescript linenos %}
+{% highlight coffeescript %}
 # XMLHttpRequest.coffee
 loadDataFromServer = ->
   req = new XMLHttpRequest()
